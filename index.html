@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVE Patch Collection Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; padding: 24px; }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .stat-card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-card .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .stat-card .delta { font-size: 12px; margin-top: 2px; }
+  .delta.pos { color: #3fb950; }
+  .delta.neg { color: #f85149; }
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .chart-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .chart-card h3 { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+  .chart-card.wide { grid-column: 1 / -1; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .badge.ok { background: #238636; }
+  .badge.fail { background: #da3633; }
+  .badge.skip { background: #6e7681; }
+  .last-updated { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
+  #loading { text-align: center; padding: 60px; color: var(--muted); }
+  @media (max-width: 768px) { .charts { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>CVE Patch Collection Dashboard</h1>
+<p class="subtitle">Daily automated crawl from GitHub Advisory, NVD, OSV, and Snyk databases</p>
+
+<div id="loading">Loading data...</div>
+<div id="content" style="display:none">
+
+<div class="stats-grid" id="stats-grid"></div>
+
+<div class="charts">
+  <div class="chart-card wide">
+    <h3>Total CVEs Over Time (by Source)</h3>
+    <canvas id="chart-total"></canvas>
+  </div>
+  <div class="chart-card">
+    <h3>Daily New CVEs</h3>
+    <canvas id="chart-daily-new"></canvas>
+  </div>
+  <div class="chart-card">
+    <h3>Patches Downloaded</h3>
+    <canvas id="chart-patches"></canvas>
+  </div>
+  <div class="chart-card">
+    <h3>Source Breakdown (Latest)</h3>
+    <canvas id="chart-pie"></canvas>
+  </div>
+  <div class="chart-card">
+    <h3>Pipeline Run History</h3>
+    <div style="max-height:300px;overflow-y:auto">
+      <table id="runs-table">
+        <thead><tr><th>Date</th><th>Duration</th><th>GHSA</th><th>NVD</th><th>OSV</th><th>Snyk</th><th>Merge</th><th>Download</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<p class="last-updated" id="last-updated"></p>
+
+<script>
+const COLORS = {
+  ghsa: '#58a6ff',
+  nvd: '#f0883e',
+  osv: '#3fb950',
+  snyk: '#d2a8ff',
+  merged: '#e6edf3',
+  patches: '#79c0ff'
+};
+
+const chartDefaults = {
+  responsive: true,
+  plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 } } } },
+  scales: {
+    x: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } },
+    y: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' }, beginAtZero: true }
+  }
+};
+
+function badge(status) {
+  if (status === true || status === 'ok') return '<span class="badge ok">OK</span>';
+  if (status === false || status === 'fail') return '<span class="badge fail">FAIL</span>';
+  return '<span class="badge skip">SKIP</span>';
+}
+
+function fmt(n) { return n != null ? n.toLocaleString() : '-'; }
+
+async function init() {
+  let data;
+  try {
+    const resp = await fetch('data/history.json');
+    data = await resp.json();
+  } catch(e) {
+    document.getElementById('loading').textContent = 'No data yet. Run the pipeline to generate stats.';
+    return;
+  }
+  if (!data.length) {
+    document.getElementById('loading').textContent = 'No data yet.';
+    return;
+  }
+
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = '';
+
+  const latest = data[data.length - 1];
+  const prev = data.length > 1 ? data[data.length - 2] : null;
+
+  // Stat cards
+  const cards = [
+    { label: 'Merged CVEs', key: 'merged_total', color: COLORS.merged },
+    { label: 'GHSA', key: 'ghsa_total', color: COLORS.ghsa },
+    { label: 'NVD', key: 'nvd_total', color: COLORS.nvd },
+    { label: 'OSV', key: 'osv_total', color: COLORS.osv },
+    { label: 'Snyk', key: 'snyk_total', color: COLORS.snyk },
+    { label: 'Patches Downloaded', key: 'patches_downloaded', color: COLORS.patches }
+  ];
+  const grid = document.getElementById('stats-grid');
+  cards.forEach(c => {
+    const val = latest[c.key] || 0;
+    const prevVal = prev ? (prev[c.key] || 0) : 0;
+    const delta = val - prevVal;
+    const deltaStr = prev ? (delta > 0 ? `+${fmt(delta)}` : delta === 0 ? 'no change' : fmt(delta)) : '';
+    const deltaClass = delta > 0 ? 'pos' : delta < 0 ? 'neg' : '';
+    grid.innerHTML += `<div class="stat-card"><div class="label">${c.label}</div><div class="value" style="color:${c.color}">${fmt(val)}</div><div class="delta ${deltaClass}">${deltaStr}</div></div>`;
+  });
+
+  const dates = data.map(d => d.date);
+
+  // Total CVEs stacked area
+  new Chart(document.getElementById('chart-total'), {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [
+        { label: 'GHSA', data: data.map(d => d.ghsa_total), borderColor: COLORS.ghsa, backgroundColor: COLORS.ghsa + '20', fill: true, tension: 0.3 },
+        { label: 'NVD', data: data.map(d => d.nvd_total), borderColor: COLORS.nvd, backgroundColor: COLORS.nvd + '20', fill: true, tension: 0.3 },
+        { label: 'OSV', data: data.map(d => d.osv_total), borderColor: COLORS.osv, backgroundColor: COLORS.osv + '20', fill: true, tension: 0.3 },
+        { label: 'Snyk', data: data.map(d => d.snyk_total), borderColor: COLORS.snyk, backgroundColor: COLORS.snyk + '20', fill: true, tension: 0.3 }
+      ]
+    },
+    options: { ...chartDefaults, plugins: { ...chartDefaults.plugins, title: { display: false } } }
+  });
+
+  // Daily new CVEs bar chart
+  const dailyNew = data.map((d, i) => {
+    if (i === 0) return { ghsa: 0, nvd: 0, osv: 0, snyk: 0 };
+    return {
+      ghsa: (d.ghsa_new || 0),
+      nvd: (d.nvd_new || 0),
+      osv: (d.osv_new || 0),
+      snyk: (d.snyk_new || 0)
+    };
+  });
+  new Chart(document.getElementById('chart-daily-new'), {
+    type: 'bar',
+    data: {
+      labels: dates,
+      datasets: [
+        { label: 'GHSA', data: dailyNew.map(d => d.ghsa), backgroundColor: COLORS.ghsa },
+        { label: 'NVD', data: dailyNew.map(d => d.nvd), backgroundColor: COLORS.nvd },
+        { label: 'OSV', data: dailyNew.map(d => d.osv), backgroundColor: COLORS.osv },
+        { label: 'Snyk', data: dailyNew.map(d => d.snyk), backgroundColor: COLORS.snyk }
+      ]
+    },
+    options: { ...chartDefaults, scales: { ...chartDefaults.scales, x: { ...chartDefaults.scales.x, stacked: true }, y: { ...chartDefaults.scales.y, stacked: true } } }
+  });
+
+  // Patches downloaded line
+  new Chart(document.getElementById('chart-patches'), {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [
+        { label: 'Total Patches', data: data.map(d => d.patches_downloaded), borderColor: COLORS.patches, backgroundColor: COLORS.patches + '30', fill: true, tension: 0.3 },
+        { label: 'Merged CVEs', data: data.map(d => d.merged_total), borderColor: COLORS.merged, borderDash: [5, 5], fill: false, tension: 0.3 }
+      ]
+    },
+    options: chartDefaults
+  });
+
+  // Pie chart
+  new Chart(document.getElementById('chart-pie'), {
+    type: 'doughnut',
+    data: {
+      labels: ['GHSA', 'NVD', 'OSV', 'Snyk'],
+      datasets: [{ data: [latest.ghsa_total, latest.nvd_total, latest.osv_total, latest.snyk_total], backgroundColor: [COLORS.ghsa, COLORS.nvd, COLORS.osv, COLORS.snyk] }]
+    },
+    options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { color: '#8b949e' } } } }
+  });
+
+  // Run history table
+  const tbody = document.querySelector('#runs-table tbody');
+  for (let i = data.length - 1; i >= 0; i--) {
+    const d = data[i];
+    const dur = d.duration_min ? `${d.duration_min.toFixed(1)} min` : '-';
+    tbody.innerHTML += `<tr><td>${d.date}</td><td>${dur}</td><td>${badge(d.steps?.ghsa)}</td><td>${badge(d.steps?.nvd)}</td><td>${badge(d.steps?.osv)}</td><td>${badge(d.steps?.snyk)}</td><td>${badge(d.steps?.merge)}</td><td>${badge(d.steps?.download)}</td></tr>`;
+  }
+
+  document.getElementById('last-updated').textContent = `Last updated: ${latest.date} (${latest.timestamp || ''})`;
+}
+
+init();
+</script>
+</body>
+</html>
