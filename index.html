@@ -186,10 +186,9 @@ function buildCharts(data) {
     options: opts
   });
 
-  const dailyNew = data.map((d, i) => {
-    if (i === 0) return { ghsa: 0, nvd: 0, osv: 0, snyk: 0 };
-    return { ghsa: d.ghsa_new || 0, nvd: d.nvd_new || 0, osv: d.osv_new || 0, snyk: d.snyk_new || 0 };
-  });
+  const dailyNew = data.map(d => ({
+    ghsa: d.ghsa_new || 0, nvd: d.nvd_new || 0, osv: d.osv_new || 0, snyk: d.snyk_new || 0
+  }));
   charts.dailyNew = new Chart(document.getElementById('chart-daily-new'), {
     type: 'bar',
     data: {

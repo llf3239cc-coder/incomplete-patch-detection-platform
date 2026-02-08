@@ -8,6 +8,10 @@
     "snyk_total": 22232,
     "merged_total": 30131,
     "patches_downloaded": 13625,
+    "ghsa_new": 12933,
+    "nvd_new": 19200,
+    "osv_new": 23791,
+    "snyk_new": 22232,
     "duration_min": 88.5,
     "steps": {
       "ghsa": "ok",
