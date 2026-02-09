@@ -20,40 +20,61 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; padding: 24px; transition: background 0.3s, color 0.3s; }
-  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
   .header-left h1 { font-size: 24px; margin-bottom: 4px; }
   .subtitle { color: var(--muted); font-size: 14px; }
   .theme-toggle { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; color: var(--text); cursor: pointer; font-size: 14px; transition: background 0.3s, border-color 0.3s; display: flex; align-items: center; gap: 6px; }
   .theme-toggle:hover { border-color: var(--accent); }
   .theme-toggle .icon { font-size: 16px; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+
+  /* Tab bar */
+  .tab-bar { display: flex; gap: 4px; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 0; }
+  .tab-btn { background: none; border: none; border-bottom: 2px solid transparent; color: var(--muted); padding: 8px 16px; cursor: pointer; font-size: 14px; font-weight: 500; transition: color 0.2s, border-color 0.2s; }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Stats grid */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
   .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; transition: background 0.3s, border-color 0.3s; }
   .stat-card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
   .stat-card .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
   .stat-card .delta { font-size: 12px; margin-top: 2px; }
   .delta.pos { color: var(--delta-pos); }
   .delta.neg { color: var(--delta-neg); }
+
+  /* Charts */
   .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
   .chart-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; transition: background 0.3s, border-color 0.3s; }
   .chart-card h3 { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
   .chart-card.wide { grid-column: 1 / -1; }
+
+  /* Tables */
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
   th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td a { color: var(--accent); text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+  .table-wrap { max-height: 400px; overflow-y: auto; }
+
+  /* Badges */
   .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #fff; }
-  .badge.ok { background: var(--badge-ok); }
-  .badge.fail { background: var(--badge-fail); }
-  .badge.skip { background: var(--badge-skip); }
+  .badge.ok, .badge.complete, .badge.confirmed { background: var(--badge-ok); }
+  .badge.fail, .badge.incomplete { background: var(--badge-fail); }
+  .badge.skip, .badge.error, .badge.not_confirmed { background: var(--badge-skip); }
+
   .last-updated { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
   #loading { text-align: center; padding: 60px; color: var(--muted); }
-  @media (max-width: 768px) { .charts { grid-template-columns: 1fr; } }
+  .empty-state { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 768px) { .charts { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
 </style>
 </head>
 <body>
 <div class="header">
   <div class="header-left">
     <h1>CVE Patch Collection Dashboard</h1>
-    <p class="subtitle">Daily automated crawl from GitHub Advisory, NVD, OSV, and Snyk databases</p>
+    <p class="subtitle">Daily automated crawl, detection, and PoC validation pipeline</p>
   </div>
   <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
     <span class="icon" id="theme-icon"></span>
@@ -61,72 +82,139 @@
   </button>
 </div>
 
+<div class="tab-bar" id="tab-bar">
+  <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+  <button class="tab-btn" data-tab="crawling">Crawling</button>
+  <button class="tab-btn" data-tab="detection">Detection</button>
+  <button class="tab-btn" data-tab="poc">PoC Validator</button>
+</div>
+
 <div id="loading">Loading data...</div>
-<div id="content" style="display:none">
 
-<div class="stats-grid" id="stats-grid"></div>
-
-<div class="charts">
-  <div class="chart-card wide">
-    <h3>Total CVEs Over Time (by Source)</h3>
-    <canvas id="chart-total"></canvas>
-  </div>
-  <div class="chart-card">
-    <h3>Daily New CVEs</h3>
-    <canvas id="chart-daily-new"></canvas>
-  </div>
-  <div class="chart-card">
-    <h3>Patches Downloaded</h3>
-    <canvas id="chart-patches"></canvas>
-  </div>
-  <div class="chart-card">
-    <h3>Source Breakdown (Latest)</h3>
-    <canvas id="chart-pie"></canvas>
-  </div>
-  <div class="chart-card">
-    <h3>Pipeline Run History</h3>
-    <div style="max-height:300px;overflow-y:auto">
-      <table id="runs-table">
-        <thead><tr><th>Date</th><th>Duration</th><th>GHSA</th><th>NVD</th><th>OSV</th><th>Snyk</th><th>Merge</th><th>Download</th></tr></thead>
-        <tbody></tbody>
-      </table>
+<!-- ==================== DASHBOARD TAB ==================== -->
+<div class="tab-content active" id="tab-dashboard">
+  <div class="stats-grid" id="dashboard-stats"></div>
+  <div class="charts">
+    <div class="chart-card wide">
+      <h3>Pipeline Overview</h3>
+      <canvas id="chart-overview"></canvas>
     </div>
   </div>
 </div>
 
+<!-- ==================== CRAWLING TAB ==================== -->
+<div class="tab-content" id="tab-crawling">
+  <div class="stats-grid" id="crawl-stats"></div>
+  <div class="charts">
+    <div class="chart-card wide">
+      <h3>Total CVEs Over Time (by Source)</h3>
+      <canvas id="chart-total"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Daily New CVEs</h3>
+      <canvas id="chart-daily-new"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Patches Downloaded</h3>
+      <canvas id="chart-patches"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Source Breakdown (Latest)</h3>
+      <canvas id="chart-pie"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Pipeline Run History</h3>
+      <div class="table-wrap">
+        <table id="runs-table">
+          <thead><tr><th>Date</th><th>Duration</th><th>GHSA</th><th>NVD</th><th>OSV</th><th>Snyk</th><th>Merge</th><th>Download</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== DETECTION TAB ==================== -->
+<div class="tab-content" id="tab-detection">
+  <div class="stats-grid" id="detection-stats"></div>
+  <div class="charts">
+    <div class="chart-card wide">
+      <h3>Detection Results Over Time</h3>
+      <canvas id="chart-detection-timeline"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Vulnerability Category Breakdown</h3>
+      <canvas id="chart-categories"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Detection Run History</h3>
+      <div class="table-wrap">
+        <table id="detection-runs-table">
+          <thead><tr><th>Date</th><th>Processed</th><th>Complete</th><th>Incomplete</th><th>Error</th><th>Duration</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <h3>Latest Detection Results</h3>
+      <div class="table-wrap">
+        <table id="detection-cases-table">
+          <thead><tr><th>CVE</th><th>Category</th><th>Detected</th><th>Confidence</th><th>URL</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== POC VALIDATOR TAB ==================== -->
+<div class="tab-content" id="tab-poc">
+  <div class="stats-grid" id="poc-stats"></div>
+  <div class="charts">
+    <div class="chart-card wide">
+      <h3>Confirmed Incomplete Fixes</h3>
+      <div id="poc-confirmed-content"></div>
+    </div>
+    <div class="chart-card wide">
+      <h3>Validation Run History</h3>
+      <div class="table-wrap">
+        <table id="poc-runs-table">
+          <thead><tr><th>Date</th><th>Processed</th><th>Confirmed</th><th>Not Confirmed</th><th>Error</th><th>Cost</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 <p class="last-updated" id="last-updated"></p>
 
 <script>
-// --- Theme ---
+// === Theme ===
 function getTheme() {
   const saved = localStorage.getItem('theme');
   if (saved) return saved;
   return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 }
-
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
   document.getElementById('theme-icon').textContent = theme === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
   document.getElementById('theme-label').textContent = theme === 'dark' ? 'Light' : 'Dark';
-  // Rebuild charts if they exist
-  if (window._chartsBuilt) rebuildCharts();
+  if (window._chartsBuilt) rebuildAllCharts();
 }
-
 document.getElementById('theme-toggle').addEventListener('click', () => {
   applyTheme(getTheme() === 'dark' ? 'light' : 'dark');
 });
-
 applyTheme(getTheme());
 
-// --- Colors ---
+// === Colors ===
 const COLORS = {
   ghsa: '#58a6ff', nvd: '#f0883e', osv: '#3fb950', snyk: '#d2a8ff',
-  merged: '#e6edf3', patches: '#79c0ff'
+  merged: '#e6edf3', patches: '#79c0ff',
+  complete: '#3fb950', incomplete: '#f85149', error: '#6e7681',
+  confirmed: '#f0883e', not_confirmed: '#8b949e'
 };
-// Light-friendly overrides
 function themeColors() {
   const t = getTheme();
   return {
@@ -137,7 +225,6 @@ function themeColors() {
     legendText: t === 'dark' ? '#8b949e' : '#656d76'
   };
 }
-
 function chartOpts() {
   const c = themeColors();
   return {
@@ -150,24 +237,91 @@ function chartOpts() {
   };
 }
 
+// === Helpers ===
 function badge(status) {
   if (status === true || status === 'ok') return '<span class="badge ok">OK</span>';
   if (status === false || status === 'fail') return '<span class="badge fail">FAIL</span>';
+  if (status === 'complete') return '<span class="badge complete">COMPLETE</span>';
+  if (status === 'incomplete') return '<span class="badge incomplete">INCOMPLETE</span>';
+  if (status === 'confirmed') return '<span class="badge confirmed">CONFIRMED</span>';
+  if (status === 'not_confirmed') return '<span class="badge not_confirmed">NOT CONFIRMED</span>';
+  if (status === 'error') return '<span class="badge error">ERROR</span>';
   return '<span class="badge skip">SKIP</span>';
 }
-
 function fmt(n) { return n != null ? n.toLocaleString() : '-'; }
+function pct(a, b) { return b > 0 ? ((a / b) * 100).toFixed(1) + '%' : '0%'; }
 
-// --- Chart instances ---
+function makeStatCard(label, value, color, delta) {
+  let deltaHtml = '';
+  if (delta !== undefined && delta !== null) {
+    const cls = delta > 0 ? 'pos' : delta < 0 ? 'neg' : '';
+    const str = delta > 0 ? `+${fmt(delta)}` : delta === 0 ? 'no change' : fmt(delta);
+    deltaHtml = `<div class="delta ${cls}">${str}</div>`;
+  }
+  return `<div class="stat-card"><div class="label">${label}</div><div class="value" style="color:${color}">${fmt(value)}</div>${deltaHtml}</div>`;
+}
+
+// === Tab navigation ===
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === 'tab-' + tabId));
+  location.hash = tabId;
+}
+document.getElementById('tab-bar').addEventListener('click', e => {
+  if (e.target.classList.contains('tab-btn')) switchTab(e.target.dataset.tab);
+});
+window.addEventListener('hashchange', () => {
+  const h = location.hash.slice(1);
+  if (['dashboard','crawling','detection','poc'].includes(h)) switchTab(h);
+});
+
+// === Chart instances ===
 let charts = {};
-let _data = [];
+let _crawlData = [], _detectionData = [], _pocData = [];
 
-function destroyCharts() {
+function destroyAllCharts() {
   Object.values(charts).forEach(c => c.destroy());
   charts = {};
 }
 
-function buildCharts(data) {
+// === Build: Dashboard charts ===
+function buildDashboardCharts() {
+  const c = themeColors();
+  const opts = chartOpts();
+
+  // Combined timeline: crawled CVEs, detection cases, PoC confirmed
+  const allDates = new Set();
+  _crawlData.forEach(d => allDates.add(d.date));
+  _detectionData.forEach(d => allDates.add(d.date));
+  _pocData.forEach(d => allDates.add(d.date));
+  const dates = [...allDates].sort();
+
+  const crawlMap = Object.fromEntries(_crawlData.map(d => [d.date, d]));
+  const detMap = Object.fromEntries(_detectionData.map(d => [d.date, d]));
+  const pocMap = Object.fromEntries(_pocData.map(d => [d.date, d]));
+
+  if (dates.length > 0) {
+    charts.overview = new Chart(document.getElementById('chart-overview'), {
+      type: 'bar',
+      data: {
+        labels: dates,
+        datasets: [
+          { label: 'New Patches Found', data: dates.map(d => detMap[d]?.new_patches_found || 0), backgroundColor: COLORS.patches },
+          { label: 'Cases Detected', data: dates.map(d => detMap[d]?.cases_processed || 0), backgroundColor: COLORS.merged },
+          { label: 'Complete', data: dates.map(d => detMap[d]?.complete || 0), backgroundColor: COLORS.complete },
+          { label: 'Incomplete (FP)', data: dates.map(d => detMap[d]?.incomplete || 0), backgroundColor: COLORS.incomplete },
+          { label: 'PoC Confirmed', data: dates.map(d => pocMap[d]?.confirmed || 0), backgroundColor: COLORS.confirmed },
+        ]
+      },
+      options: opts
+    });
+  }
+}
+
+// === Build: Crawling charts ===
+function buildCrawlCharts() {
+  const data = _crawlData;
+  if (!data.length) return;
   const c = themeColors();
   const dates = data.map(d => d.date);
   const opts = chartOpts();
@@ -186,18 +340,15 @@ function buildCharts(data) {
     options: opts
   });
 
-  const dailyNew = data.map(d => ({
-    ghsa: d.ghsa_new || 0, nvd: d.nvd_new || 0, osv: d.osv_new || 0, snyk: d.snyk_new || 0
-  }));
   charts.dailyNew = new Chart(document.getElementById('chart-daily-new'), {
     type: 'bar',
     data: {
       labels: dates,
       datasets: [
-        { label: 'GHSA', data: dailyNew.map(d => d.ghsa), backgroundColor: COLORS.ghsa },
-        { label: 'NVD', data: dailyNew.map(d => d.nvd), backgroundColor: COLORS.nvd },
-        { label: 'OSV', data: dailyNew.map(d => d.osv), backgroundColor: COLORS.osv },
-        { label: 'Snyk', data: dailyNew.map(d => d.snyk), backgroundColor: COLORS.snyk }
+        { label: 'GHSA', data: data.map(d => d.ghsa_new || 0), backgroundColor: COLORS.ghsa },
+        { label: 'NVD', data: data.map(d => d.nvd_new || 0), backgroundColor: COLORS.nvd },
+        { label: 'OSV', data: data.map(d => d.osv_new || 0), backgroundColor: COLORS.osv },
+        { label: 'Snyk', data: data.map(d => d.snyk_new || 0), backgroundColor: COLORS.snyk }
       ]
     },
     options: { ...opts, scales: { ...opts.scales, x: { ...opts.scales.x, stacked: true }, y: { ...opts.scales.y, stacked: true } } }
@@ -226,34 +377,93 @@ function buildCharts(data) {
   });
 }
 
-function rebuildCharts() {
-  destroyCharts();
-  buildCharts(_data);
+// === Build: Detection charts ===
+function buildDetectionCharts() {
+  const data = _detectionData;
+  if (!data.length) return;
+  const c = themeColors();
+  const opts = chartOpts();
+  const dates = data.map(d => d.date);
+
+  // Stacked bar: complete/incomplete/error per day
+  charts.detTimeline = new Chart(document.getElementById('chart-detection-timeline'), {
+    type: 'bar',
+    data: {
+      labels: dates,
+      datasets: [
+        { label: 'Complete', data: data.map(d => d.complete || 0), backgroundColor: COLORS.complete },
+        { label: 'Incomplete', data: data.map(d => d.incomplete || 0), backgroundColor: COLORS.incomplete },
+        { label: 'Error', data: data.map(d => d.error || 0), backgroundColor: COLORS.error }
+      ]
+    },
+    options: { ...opts, scales: { ...opts.scales, x: { ...opts.scales.x, stacked: true }, y: { ...opts.scales.y, stacked: true } } }
+  });
+
+  // Category doughnut (aggregated across all runs)
+  const allCats = {};
+  data.forEach(d => {
+    if (d.categories) {
+      Object.entries(d.categories).forEach(([k, v]) => { allCats[k] = (allCats[k] || 0) + v; });
+    }
+  });
+  const catLabels = Object.keys(allCats);
+  const catValues = Object.values(allCats);
+  const catColors = ['#58a6ff', '#f0883e', '#3fb950', '#d2a8ff', '#f85149', '#79c0ff', '#e6edf3', '#ff7b72'];
+
+  if (catLabels.length > 0) {
+    charts.categories = new Chart(document.getElementById('chart-categories'), {
+      type: 'doughnut',
+      data: {
+        labels: catLabels,
+        datasets: [{ data: catValues, backgroundColor: catColors.slice(0, catLabels.length) }]
+      },
+      options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { color: c.legendText } } } }
+    });
+  }
 }
 
-// --- Init ---
-async function init() {
-  let data;
-  try {
-    const resp = await fetch('data/history.json');
-    data = await resp.json();
-  } catch(e) {
-    document.getElementById('loading').textContent = 'No data yet. Run the pipeline to generate stats.';
-    return;
-  }
-  if (!data.length) {
-    document.getElementById('loading').textContent = 'No data yet.';
-    return;
-  }
+function rebuildAllCharts() {
+  destroyAllCharts();
+  buildDashboardCharts();
+  buildCrawlCharts();
+  buildDetectionCharts();
+}
 
-  _data = data;
-  document.getElementById('loading').style.display = 'none';
-  document.getElementById('content').style.display = '';
+// === Populate tables and stats ===
+
+function populateDashboardStats() {
+  const grid = document.getElementById('dashboard-stats');
+  const crawlLatest = _crawlData.length ? _crawlData[_crawlData.length - 1] : {};
+  const detLatest = _detectionData.length ? _detectionData[_detectionData.length - 1] : {};
+  const pocLatest = _pocData.length ? _pocData[_pocData.length - 1] : {};
+
+  // Aggregate totals across all detection runs
+  const totalDetected = _detectionData.reduce((s, d) => s + (d.cases_processed || 0), 0);
+  const totalComplete = _detectionData.reduce((s, d) => s + (d.complete || 0), 0);
+  const totalIncomplete = _detectionData.reduce((s, d) => s + (d.incomplete || 0), 0);
+  const totalPocConfirmed = _pocData.reduce((s, d) => s + (d.confirmed || 0), 0);
+  const totalPocNotConfirmed = _pocData.reduce((s, d) => s + (d.not_confirmed || 0), 0);
+
+  grid.innerHTML = [
+    makeStatCard('Merged CVEs', crawlLatest.merged_total || 0, COLORS.merged),
+    makeStatCard('Patches Downloaded', crawlLatest.patches_downloaded || 0, COLORS.patches),
+    makeStatCard('Cases Detected', totalDetected, COLORS.ghsa),
+    makeStatCard('Complete', totalComplete, COLORS.complete),
+    makeStatCard('Incomplete (FP)', totalIncomplete, COLORS.incomplete),
+    makeStatCard('PoC Confirmed', totalPocConfirmed, COLORS.confirmed),
+    makeStatCard('PoC Not Confirmed', totalPocNotConfirmed, COLORS.not_confirmed),
+    makeStatCard('Detection Runs', _detectionData.length, COLORS.nvd),
+  ].join('');
+}
+
+function populateCrawlStats() {
+  const grid = document.getElementById('crawl-stats');
+  const data = _crawlData;
+  if (!data.length) { grid.innerHTML = ''; return; }
 
   const latest = data[data.length - 1];
   const prev = data.length > 1 ? data[data.length - 2] : null;
 
-  // Stat cards
   const cards = [
     { label: 'Merged CVEs', key: 'merged_total', color: COLORS.merged },
     { label: 'GHSA', key: 'ghsa_total', color: COLORS.ghsa },
@@ -262,29 +472,161 @@ async function init() {
     { label: 'Snyk', key: 'snyk_total', color: COLORS.snyk },
     { label: 'Patches Downloaded', key: 'patches_downloaded', color: COLORS.patches }
   ];
-  const grid = document.getElementById('stats-grid');
-  cards.forEach(c => {
+  grid.innerHTML = cards.map(c => {
     const val = latest[c.key] || 0;
-    const prevVal = prev ? (prev[c.key] || 0) : 0;
-    const delta = val - prevVal;
-    const deltaStr = prev ? (delta > 0 ? `+${fmt(delta)}` : delta === 0 ? 'no change' : fmt(delta)) : '';
-    const deltaClass = delta > 0 ? 'pos' : delta < 0 ? 'neg' : '';
-    grid.innerHTML += `<div class="stat-card"><div class="label">${c.label}</div><div class="value" style="color:${c.color}">${fmt(val)}</div><div class="delta ${deltaClass}">${deltaStr}</div></div>`;
-  });
-
-  // Build charts
-  buildCharts(data);
-  window._chartsBuilt = true;
+    const delta = prev ? val - (prev[c.key] || 0) : null;
+    return makeStatCard(c.label, val, c.color, delta);
+  }).join('');
 
   // Run history table
   const tbody = document.querySelector('#runs-table tbody');
+  tbody.innerHTML = '';
   for (let i = data.length - 1; i >= 0; i--) {
     const d = data[i];
     const dur = d.duration_min ? `${d.duration_min.toFixed(1)} min` : '-';
     tbody.innerHTML += `<tr><td>${d.date}</td><td>${dur}</td><td>${badge(d.steps?.ghsa)}</td><td>${badge(d.steps?.nvd)}</td><td>${badge(d.steps?.osv)}</td><td>${badge(d.steps?.snyk)}</td><td>${badge(d.steps?.merge)}</td><td>${badge(d.steps?.download)}</td></tr>`;
   }
+}
 
-  document.getElementById('last-updated').textContent = `Last updated: ${latest.date} (${latest.timestamp || ''})`;
+function populateDetectionStats() {
+  const grid = document.getElementById('detection-stats');
+  const data = _detectionData;
+
+  const totalProcessed = data.reduce((s, d) => s + (d.cases_processed || 0), 0);
+  const totalComplete = data.reduce((s, d) => s + (d.complete || 0), 0);
+  const totalIncomplete = data.reduce((s, d) => s + (d.incomplete || 0), 0);
+  const totalError = data.reduce((s, d) => s + (d.error || 0), 0);
+
+  grid.innerHTML = [
+    makeStatCard('Total Processed', totalProcessed, COLORS.ghsa),
+    makeStatCard('Complete', totalComplete, COLORS.complete),
+    makeStatCard('Incomplete (FP)', totalIncomplete, COLORS.incomplete),
+    makeStatCard('Error', totalError, COLORS.error),
+  ].join('');
+
+  // Detection run history table
+  const tbody = document.querySelector('#detection-runs-table tbody');
+  tbody.innerHTML = '';
+  for (let i = data.length - 1; i >= 0; i--) {
+    const d = data[i];
+    const dur = d.duration_min ? `${d.duration_min.toFixed(1)} min` : '-';
+    tbody.innerHTML += `<tr><td>${d.date}</td><td>${d.cases_processed || 0}</td><td>${d.complete || 0}</td><td>${d.incomplete || 0}</td><td>${d.error || 0}</td><td>${dur}</td></tr>`;
+  }
+
+  // Latest detection cases table
+  const casesTbody = document.querySelector('#detection-cases-table tbody');
+  casesTbody.innerHTML = '';
+  if (data.length > 0) {
+    const latest = data[data.length - 1];
+    const cases = latest.cases || [];
+    cases.forEach(c => {
+      const conf = typeof c.confidence === 'number' ? c.confidence.toFixed(4) : c.confidence || '-';
+      const urlShort = c.url ? c.url.replace('https://github.com/', '') : '-';
+      const urlLink = c.url ? `<a href="${c.url}" target="_blank" rel="noopener">${urlShort.length > 60 ? urlShort.slice(0, 57) + '...' : urlShort}</a>` : '-';
+      casesTbody.innerHTML += `<tr><td>${c.cve}</td><td>${c.category || '-'}</td><td>${badge(c.detected)}</td><td>${conf}</td><td>${urlLink}</td></tr>`;
+    });
+  }
+  if (!data.length) {
+    document.querySelector('#detection-cases-table tbody').innerHTML = '<tr><td colspan="5" class="empty-state">No detection results yet. Run daily_detection.py to populate.</td></tr>';
+  }
+}
+
+function populatePocStats() {
+  const grid = document.getElementById('poc-stats');
+  const data = _pocData;
+
+  const totalProcessed = data.reduce((s, d) => s + (d.cases_processed || 0), 0);
+  const totalConfirmed = data.reduce((s, d) => s + (d.confirmed || 0), 0);
+  const totalNotConfirmed = data.reduce((s, d) => s + (d.not_confirmed || 0), 0);
+  const totalCost = data.reduce((s, d) => s + (d.total_cost_usd || 0), 0);
+
+  grid.innerHTML = [
+    makeStatCard('Total Validated', totalProcessed, COLORS.ghsa),
+    makeStatCard('Confirmed', totalConfirmed, COLORS.confirmed),
+    makeStatCard('Not Confirmed', totalNotConfirmed, COLORS.not_confirmed),
+    makeStatCard('Total Cost', '$' + totalCost.toFixed(2), COLORS.patches),
+  ].join('');
+
+  // Confirmed cases table
+  const confirmedDiv = document.getElementById('poc-confirmed-content');
+  const allConfirmed = [];
+  data.forEach(d => {
+    (d.cases || []).forEach(c => {
+      if (c.poc_status === 'confirmed') allConfirmed.push(c);
+    });
+  });
+
+  if (allConfirmed.length > 0) {
+    let html = '<div class="table-wrap"><table><thead><tr><th>CVE</th><th>Bypasses</th><th>PoC Path</th><th>Summary</th></tr></thead><tbody>';
+    allConfirmed.forEach(c => {
+      html += `<tr><td>${c.cve}</td><td>${c.poc_bypass_count || 0}</td><td>${c.poc_path || '-'}</td><td>${c.poc_summary || '-'}</td></tr>`;
+    });
+    html += '</tbody></table></div>';
+    confirmedDiv.innerHTML = html;
+  } else {
+    confirmedDiv.innerHTML = '<div class="empty-state">No confirmed incomplete fixes yet. Run poc_validator.py on a batch with incomplete-detected cases.</div>';
+  }
+
+  // Run history table
+  const tbody = document.querySelector('#poc-runs-table tbody');
+  tbody.innerHTML = '';
+  if (data.length > 0) {
+    for (let i = data.length - 1; i >= 0; i--) {
+      const d = data[i];
+      const cost = d.total_cost_usd ? `$${d.total_cost_usd.toFixed(2)}` : '-';
+      tbody.innerHTML += `<tr><td>${d.date}</td><td>${d.cases_processed || 0}</td><td>${d.confirmed || 0}</td><td>${d.not_confirmed || 0}</td><td>${d.error || 0}</td><td>${cost}</td></tr>`;
+    }
+  } else {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No PoC validation runs yet.</td></tr>';
+  }
+}
+
+// === Init ===
+async function init() {
+  let crawlData, detectionData, pocData;
+  try {
+    [crawlData, detectionData, pocData] = await Promise.all([
+      fetch('data/history.json').then(r => r.json()).catch(() => []),
+      fetch('data/detection_history.json').then(r => r.json()).catch(() => []),
+      fetch('data/poc_history.json').then(r => r.json()).catch(() => []),
+    ]);
+  } catch(e) {
+    document.getElementById('loading').textContent = 'Error loading data.';
+    return;
+  }
+
+  if (!crawlData.length && !detectionData.length && !pocData.length) {
+    document.getElementById('loading').textContent = 'No data yet. Run the pipeline to generate stats.';
+    return;
+  }
+
+  _crawlData = crawlData;
+  _detectionData = detectionData;
+  _pocData = pocData;
+
+  document.getElementById('loading').style.display = 'none';
+
+  // Populate all tabs
+  populateDashboardStats();
+  populateCrawlStats();
+  populateDetectionStats();
+  populatePocStats();
+
+  // Build charts
+  buildDashboardCharts();
+  buildCrawlCharts();
+  buildDetectionCharts();
+  window._chartsBuilt = true;
+
+  // Last updated
+  const latest = crawlData.length ? crawlData[crawlData.length - 1] : null;
+  if (latest) {
+    document.getElementById('last-updated').textContent = `Last updated: ${latest.date} (${latest.timestamp || ''})`;
+  }
+
+  // Handle initial hash
+  const h = location.hash.slice(1);
+  if (['dashboard','crawling','detection','poc'].includes(h)) switchTab(h);
 }
 
 init();
