@@ -1,0 +1,92 @@
+[
+  {
+    "date": "2026-02-09",
+    "timestamp": "20260209_055844",
+    "new_patches_found": 10,
+    "cases_processed": 10,
+    "complete": 10,
+    "incomplete": 0,
+    "error": 0,
+    "duration_min": 16.6,
+    "categories": {
+      "input_validation": 2,
+      "path_traversal": 1,
+      "other": 2,
+      "authz": 3,
+      "integer_handling": 1,
+      "memory_safety": 1
+    },
+    "cases": [
+      {
+        "cve": "CVE-2026-25803",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/denpiligrim/3dp-manager/commit/f568de41de97dd1b70a963708a1ee18e52b9d248"
+      },
+      {
+        "cve": "CVE-2026-25760",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/BishopFox/sliver/commit/818127349ccec812876693c4ca74ebf4350ec6b7"
+      },
+      {
+        "cve": "CVE-2026-25754",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/adonisjs/bodyparser/commit/40e1c71f958cffb74f6b91bed6630dca979062ed"
+      },
+      {
+        "cve": "CVE-2026-25793",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/slackhq/nebula/commit/f573e8a26695278f9d71587390fbfe0d0933aa21"
+      },
+      {
+        "cve": "CVE-2026-25751",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/frangoteam/FUXA/commit/c6c4cba1a62545e8e3ae0f43b2269e61209fbee8"
+      },
+      {
+        "cve": "CVE-2026-25752",
+        "detected": "complete",
+        "confidence": 0.024,
+        "category": "authz",
+        "url": "https://github.com/frangoteam/FUXA/commit/eb2d8a20964ce7acaa0f442a181390a5f726a1ae"
+      },
+      {
+        "cve": "CVE-2026-25804",
+        "detected": "complete",
+        "confidence": 0.122,
+        "category": "integer_handling",
+        "url": "https://github.com/antrea-io/antrea/commit/86c4b6010f3be536866f339b632621c23d7186fa"
+      },
+      {
+        "cve": "CVE-2026-25749",
+        "detected": "complete",
+        "confidence": 0.132,
+        "category": "memory_safety",
+        "url": "https://github.com/vim/vim/commit/0714b15940b245108e6e9d7aa2260dd849a26fa9"
+      },
+      {
+        "cve": "CVE-2026-25731",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/kovidgoyal/calibre/commit/f0649b27512e987b95fcab2e1e0a3bcdafc23379"
+      },
+      {
+        "cve": "CVE-2026-25791",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/BishopFox/sliver/commit/2b65089b27c553e79e69f1067cad1339e4f3d937"
+      }
+    ]
+  }
+]
