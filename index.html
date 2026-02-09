@@ -309,7 +309,7 @@ function buildDashboardCharts() {
           { label: 'New Patches Found', data: dates.map(d => detMap[d]?.new_patches_found || 0), backgroundColor: COLORS.patches },
           { label: 'Cases Detected', data: dates.map(d => detMap[d]?.cases_processed || 0), backgroundColor: COLORS.merged },
           { label: 'Complete', data: dates.map(d => detMap[d]?.complete || 0), backgroundColor: COLORS.complete },
-          { label: 'Incomplete (FP)', data: dates.map(d => detMap[d]?.incomplete || 0), backgroundColor: COLORS.incomplete },
+          { label: 'Incomplete', data: dates.map(d => detMap[d]?.incomplete || 0), backgroundColor: COLORS.incomplete },
           { label: 'PoC Confirmed', data: dates.map(d => pocMap[d]?.confirmed || 0), backgroundColor: COLORS.confirmed },
         ]
       },
@@ -449,7 +449,7 @@ function populateDashboardStats() {
     makeStatCard('Patches Downloaded', crawlLatest.patches_downloaded || 0, COLORS.patches),
     makeStatCard('Cases Detected', totalDetected, COLORS.ghsa),
     makeStatCard('Complete', totalComplete, COLORS.complete),
-    makeStatCard('Incomplete (FP)', totalIncomplete, COLORS.incomplete),
+    makeStatCard('Incomplete', totalIncomplete, COLORS.incomplete),
     makeStatCard('PoC Confirmed', totalPocConfirmed, COLORS.confirmed),
     makeStatCard('PoC Not Confirmed', totalPocNotConfirmed, COLORS.not_confirmed),
     makeStatCard('Detection Runs', _detectionData.length, COLORS.nvd),
@@ -500,7 +500,7 @@ function populateDetectionStats() {
   grid.innerHTML = [
     makeStatCard('Total Processed', totalProcessed, COLORS.ghsa),
     makeStatCard('Complete', totalComplete, COLORS.complete),
-    makeStatCard('Incomplete (FP)', totalIncomplete, COLORS.incomplete),
+    makeStatCard('Incomplete', totalIncomplete, COLORS.incomplete),
     makeStatCard('Error', totalError, COLORS.error),
   ].join('');
 
