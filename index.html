@@ -60,9 +60,14 @@
 
   /* Badges */
   .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #fff; }
-  .badge.ok, .badge.complete, .badge.confirmed { background: var(--badge-ok); }
+  .badge.ok, .badge.complete, .badge.confirmed, .badge.accepted { background: var(--badge-ok); }
   .badge.fail, .badge.incomplete { background: var(--badge-fail); }
   .badge.skip, .badge.error, .badge.not_confirmed { background: var(--badge-skip); }
+  .badge.pending { background: #9a6700; }
+  .badge.discussing { background: #8250df; }
+  .badge.closed { background: var(--badge-skip); }
+  [data-theme="light"] .badge.pending { background: #bf8700; }
+  [data-theme="light"] .badge.discussing { background: #8250df; }
 
   .last-updated { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
   #loading { text-align: center; padding: 60px; color: var(--muted); }
@@ -647,7 +652,7 @@ function populatePocStats() {
       } else if (r.submission_link === 'snyk') {
         issueLink = '<span style="color:var(--muted)">via Snyk</span>';
       }
-      const statusBadge = r.submission_status ? badge(r.submission_status === 'accepted' ? 'confirmed' : r.submission_status === 'pending' ? 'skip' : r.submission_status === 'discussing' ? 'skip' : 'not_confirmed') : '-';
+      const statusBadge = r.submission_status ? `<span class="badge ${r.submission_status}">${r.submission_status.toUpperCase()}</span>` : '-';
       tbody.innerHTML += `<tr>
         <td><strong>${r.cve}</strong></td>
         <td>${r.product}</td>
