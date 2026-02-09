@@ -1,0 +1,1092 @@
+[
+  {
+    "cve": "CVE-2018-5804",
+    "product": "LibRaw",
+    "initial_patch_url": "https://github.com/LibRaw/LibRaw/commit/9f26ce37f5be86ea11bfc6831366558650b1f6ff",
+    "followup_cve": "CVE-2018-5816",
+    "followup_patch_url": "https://github.com/LibRaw/LibRaw/commit/1d8d1b452e5dc74033ee9f846081a0efb616cc39",
+    "followup_description": "An integer overflow error within the \"identify()\" function (internal/dcraw_common.cpp) in LibRaw versions prior to 0.18.12 can be exploited to trigger a division by zero via specially crafted NOKIARAW file (Note: This vulnerability is caused due to an incomplete fix of CVE-2018-5804).",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2021-3748",
+    "product": "QEMU",
+    "initial_patch_url": "https://github.com/qemu/qemu/commit/bedd7e93d01961fcb16a97ae45d93acf357e11f6",
+    "followup_cve": "CVE-2022-26353",
+    "followup_patch_url": "https://gitlab.com/qemu-project/qemu/-/commit/abe300d9d894f7138e1af7c8e9c88c04bfe98b37",
+    "followup_description": "A flaw was found in the virtio-net device of QEMU. This flaw was inadvertently introduced with the fix for CVE-2021-3748, which forgot to unmap the cached virtqueue elements on error, leading to memory leakage and other unexpected results. Affected QEMU version: 6.2.0.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2016-10009",
+    "product": "OpenSSH",
+    "initial_patch_url": "https://github.com/openbsd/src/commit/9476ce1dd37d3c3218d5640b74c34c65e5f4efe5",
+    "followup_cve": "CVE-2023-38408",
+    "followup_patch_url": "https://github.com/openssh/openssh-portable/commit/892506b13654301f69f9545f48213fc210e5c5cc",
+    "followup_description": "The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system. (Code in /usr/lib is not necessarily safe for loading into ssh-agent.) NOTE: this issue exists because of an incomplete fix for CVE-2016-10009.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2016-2324",
+    "product": "git",
+    "initial_patch_url": "https://github.com/git/git/commit/de1e67d0703894cb6ea782e36abb63976ab07e60",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2019-20630",
+    "product": "GPAC",
+    "initial_patch_url": "https://github.com/gpac/gpac/commit/1ab4860609f2e7a35634930571e7d0531297e090",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/gpac/gpac/issues/3434",
+    "submission_status": "closed"
+  },
+  {
+    "cve": "CVE-2023-5998",
+    "product": "GPAC",
+    "initial_patch_url": "https://github.com/gpac/gpac/commit/db74835944548fc3bdf03121b0e012373bdebb3e",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/gpac/gpac/issues/3433",
+    "submission_status": "closed"
+  },
+  {
+    "cve": "CVE-2018-14363",
+    "product": "NeoMutt",
+    "initial_patch_url": "https://github.com/neomutt/neomutt/commit/9bfab35522301794483f8f9ed60820bdec9be59e",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "discussing"
+  },
+  {
+    "cve": "CVE-2022-2860",
+    "product": "Electron",
+    "initial_patch_url": "https://github.com/electron/electron/commit/7a0dc04ba1bdaaa8d827e10cbae0d134aab3f41e",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2021-40566",
+    "product": "GPAC",
+    "initial_patch_url": "https://github.com/gpac/gpac/commit/96047e0e6166407c40cc19f4e94fb35cd7624391",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-0728",
+    "product": "eclipse-threadx",
+    "initial_patch_url": "https://github.com/eclipse-threadx/netxduo/commit/c78d650be7377aae1a8704bc0ce5cc6f9f189014",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/eclipse-threadx/netxduo/security/advisories/GHSA-wrwf-jf85-4549",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-38951",
+    "product": "PX4-Autopilot",
+    "initial_patch_url": "https://github.com/PX4/PX4-Autopilot/commit/2b0ea50d161de5e6709f2700099c42932743986b",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-0726",
+    "product": "eclipse-threadx-netxduo",
+    "initial_patch_url": "https://github.com/eclipse-threadx/netxduo/commit/c78d650be7377aae1a8704bc0ce5cc6f9f189014",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-0727",
+    "product": "eclipse-threadx-netxduo",
+    "initial_patch_url": "https://github.com/eclipse-threadx/netxduo/commit/c78d650be7377aae1a8704bc0ce5cc6f9f189014",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-29912",
+    "product": "nasa-CryptoLib",
+    "initial_patch_url": "https://github.com/nasa/CryptoLib/commit/ca39cb96f21e76102aefb956d2c8c0ba0bd143ca",
+    "followup_cve": "CVE-2025-30356",
+    "followup_patch_url": "https://github.com/nasa/CryptoLib/commit/ca39cb96f21e76102aefb956d2c8c0ba0bd143ca",
+    "followup_description": "CryptoLib provides a software-only solution using the CCSDS Space Data Link Security Protocol - Extended Procedures (SDLS-EP) to secure communications between a spacecraft running the core Flight System (cFS) and a ground station. In 1.3.3 and earlier, a heap buffer overflow vulnerability persists in the Crypto_TC_ApplySecurity function due to an incomplete validation check on the fl (frame length) field. Although CVE-2025-29912 addressed an underflow issue involving fl, the patch fails to fully prevent unsafe calculations. As a result, an attacker can still craft malicious frames that cause a negative tf_payload_len, which is then interpreted as a large unsigned value, leading to a heap buffer overflow in a memcpy call.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-42484",
+    "product": "espressif-esp-now",
+    "initial_patch_url": "https://github.com/espressif/esp-now/commit/b03a1b4593713fa4bf0038a87edca01f10114a7a",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "accepted"
+  },
+  {
+    "cve": "CVE-2024-45971",
+    "product": "libiec61850",
+    "initial_patch_url": "https://github.com/mz-automation/libiec61850/commit/1f52be9ddeae00e69cd43e4cac3cb4f0c880c4f0",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/mz-automation/libiec61850/issues/580",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-1052",
+    "product": "mintty",
+    "initial_patch_url": "https://github.com/mintty/mintty/commit/c78ee1085f438333d5be4e3688e5d6b890c146c4",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-34026",
+    "product": "OpenPLC_v3",
+    "initial_patch_url": "https://github.com/thiagoralves/OpenPLC_v3/commit/df16a98db224ea64628e9461e8ddafdac48934b7",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/thiagoralves/OpenPLC_v3/issues/317",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-55096",
+    "product": "eclipse-threadx-usbx",
+    "initial_patch_url": "https://github.com/eclipse-threadx/usbx/commit/0b246ac82490441daa615aa90ab88a4456219c58",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/eclipse-threadx/usbx/security/advisories/GHSA-jmhw-897q-mgj5",
+    "submission_status": "accepted"
+  },
+  {
+    "cve": "CVE-2014-4657",
+    "product": "ansible",
+    "initial_patch_url": "https://github.com/ansible/ansible/commit/998793fd0ab55705d57527a38cee5e83f535974c",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2015-2696",
+    "product": "krb5",
+    "initial_patch_url": "https://github.com/krb5/krb5/commit/e04f0283516e80d2f93366e0d479d13c9b5c8c2a",
+    "followup_cve": "CVE-2015-2698",
+    "followup_patch_url": "",
+    "followup_description": "The iakerb_gss_export_sec_context function in lib/gssapi/krb5/iakerb.c in MIT Kerberos 5 (aka krb5) 1.14 pre-release 2015-09-14 improperly accesses a certain pointer, which allows remote authenticated users to cause a denial of service (memory corruption) or possibly have unspecified other impact by interacting with an application that calls the gss_export_sec_context function.  NOTE: this vulnerability exists because of an incorrect fix for CVE-2015-2696.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2015-2312",
+    "product": "capnproto",
+    "initial_patch_url": "https://github.com/capnproto/capnproto/commit/f343f0dbd0a2e87f17cd74f14186ed73e3fbdbfa",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2015-3297",
+    "product": "etherpad-lite",
+    "initial_patch_url": "https://github.com/ether/etherpad-lite/commit/9d4e5f6e35153129377206ef545d4965afae627d",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2015-5069",
+    "product": "wesnoth",
+    "initial_patch_url": "https://github.com/wesnoth/wesnoth/commit/f8914468182e8d0a1551b430c0879ba236fe4d6d",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2015-5947",
+    "product": "SuiteCRM",
+    "initial_patch_url": "",
+    "followup_cve": "CVE-2015-5948",
+    "followup_patch_url": "",
+    "followup_description": "Race condition in SuiteCRM before 7.2.3 allows remote attackers to execute arbitrary code.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2015-5947.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2023-6909",
+    "product": "mlflow",
+    "initial_patch_url": "https://github.com/mlflow/mlflow/commit/1da75dfcecd4d169e34809ade55748384e8af6c1",
+    "followup_cve": "CVE-2024-3848",
+    "followup_patch_url": "https://github.com/mlflow/mlflow/commit/f8d51e21523238280ebcfdb378612afd7844eca8",
+    "followup_description": "A path traversal vulnerability exists in mlflow/mlflow version 2.11.0, identified as a bypass for the previously addressed CVE-2023-6909. The vulnerability arises from the application's handling of artifact URLs, where a '#' character can be used to insert a path into the fragment, effectively skipping validation. This allows an attacker to construct a URL that, when processed, ignores the protocol scheme and uses the provided path for filesystem access. As a result, an attacker can read arbitrary files, including sensitive information such as SSH and cloud keys, by exploiting the way the application converts the URL into a filesystem path. The issue stems from insufficient validation of the fragment portion of the URL, leading to arbitrary file read through path traversal.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2011-4131",
+    "product": "linux",
+    "initial_patch_url": "https://github.com/torvalds/linux/commit/bf118a342f10dafe44b14451a1392c3254629a1f",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2012-0818",
+    "product": "resteasy",
+    "initial_patch_url": "https://github.com/resteasy/resteasy/commit/71ace879cf92d323bfa4d3e88db0c3059109bbf6",
+    "followup_cve": "CVE-2014-3490",
+    "followup_patch_url": "",
+    "followup_description": "RESTEasy 2.3.1 before 2.3.8.SP2 and 3.x before 3.0.9, as used in Red Hat JBoss Enterprise Application Platform (EAP) 6.3.0, does not disable external entities when the resteasy.document.expand.entity.references parameter is set to false, which allows remote attackers to read arbitrary files and have other unspecified impact via unspecified vectors, related to an XML External Entity (XXE) issue.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2012-0818.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2012-1836",
+    "product": "inspircd",
+    "initial_patch_url": "https://github.com/inspircd/inspircd/commit/fe7dbd2c104c37f6f3af7d9f1646a3c332aea4a4",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2012-5657",
+    "product": "zendframework",
+    "initial_patch_url": "https://github.com/zendframework/zf1/commit/15c84914f063efea49ea1c4425459a792cc185ea",
+    "followup_cve": "CVE-2014-2681",
+    "followup_patch_url": "",
+    "followup_description": "Zend Framework 1 (ZF1) before 1.12.4, Zend Framework 2 before 2.1.6 and 2.2.x before 2.2.6, ZendOpenId, ZendRest, ZendService_AudioScrobbler, ZendService_Nirvanix, ZendService_SlideShare, ZendService_Technorati, and ZendService_WindowsAzure before 2.0.2, ZendService_Amazon before 2.0.3, and ZendService_Api before 1.0.0 allow remote attackers to read arbitrary files, send HTTP requests to intranet servers, and possibly cause a denial of service (CPU and memory consumption) via an XML External Entity (XXE) attack.  NOTE: this issue exists because of an incomplete fix for CVE-2012-5657.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2012-6532",
+    "product": "zendframework",
+    "initial_patch_url": "https://github.com/zendframework/zf1/commit/1b5e86183a72b7b10b6c89e4f95f08c5da9716db",
+    "followup_cve": "CVE-2014-2683",
+    "followup_patch_url": "",
+    "followup_description": "Zend Framework 1 (ZF1) before 1.12.4, Zend Framework 2 before 2.1.6 and 2.2.x before 2.2.6, ZendOpenId, ZendRest, ZendService_AudioScrobbler, ZendService_Nirvanix, ZendService_SlideShare, ZendService_Technorati, and ZendService_WindowsAzure before 2.0.2, ZendService_Amazon before 2.0.3, and ZendService_Api before 1.0.0 allow remote attackers to cause a denial of service (CPU consumption) via (1) recursive or (2) circular references in an XML entity definition in an XML DOCTYPE declaration, aka an XML Entity Expansion (XEE) attack.  NOTE: this issue exists because of an incomplete fix for CVE-2012-6532.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2013-1966",
+    "product": "struts",
+    "initial_patch_url": "https://github.com/apache/struts/commit/7e6f641ebb142663cbd1653dc49bed725edf7f56",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2013-6407",
+    "product": "solr",
+    "initial_patch_url": "https://github.com/apache/lucene-solr/commit/f230486ce6707762c1a6e81655d0fac52887906d",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2013-7342",
+    "product": "flowplayer",
+    "initial_patch_url": "https://github.com/flowplayer/flowplayer/commit/017f8c2a0865ab31e01d591adc43d34f2dd60e59",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2013-7345",
+    "product": "file",
+    "initial_patch_url": "https://github.com/file/file/commit/ef2329cf71acb59204dd981e2c6cce6c81fe467c",
+    "followup_cve": "CVE-2014-3538",
+    "followup_patch_url": "",
+    "followup_description": "file before 5.19 does not properly restrict the amount of data read during a regex search, which allows remote attackers to cause a denial of service (CPU consumption) via a crafted file that triggers backtracking during processing of an awk rule.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2013-7345.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2014-0978",
+    "product": "graphviz",
+    "initial_patch_url": "https://github.com/ellson/graphviz/commit/7aaddf52cd98589fb0c3ab72a393f8411838438a",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2014-1831",
+    "product": "passenger",
+    "initial_patch_url": "https://github.com/phusion/passenger/commit/34b1087870c2",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2014-4049",
+    "product": "php",
+    "initial_patch_url": "https://github.com/php/php-src/commit/b34d7849ed90ced9345f8ea1c59bc8d101c18468",
+    "followup_cve": "CVE-2014-3597",
+    "followup_patch_url": "",
+    "followup_description": "Multiple buffer overflows in the php_parserr function in ext/standard/dns.c in PHP before 5.4.32 and 5.5.x before 5.5.16 allow remote DNS servers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted DNS record, related to the dns_get_record function and the dn_expand function.  NOTE: this issue exists because of an incomplete fix for CVE-2014-4049.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2016-10189",
+    "product": "bitlbee",
+    "initial_patch_url": "https://github.com/bitlbee/bitlbee/commit/701ab8129ba9ea64f569daedca9a8603abad740f",
+    "followup_cve": "CVE-2017-5668",
+    "followup_patch_url": "",
+    "followup_description": "bitlbee-libpurple before 3.5.1 allows remote attackers to cause a denial of service (NULL pointer dereference and crash) and possibly execute arbitrary code via a file transfer request for a contact that is not in the contact list.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2016-10189.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2016-8887",
+    "product": "jasper",
+    "initial_patch_url": "https://github.com/mdadams/jasper/commit/e24bdc716c3327b067c551bc6cfb97fd2370358d",
+    "followup_cve": "CVE-2016-10250",
+    "followup_patch_url": "",
+    "followup_description": "The jp2_colr_destroy function in jp2_cod.c in JasPer before 1.900.13 allows remote attackers to cause a denial of service (NULL pointer dereference) by leveraging incorrect cleanup of JP2 box data on error. NOTE: this vulnerability exists because of an incomplete fix for CVE-2016-8887.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2016-8690",
+    "product": "jasper",
+    "initial_patch_url": "https://github.com/mdadams/jasper/commit/8f62b4761711d036fd8964df256b938c809b7fca",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2017-8052",
+    "product": "craftcms",
+    "initial_patch_url": "https://github.com/craftcms/cms/commit/f7e57018ff487d1ebbe375f6cb1852f4d79767ff",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2018-13055",
+    "product": "mantisbt",
+    "initial_patch_url": "http://github.com/mantisbt/mantisbt/commit/4efac90ed89a5c009108b641e2e95683791a165a",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2018-9109",
+    "product": "elFinder",
+    "initial_patch_url": "https://github.com/Studio-42/elFinder/commit/157f471d7e48f190f74e66eb5bc73360b5352fd3",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2019-10343",
+    "product": "jenkins-casc",
+    "initial_patch_url": "https://github.com/jenkinsci/configuration-as-code-plugin/commit/73afe3cb10a723cb06e29c2e5499206aadae3a0d",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-28273",
+    "product": "set-in",
+    "initial_patch_url": "https://github.com/ahdinosaur/set-in/commit/e431effa00195a6f06b111e09733cd1445a91a88",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-28442",
+    "product": "js-data",
+    "initial_patch_url": "https://github.com/js-data/js-data/commit/2d9eed5d3e9710d7e7fecc6f6437c39fe73a4097",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-7701",
+    "product": "madlib-object-utils",
+    "initial_patch_url": "https://github.com/Qwerios/madlib-object-utils/commit/2a8d5be4fddfe46b69fbe25b9ebdff49a54481a8",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-7715",
+    "product": "deep-get-set",
+    "initial_patch_url": "https://github.com/acstll/deep-get-set/commit/a127e65bc77ff5707a6a103819e140d11475c5f4",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-7736",
+    "product": "bmoor",
+    "initial_patch_url": "https://github.com/b-heilman/bmoor/commit/7d4a086a1dc3ef11ed0b323824d02348734b7da5",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-35654",
+    "product": "Pillow",
+    "initial_patch_url": "https://github.com/python-pillow/Pillow/commit/eb8c1206d6b170d4e798a00db7432e023853da5c",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2021-35463",
+    "product": "liferay-portal",
+    "initial_patch_url": "https://github.com/liferay/liferay-portal/commit/751a70e0ed7b380ea2ab510ff79ddb33ed87dd9b",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2021-40566",
+    "product": "gpac",
+    "initial_patch_url": "https://github.com/gpac/gpac/commit/96047e0e6166407c40cc19f4e94fb35cd7624391",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2022-47933",
+    "product": "brave-core",
+    "initial_patch_url": "https://github.com/brave/brave-core/commit/7ef8cb2f232abdf59ec9c3c99a086a14b972bc56",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-1929",
+    "product": "dnf5daemon-server",
+    "initial_patch_url": "https://github.com/rpm-software-management/dnf5/commit/6e51bf2f0d585ab661806076c1e428c6482ddf86",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2017-7501",
+    "product": "rpm",
+    "initial_patch_url": "https://github.com/rpm-software-management/rpm/commit/404ef011c300207cdb1e531670384564aae04bdc",
+    "followup_cve": "CVE-2021-35939",
+    "followup_patch_url": "https://github.com/rpm-software-management/rpm/commit/",
+    "followup_description": "It was found that the fix for CVE-2017-7500 and CVE-2017-7501 was incomplete: the check was only implemented for the parent directory of the file to be created. A local unprivileged user who owns another ancestor directory could potentially use this flaw to gain root privileges. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-36980",
+    "product": "OpenPLC_v3",
+    "initial_patch_url": "https://github.com/thiagoralves/OpenPLC_v3/commit/df16a98db224ea64628e9461e8ddafdac48934b7",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-36981",
+    "product": "OpenPLC_v3",
+    "initial_patch_url": "https://github.com/thiagoralves/OpenPLC_v3/commit/df16a98db224ea64628e9461e8ddafdac48934b7",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-39589",
+    "product": "OpenPLC_v3",
+    "initial_patch_url": "https://github.com/thiagoralves/OpenPLC_v3/commit/df16a98db224ea64628e9461e8ddafdac48934b7",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-39590",
+    "product": "OpenPLC_v3",
+    "initial_patch_url": "https://github.com/thiagoralves/OpenPLC_v3/commit/df16a98db224ea64628e9461e8ddafdac48934b7",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-35434",
+    "product": "sngrep",
+    "initial_patch_url": "https://github.com/irontec/sngrep/commit/da80ced1e3cf6321f748b08e145a829bcc3c90e5",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/irontec/sngrep/issues/533",
+    "submission_status": "accepted"
+  },
+  {
+    "cve": "CVE-2024-5125",
+    "product": "lollms-webui",
+    "initial_patch_url": "https://github.com/parisneo/lollms-webui/commit/9b0f6c4ad1b9a2cd3466dcefaa278df30feed67e",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-28709",
+    "product": "LimeSurvey",
+    "initial_patch_url": "https://github.com/LimeSurvey/LimeSurvey/commit/c844c4fba81cc26ffe6544bf095bad6252910bc0",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-32621",
+    "product": "HDF5",
+    "initial_patch_url": "https://github.com/HDFGroup/hdf5/commit/dded9372c229124044a6f163106999e718c8861e",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/HDFGroup/hdf5/security/advisories/GHSA-657v-4ccc-69x5",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-51494",
+    "product": "LibreNMS",
+    "initial_patch_url": "https://github.com/librenms/librenms/commit/82a744bfe29017b8b58b5752ab9e1b335bedf0a0",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/librenms/librenms/security/advisories/GHSA-fqx6-693c-f55g",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-56359",
+    "product": "Grist",
+    "initial_patch_url": "https://github.com/gristlabs/grist-core/commit/a792bdc43b456dbdd6fdc50d8747f4c349fab2f4",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-32613",
+    "product": "HDF5",
+    "initial_patch_url": "https://github.com/HDFGroup/hdf5/commit/ce53bc020d37e10a06a59501c45f1ab82539f0c5",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/HDFGroup/hdf5/security/advisories/GHSA-m926-jf7p-h2q3",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-41673",
+    "product": "Decidim",
+    "initial_patch_url": "https://github.com/decidim/decidim/commit/8a18c8b1ee85a1b35ee0d8d5893f218695d15637",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-2206",
+    "product": "Gradio",
+    "initial_patch_url": "https://github.com/gradio-app/gradio/commit/49d9c48537aa706bf72628e3640389470138bdc6",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-26148",
+    "product": "Querybook",
+    "initial_patch_url": "https://github.com/pinterest/querybook/commit/bc620dabaaf13ff1dcb30af0b46a490403fb9908",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2021-41276",
+    "product": "Tuleap",
+    "initial_patch_url": "https://github.com/Enalean/tuleap/commit/bd47f29847fcd6a68d359bc8aefb8749bb8a1b7c",
+    "followup_cve": "CVE-2021-43782",
+    "followup_patch_url": "https://github.com/Enalean/tuleap/commit/bd47f29847fcd6a68d359bc8aefb8749bb8a1b7c",
+    "followup_description": "Tuleap is a Libre and Open Source tool for end to end traceability of application and system developments. This is a follow up to GHSA-887w-pv2r-x8pm/CVE-2021-41276, the initial fix was incomplete. Tuleap does not sanitize properly the search filter built from the ldap_id attribute of a user during the daily synchronization. A malicious user could force accounts to be suspended or take over another account by forcing the update of the ldap_uid attribute. Note that the malicious user either need to have site administrator capability on the Tuleap instance or be an LDAP operator with the capability to create/modify account. The Tuleap instance needs to have the LDAP plugin activated and enabled for this issue to be exploitable. The following versions contain the fix: Tuleap Community Edition 13.2.99.83, Tuleap Enterprise Edition 13.1-6, and Tuleap Enterprise Edition 13.2-4.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2020-15209",
+    "product": "TensorFlow",
+    "initial_patch_url": "https://github.com/tensorflow/tensorflow/commit/0b5662bc2be13a8c8f044d925d87fb6e56247cd8",
+    "followup_cve": "CVE-2021-29592",
+    "followup_patch_url": "https://github.com/tensorflow/tensorflow/commit/0b5662bc2be13a8c8f044d925d87fb6e56247cd8",
+    "followup_description": "TensorFlow is an end-to-end open source platform for machine learning. The fix for CVE-2020-15209(https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15209) missed the case when the target shape of `Reshape` operator is given by the elements of a 1-D tensor. As such, the fix for the vulnerability(https://github.com/tensorflow/tensorflow/blob/9c1dc920d8ffb4893d6c9d27d1f039607b326743/tensorflow/lite/core/subgraph.cc#L1062-L1074) allowed passing a null-buffer-backed tensor with a 1D shape. The fix will be included in TensorFlow 2.5.0. We will also cherrypick this commit on TensorFlow 2.4.2, TensorFlow 2.3.3, TensorFlow 2.2.3 and TensorFlow 2.1.4, as these are also affected and still in supported range.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2023-47627",
+    "product": "aiohttp",
+    "initial_patch_url": "https://github.com/aio-libs/aiohttp/commit/d5c12ba890557a575c313bb3017910d7616fce3d",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-24571",
+    "product": "facileManager",
+    "initial_patch_url": "https://github.com/WillyXJ/facileManager/commit/0aa850d4b518f10143a4c675142b15caa5872877",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-39698",
+    "product": "electron-updater",
+    "initial_patch_url": "https://github.com/electron-userland/electron-builder/commit/ac2e6a25aa491c1ef5167a552c19fc2085cd427f",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/electron-userland/electron-builder/security/advisories/GHSA-pqpq-f4cf-cpc6",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-29272",
+    "product": "VvvebJs",
+    "initial_patch_url": "https://github.com/givanz/VvvebJs/commit/c6422cfd4d835c2fa6d512645e30015f24538ef0",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/givanz/VvvebJs/issues/449",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2021-42053",
+    "product": "django-unicorn",
+    "initial_patch_url": "https://github.com/adamghill/django-unicorn/commit/aa5b9835d946bd9893ef02e556859e3ea62cc5e2",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/adamghill/django-unicorn/security/advisories/GHSA-jq5q-v27w-qg23",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-11319",
+    "product": "django-cms",
+    "initial_patch_url": "https://github.com/django-cms/django-cms/commit/241d1cbe47a68f5d271ce4d27ad5e32e2c360ec3",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-21521",
+    "product": "discordjs-opus",
+    "initial_patch_url": "https://github.com/discordjs/opus/commit/8f52fa01b8229d92bca1027f1e89c5cf71b48133",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/discordjs/opus/issues/198",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-23830",
+    "product": "MantisBT",
+    "initial_patch_url": "https://github.com/mantisbt/mantisbt/commit/7055731d09ff12b2781410a372f790172e279744",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://mantisbt.org/bugs/view.php?id=36843",
+    "submission_status": "closed"
+  },
+  {
+    "cve": "CVE-2023-40581",
+    "product": "yt-dlp",
+    "initial_patch_url": "https://github.com/yt-dlp/yt-dlp/commit/de015e930",
+    "followup_cve": "CVE-2024-22423",
+    "followup_patch_url": "https://github.com/yt-dlp/yt-dlp/commit/de015e930",
+    "followup_description": "yt-dlp is a youtube-dl fork with additional features and fixes. The patch that addressed CVE-2023-40581 attempted to prevent RCE when using `--exec` with `%q` by replacing double quotes with two double quotes. However, this escaping is not sufficient, and still allows expansion of environment variables. Support for output template expansion in `--exec`, along with this vulnerable behavior, was added to `yt-dlp` in version 2021.04.11. yt-dlp version 2024.04.09 fixes this issue by properly escaping `%`. It replaces them with `%%cd:~,%`, a variable that expands to nothing, leaving only the leading percent. It is recommended to upgrade yt-dlp to version 2024.04.09 as soon as possible. Also, always be careful when using `--exec`, because while this specific vulnerability has been patched, using unvalidated input in shell commands is inherently dangerous. For Windows users who are not able to upgrade, avoid using any output template expansion in `--exec` other than `{}` (filepath); if expansion in `--exec` is needed, verify the fields you are using do not contain `\"`, `|` or `&`; and/or instead of using `--exec`, write the info json and load the fields from it instead.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-48378",
+    "product": "DNN-Platform",
+    "initial_patch_url": "https://github.com/dnnsoftware/Dnn.Platform/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-8581",
+    "product": "lollms-webui",
+    "initial_patch_url": "https://github.com/parisneo/lollms-webui/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/ParisNeo/lollms-webui/issues/641",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-22212",
+    "product": "Nextcloud-GSS",
+    "initial_patch_url": "https://github.com/nextcloud/globalsiteselector/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2018-1261",
+    "product": "Spring-Integration",
+    "initial_patch_url": "https://github.com/spring-projects/spring-integration-extensions/commit/",
+    "followup_cve": "CVE-2018-1263",
+    "followup_patch_url": "https://github.com/spring-projects/spring-integration-extensions/commit/",
+    "followup_description": "Addresses partial fix in CVE-2018-1261. Pivotal spring-integration-zip, versions prior to 1.0.2, exposes an arbitrary file write vulnerability, that can be achieved using a specially crafted zip archive (affects other archives as well, bzip2, tar, xz, war, cpio, 7z), that holds path traversal filenames. So when the filename gets concatenated to the target extraction directory, the final path ends up outside of the target folder.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-25639",
+    "product": "Khoj",
+    "initial_patch_url": "https://github.com/khoj-ai/khoj/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-28246",
+    "product": "KaTeX",
+    "initial_patch_url": "https://github.com/KaTeX/KaTeX/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/KaTeX/KaTeX/security/advisories/GHSA-f6ww-mppc-64rx",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-43795",
+    "product": "OpenC3-COSMOS",
+    "initial_patch_url": "https://github.com/OpenC3/cosmos/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-52511",
+    "product": "Nextcloud-Tables",
+    "initial_patch_url": "https://github.com/nextcloud/tables/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-52912",
+    "product": "Bitcoin-Core",
+    "initial_patch_url": "https://github.com/bitcoin/bitcoin/commit/",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-21549",
+    "product": "spatie-browsershot",
+    "initial_patch_url": "https://github.com/spatie/browsershot/commit/",
+    "followup_cve": "CVE-2025-1026",
+    "followup_patch_url": "",
+    "followup_description": "Versions of the package spatie/browsershot before 5.0.5 are vulnerable to Improper Input Validation due to improper URL validation through the setUrl method, which results in a Local File Inclusion allowing the attacker to read sensitive files.  **Note:**  This is a bypass of the fix for [CVE-2024-21549](https://security.snyk.io/vuln/SNYK-PHP-SPATIEBROWSERSHOT-8533023).",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2023-42792",
+    "product": "Apache-Airflow",
+    "initial_patch_url": "https://github.com/apache/airflow/commit/",
+    "followup_cve": "CVE-2023-48291",
+    "followup_patch_url": "",
+    "followup_description": "Apache Airflow, in versions prior to 2.8.0, contains a security vulnerability that allows an authenticated user with limited access to some DAGs, to craft a request that could give the user write access to various DAG resources for DAGs that the user had no access to, thus, enabling the user to clear DAGs they shouldn't.  This is a missing fix for CVE-2023-42792 in Apache Airflow 2.7.2\u00a0  Users of Apache Airflow are strongly advised to upgrade to version 2.8.0 or newer to mitigate the risk associated with this vulnerability.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-61787",
+    "product": "deno",
+    "initial_patch_url": "https://github.com/denoland/deno/commit/1b07f0295dd91f393966f953099ee90505a97e50",
+    "followup_cve": "CVE-2026-22864",
+    "followup_patch_url": "",
+    "followup_description": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Before 2.5.6, a prior patch aimed to block spawning Windows batch/shell files by returning an error when a spawned path\u2019s extension matched .bat or .cmd. That check performs a case-sensitive comparison against lowercase literals and therefore can be bypassed when the extension uses alternate casing (for example .BAT, .Bat, etc.). This vulnerability is fixed in 2.5.6.",
+    "submission_link": "https://github.com/denoland/deno/security/advisories/GHSA-vw4w-cgpj-63g3",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-24358",
+    "product": "gorilla/csrf",
+    "initial_patch_url": "https://github.com/gorilla/csrf/commit/9dd6af1f6d30fc79fb0d972394deebdabad6b5eb",
+    "followup_cve": "CVE-2025-47909",
+    "followup_patch_url": "",
+    "followup_description": "Hosts listed in TrustedOrigins implicitly allow requests from the corresponding HTTP origins, allowing network MitMs to perform CSRF attacks. After the CVE-2025-24358 fix, a network attacker that places a form at http://example.com can't get it to submit to https://example.com because the Origin header is checked with sameOrigin against a synthetic URL. However, if a host is added to TrustedOrigins, both its HTTP and HTTPS origins will be allowed, because the schema of the synthetic URL is ignored and only the host is checked. For example, if an application is hosted on https://example.com and adds example.net to TrustedOrigins, a network attacker can serve a form at http://example.net to perform the attack. Applications should migrate to net/http.CrossOriginProtection, introduced in Go 1.25. If that is not an option, a backport is available as a module at filippo.io/csrf, and a drop-in replacement for the github.com/gorilla/csrf API is available at filippo.io/csrf/gorilla.",
+    "submission_link": "https://github.com/gorilla/csrf/security/advisories/GHSA-hvg4-f9gf-6mrw",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2026-22785",
+    "product": "orval",
+    "initial_patch_url": "https://github.com/orval-labs/orval/commit/80b5fe73b94f120a3a5561952d6d4b0f8d7e928d",
+    "followup_cve": "CVE-2026-23947",
+    "followup_patch_url": "",
+    "followup_description": "Orval generates type-safe JS clients (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification. Versions prior to 7.19.0 until 8.0.2 are vulnerable to arbitrary code execution in environments consuming generated clients. This issue is similar in nature to CVE-2026-22785, but affects a different code path in @orval/core that was not addressed by CVE-2026-22785's fix. The vulnerability allows untrusted OpenAPI specifications to inject arbitrary TypeScript/JavaScript code into generated clients via the x-enumDescriptions field, which is embedded without proper escaping in getEnumImplementation(). I have confirmed that the injection occurs during const enum generation and results in executable code within the generated schema files. Orval 7.19.0 and 8.0.2 contain a fix for the issue.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2026-23947",
+    "product": "orval",
+    "initial_patch_url": "",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-53615",
+    "product": "files.photo.gallery",
+    "initial_patch_url": "https://github.com/mjau-mjau/files.photo.gallery/commit/1f9c42bcf7dd9ef0fccb3cf7561b9d23b99d6e04",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/mjau-mjau/files.photo.gallery/issues/32",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-11001",
+    "product": "7zip",
+    "initial_patch_url": "https://github.com/ip7z/7zip/commit/395149956d696e6e3099d8b76d797437f94a6942",
+    "followup_cve": "CVE-2025-55188",
+    "followup_patch_url": "https://github.com/advisories/GHSA-58pw-r2v4-pwjv",
+    "followup_description": "7-Zip before 25.01 does not always properly handle symbolic links during extraction.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-56200",
+    "product": "validator.js",
+    "initial_patch_url": "https://github.com/validatorjs/validator.js/commit/cbef5088f02d36caf978f378bb845fe49bdc0809",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "snyk",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-35939",
+    "product": "craftcms/cms",
+    "initial_patch_url": "https://github.com/craftcms/cms/commit/e4c7bac8f31010aee048409f9ef6f744a83146b2",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/craftcms/cms/security/advisories/GHSA-fvwq-45qv-xvhv",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-31867",
+    "product": "apache/zeppelin",
+    "initial_patch_url": "https://github.com/apache/zeppelin/commit/65d0bcc1ee8ec3ec372d0a71ab513cd20e6522a0",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "email",
+    "submission_status": "accepted"
+  },
+  {
+    "cve": "CVE-2024-39713",
+    "product": "RocketChat",
+    "initial_patch_url": "https://github.com/RocketChat/Rocket.Chat/commit/ce072a1a70c86f90a4f502cdc0bad92d79f6e6e9",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-48175",
+    "product": "libavif",
+    "initial_patch_url": "https://github.com/AOMediaCodec/libavif/commit/64d956ed5a602f78cebf29da023280944ee92efd",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/AOMediaCodec/libavif/security/advisories/GHSA-63f4-mhm8-hhq2",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-59417",
+    "product": "lobe-chat",
+    "initial_patch_url": "https://github.com/lobehub/lobe-chat/commit/9f044edd07ce102fe9f4b2fb47c62191c36da05c",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/lobehub/lobehub/security/advisories/GHSA-6rvw-6jxh-834p",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-61681",
+    "product": "kuno",
+    "initial_patch_url": "https://github.com/xuemian168/kuno/commit/fc486b5c9091b607f82bf7b354d18f25204f7dc6",
+    "followup_cve": "GHSA-4f5f-2c49-5mwm",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-47165",
+    "product": "gradio",
+    "initial_patch_url": "https://github.com/gradio-app/gradio/commit/6f95286337459efbccb95c9cfac63355669df9ee",
+    "followup_cve": "CVE-2025-5320",
+    "followup_patch_url": "",
+    "followup_description": "A vulnerability classified as problematic has been found in gradio-app gradio up to 5.29.1. This affects the function is_valid_origin of the component CORS Handler. The manipulation of the argument localhost_aliases leads to erweiterte Rechte. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2024-45613",
+    "product": "ckeditor5",
+    "initial_patch_url": "https://github.com/ckeditor/ckeditor5/commit/9c2d2973b9e6df61e29e724eb4addd30efb0339d",
+    "followup_cve": "CVE-2025-58064",
+    "followup_patch_url": "",
+    "followup_description": "CKEditor 5 is a modern JavaScript rich-text editor with an MVC architecture. ckeditor5 and ckeditor5-clipboard versions 46.0.0 through 46.0.2 and 44.2.0 through 45.2.1 contain a Cross-Site Scripting (XSS) vulnerability. Ability to exploit could be triggered by a specific user action (leading to unauthorized JavaScript code execution) if the attacker managed to insert a malicious content into the editor, which might happen with a very specific editor configuration. This vulnerability affects installations where the editor configuration meets one of the following criteria: the HTML embed plugin is enabled, or there is a custom plugin introducing an editable element where view RawElement is enabled. This issue is fixed in versions 45.2.2 and 46.0.3 of both ckeditor5 and ckeditor5-clipboard.",
+    "submission_link": "",
+    "submission_status": ""
+  },
+  {
+    "cve": "CVE-2025-59334",
+    "product": "Linkr",
+    "initial_patch_url": "https://github.com/mohammadzain2008/Linkr/commit/182e5ddaa51972e144005b500c4bceb",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/mohammadzain2008/Linkr/security/advisories/GHSA-j92p-rv4v-v3mr",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2025-4123",
+    "product": "grafana",
+    "initial_patch_url": "https://github.com/grafana/grafana/commit/c7a690348df761d41b659224cbc50a46a0c0e4cc",
+    "followup_cve": "CVE-2025-6023",
+    "followup_patch_url": "",
+    "followup_description": "An open redirect vulnerability has been identified in Grafana OSS that can be exploited to achieve XSS attacks. The vulnerability was introduced in Grafana v11.5.0.  The open redirect can be chained with path traversal vulnerabilities to achieve XSS.  Fixed in versions 12.0.2+security-01, 11.6.3+security-01, 11.5.6+security-01, 11.4.6+security-01 and 11.3.8+security-01",
+    "submission_link": "",
+    "submission_status": ""
+  }
+]

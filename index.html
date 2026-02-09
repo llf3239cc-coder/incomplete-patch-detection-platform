@@ -67,7 +67,25 @@
   .last-updated { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
   #loading { text-align: center; padding: 60px; color: var(--muted); }
   .empty-state { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
-  @media (max-width: 768px) { .charts { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
+
+  /* Modal overlay */
+  .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; }
+  .modal-overlay.visible { display: flex; }
+  .modal { background: var(--card); border: 1px solid var(--border); border-radius: 12px; max-width: 720px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 24px; position: relative; box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+  .modal-close { position: absolute; top: 12px; right: 16px; background: none; border: none; color: var(--muted); font-size: 20px; cursor: pointer; padding: 4px 8px; border-radius: 4px; }
+  .modal-close:hover { color: var(--text); background: var(--border); }
+  .modal h2 { font-size: 18px; margin-bottom: 4px; }
+  .modal .modal-product { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+  .modal .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-top: 16px; margin-bottom: 6px; font-weight: 600; }
+  .modal .report-body { font-size: 14px; line-height: 1.6; }
+  .modal .report-body p { margin-bottom: 8px; }
+  .modal .meta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; }
+  .modal .meta-row a { color: var(--accent); text-decoration: none; }
+  .modal .meta-row a:hover { text-decoration: underline; }
+  .btn-report { background: none; border: 1px solid var(--border); border-radius: 6px; color: var(--accent); padding: 3px 10px; font-size: 12px; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+  .btn-report:hover { background: var(--border); border-color: var(--accent); }
+
+  @media (max-width: 768px) { .charts { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } .modal { width: 95%; padding: 16px; } }
 </style>
 </head>
 <body>
@@ -86,7 +104,7 @@
   <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
   <button class="tab-btn" data-tab="crawling">Crawling</button>
   <button class="tab-btn" data-tab="detection">Detection</button>
-  <button class="tab-btn" data-tab="poc">PoC Validator</button>
+  <button class="tab-btn" data-tab="poc">Manual PoC Validator</button>
 </div>
 
 <div id="loading">Loading data...</div>
@@ -167,13 +185,18 @@
   </div>
 </div>
 
-<!-- ==================== POC VALIDATOR TAB ==================== -->
+<!-- ==================== MANUAL POC VALIDATOR TAB ==================== -->
 <div class="tab-content" id="tab-poc">
   <div class="stats-grid" id="poc-stats"></div>
   <div class="charts">
     <div class="chart-card wide">
       <h3>Confirmed Incomplete Fixes</h3>
-      <div id="poc-confirmed-content"></div>
+      <div class="table-wrap" style="max-height:600px">
+        <table id="poc-confirmed-table">
+          <thead><tr><th>CVE</th><th>Product</th><th>Follow-up CVE</th><th>Issue</th><th>Status</th><th>Report</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
     <div class="chart-card wide">
       <h3>Validation Run History</h3>
@@ -185,6 +208,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- Report modal -->
+<div class="modal-overlay" id="report-modal">
+  <div class="modal" id="report-modal-content"></div>
 </div>
 
 <p class="last-updated" id="last-updated"></p>
@@ -531,71 +559,138 @@ function populateDetectionStats() {
   }
 }
 
+// === Modal ===
+let _pocReports = [];
+
+function openReportModal(cve) {
+  const r = _pocReports.find(x => x.cve === cve);
+  if (!r) return;
+  const modal = document.getElementById('report-modal-content');
+
+  // Build description: use followup_description if available, otherwise a summary
+  let descHtml = '';
+  if (r.followup_description) {
+    descHtml = `<p>${r.followup_description}</p>`;
+  } else {
+    descHtml = `<p>The original patch for <strong>${r.cve}</strong> in <strong>${r.product}</strong> was detected as incomplete by automated analysis and confirmed via manual PoC validation.</p>`;
+  }
+
+  // Impact summary
+  let impactHtml = '<p>';
+  if (r.followup_cve) {
+    impactHtml += `A follow-up vulnerability <strong>${r.followup_cve}</strong> was assigned, confirming the original fix was insufficient. `;
+  }
+  impactHtml += `The incomplete patch leaves the ${r.product} project vulnerable to the same class of attack as the original CVE.</p>`;
+
+  // Links
+  let linksHtml = '';
+  if (r.initial_patch_url) linksHtml += `<a href="${r.initial_patch_url}" target="_blank" rel="noopener">Original Patch</a> `;
+  if (r.followup_patch_url) linksHtml += `<a href="${r.followup_patch_url}" target="_blank" rel="noopener">Follow-up Patch</a> `;
+  if (r.submission_link && r.submission_link !== 'email' && r.submission_link !== 'snyk') linksHtml += `<a href="${r.submission_link}" target="_blank" rel="noopener">Submitted Issue</a> `;
+
+  modal.innerHTML = `
+    <button class="modal-close" onclick="closeReportModal()">&times;</button>
+    <h2>${r.cve}</h2>
+    <div class="modal-product">${r.product}${r.followup_cve ? ' &rarr; ' + r.followup_cve : ''}${r.submission_status ? ' &bull; ' + badge(r.submission_status === 'accepted' ? 'confirmed' : r.submission_status === 'pending' ? 'skip' : 'not_confirmed') : ''}</div>
+    <div class="section-label">Description</div>
+    <div class="report-body">${descHtml}</div>
+    <div class="section-label">Impact</div>
+    <div class="report-body">${impactHtml}</div>
+    <div class="section-label">Links</div>
+    <div class="meta-row">${linksHtml || '<span style="color:var(--muted)">No public links available</span>'}</div>
+  `;
+  document.getElementById('report-modal').classList.add('visible');
+}
+
+function closeReportModal() {
+  document.getElementById('report-modal').classList.remove('visible');
+}
+
+// Close on overlay click (outside modal)
+document.getElementById('report-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeReportModal();
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeReportModal();
+});
+
 function populatePocStats() {
   const grid = document.getElementById('poc-stats');
   const data = _pocData;
 
-  const totalProcessed = data.reduce((s, d) => s + (d.cases_processed || 0), 0);
-  const totalConfirmed = data.reduce((s, d) => s + (d.confirmed || 0), 0);
-  const totalNotConfirmed = data.reduce((s, d) => s + (d.not_confirmed || 0), 0);
-  const totalCost = data.reduce((s, d) => s + (d.total_cost_usd || 0), 0);
+  const totalSubmitted = _pocReports.filter(r => r.submission_link).length;
+  const totalAccepted = _pocReports.filter(r => r.submission_status === 'accepted').length;
+  const totalWithFollowup = _pocReports.filter(r => r.followup_cve).length;
 
   grid.innerHTML = [
-    makeStatCard('Total Validated', totalProcessed, COLORS.ghsa),
-    makeStatCard('Confirmed', totalConfirmed, COLORS.confirmed),
-    makeStatCard('Not Confirmed', totalNotConfirmed, COLORS.not_confirmed),
-    makeStatCard('Total Cost', '$' + totalCost.toFixed(2), COLORS.patches),
+    makeStatCard('Confirmed Incomplete', _pocReports.length, COLORS.incomplete),
+    makeStatCard('With Follow-up CVE', totalWithFollowup, COLORS.confirmed),
+    makeStatCard('Issues Submitted', totalSubmitted, COLORS.ghsa),
+    makeStatCard('Vendor Accepted', totalAccepted, COLORS.complete),
   ].join('');
 
-  // Confirmed cases table
-  const confirmedDiv = document.getElementById('poc-confirmed-content');
-  const allConfirmed = [];
-  data.forEach(d => {
-    (d.cases || []).forEach(c => {
-      if (c.poc_status === 'confirmed') allConfirmed.push(c);
-    });
-  });
+  // Confirmed cases table from poc_reports.json
+  const tbody = document.querySelector('#poc-confirmed-table tbody');
+  tbody.innerHTML = '';
 
-  if (allConfirmed.length > 0) {
-    let html = '<div class="table-wrap"><table><thead><tr><th>CVE</th><th>Bypasses</th><th>PoC Path</th><th>Summary</th></tr></thead><tbody>';
-    allConfirmed.forEach(c => {
-      html += `<tr><td>${c.cve}</td><td>${c.poc_bypass_count || 0}</td><td>${c.poc_path || '-'}</td><td>${c.poc_summary || '-'}</td></tr>`;
+  if (_pocReports.length > 0) {
+    _pocReports.forEach(r => {
+      const followup = r.followup_cve || '-';
+      let issueLink = '-';
+      if (r.submission_link && r.submission_link !== 'email' && r.submission_link !== 'snyk') {
+        const short = r.submission_link.replace('https://github.com/', '').replace('https://', '');
+        issueLink = `<a href="${r.submission_link}" target="_blank" rel="noopener">${short.length > 45 ? short.slice(0, 42) + '...' : short}</a>`;
+      } else if (r.submission_link === 'email') {
+        issueLink = '<span style="color:var(--muted)">via email</span>';
+      } else if (r.submission_link === 'snyk') {
+        issueLink = '<span style="color:var(--muted)">via Snyk</span>';
+      }
+      const statusBadge = r.submission_status ? badge(r.submission_status === 'accepted' ? 'confirmed' : r.submission_status === 'pending' ? 'skip' : r.submission_status === 'discussing' ? 'skip' : 'not_confirmed') : '-';
+      tbody.innerHTML += `<tr>
+        <td><strong>${r.cve}</strong></td>
+        <td>${r.product}</td>
+        <td>${followup}</td>
+        <td>${issueLink}</td>
+        <td>${statusBadge}</td>
+        <td><button class="btn-report" onclick="openReportModal('${r.cve}')">View Report</button></td>
+      </tr>`;
     });
-    html += '</tbody></table></div>';
-    confirmedDiv.innerHTML = html;
   } else {
-    confirmedDiv.innerHTML = '<div class="empty-state">No confirmed incomplete fixes yet. Run poc_validator.py on a batch with incomplete-detected cases.</div>';
+    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No confirmed incomplete fixes yet.</td></tr>';
   }
 
   // Run history table
-  const tbody = document.querySelector('#poc-runs-table tbody');
-  tbody.innerHTML = '';
+  const runsTbody = document.querySelector('#poc-runs-table tbody');
+  runsTbody.innerHTML = '';
   if (data.length > 0) {
     for (let i = data.length - 1; i >= 0; i--) {
       const d = data[i];
       const cost = d.total_cost_usd ? `$${d.total_cost_usd.toFixed(2)}` : '-';
-      tbody.innerHTML += `<tr><td>${d.date}</td><td>${d.cases_processed || 0}</td><td>${d.confirmed || 0}</td><td>${d.not_confirmed || 0}</td><td>${d.error || 0}</td><td>${cost}</td></tr>`;
+      runsTbody.innerHTML += `<tr><td>${d.date}</td><td>${d.cases_processed || 0}</td><td>${d.confirmed || 0}</td><td>${d.not_confirmed || 0}</td><td>${d.error || 0}</td><td>${cost}</td></tr>`;
     }
   } else {
-    tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No PoC validation runs yet.</td></tr>';
+    runsTbody.innerHTML = '<tr><td colspan="6" class="empty-state">No PoC validation runs yet.</td></tr>';
   }
 }
 
 // === Init ===
 async function init() {
-  let crawlData, detectionData, pocData;
+  let crawlData, detectionData, pocData, pocReports;
   try {
-    [crawlData, detectionData, pocData] = await Promise.all([
+    [crawlData, detectionData, pocData, pocReports] = await Promise.all([
       fetch('data/history.json').then(r => r.json()).catch(() => []),
       fetch('data/detection_history.json').then(r => r.json()).catch(() => []),
       fetch('data/poc_history.json').then(r => r.json()).catch(() => []),
+      fetch('data/poc_reports.json').then(r => r.json()).catch(() => []),
     ]);
   } catch(e) {
     document.getElementById('loading').textContent = 'Error loading data.';
     return;
   }
 
-  if (!crawlData.length && !detectionData.length && !pocData.length) {
+  if (!crawlData.length && !detectionData.length && !pocData.length && !pocReports.length) {
     document.getElementById('loading').textContent = 'No data yet. Run the pipeline to generate stats.';
     return;
   }
@@ -603,6 +698,7 @@ async function init() {
   _crawlData = crawlData;
   _detectionData = detectionData;
   _pocData = pocData;
+  _pocReports = pocReports;
 
   document.getElementById('loading').style.display = 'none';
 
