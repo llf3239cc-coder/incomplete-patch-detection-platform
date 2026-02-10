@@ -40,6 +40,26 @@
     "submission_status": "accepted"
   },
   {
+    "cve": "CVE-2024-32621",
+    "product": "HDF5",
+    "initial_patch_url": "https://github.com/HDFGroup/hdf5/commit/dded9372c229124044a6f163106999e718c8861e",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "https://github.com/HDFGroup/hdf5/security/advisories/GHSA-657v-4ccc-69x5",
+    "submission_status": "accepted"
+  },
+  {
+    "cve": "CVE-2025-56200",
+    "product": "validator.js",
+    "initial_patch_url": "https://github.com/validatorjs/validator.js/commit/cbef5088f02d36caf978f378bb845fe49bdc0809",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "",
+    "submission_link": "snyk",
+    "submission_status": "accepted"
+  },
+  {
     "cve": "CVE-2018-14363",
     "product": "NeoMutt",
     "initial_patch_url": "https://github.com/neomutt/neomutt/commit/9bfab35522301794483f8f9ed60820bdec9be59e",
@@ -137,16 +157,6 @@
     "followup_patch_url": "",
     "followup_description": "",
     "submission_link": "https://github.com/HDFGroup/hdf5/security/advisories/GHSA-m926-jf7p-h2q3",
-    "submission_status": "pending"
-  },
-  {
-    "cve": "CVE-2024-32621",
-    "product": "HDF5",
-    "initial_patch_url": "https://github.com/HDFGroup/hdf5/commit/dded9372c229124044a6f163106999e718c8861e",
-    "followup_cve": "",
-    "followup_patch_url": "",
-    "followup_description": "",
-    "submission_link": "https://github.com/HDFGroup/hdf5/security/advisories/GHSA-657v-4ccc-69x5",
     "submission_status": "pending"
   },
   {
@@ -250,16 +260,6 @@
     "submission_status": "pending"
   },
   {
-    "cve": "CVE-2025-56200",
-    "product": "validator.js",
-    "initial_patch_url": "https://github.com/validatorjs/validator.js/commit/cbef5088f02d36caf978f378bb845fe49bdc0809",
-    "followup_cve": "",
-    "followup_patch_url": "",
-    "followup_description": "",
-    "submission_link": "snyk",
-    "submission_status": "pending"
-  },
-  {
     "cve": "CVE-2025-59334",
     "product": "Linkr",
     "initial_patch_url": "https://github.com/mohammadzain2008/Linkr/commit/182e5ddaa51972e144005b500c4bceb",
@@ -287,6 +287,16 @@
     "followup_patch_url": "",
     "followup_description": "Deno is a JavaScript, TypeScript, and WebAssembly runtime. Before 2.5.6, a prior patch aimed to block spawning Windows batch/shell files by returning an error when a spawned path\u2019s extension matched .bat or .cmd. That check performs a case-sensitive comparison against lowercase literals and therefore can be bypassed when the extension uses alternate casing (for example .BAT, .Bat, etc.). This vulnerability is fixed in 2.5.6.",
     "submission_link": "https://github.com/denoland/deno/security/advisories/GHSA-vw4w-cgpj-63g3",
+    "submission_status": "pending"
+  },
+  {
+    "cve": "CVE-2024-2221",
+    "product": "qdrant",
+    "initial_patch_url": "https://github.com/qdrant/qdrant/commit/e6411907f0ecf3c2f8ba44ab704b9e4597d9705d",
+    "followup_cve": "",
+    "followup_patch_url": "",
+    "followup_description": "qdrant/qdrant is vulnerable to a path traversal and arbitrary file upload vulnerability via the /collections/{COLLECTION}/snapshots/upload endpoint. The original patch was detected as incomplete, leaving the endpoint still exploitable under certain conditions.",
+    "submission_link": "https://hackerone.com/bugs?subject=user&report_id=3522713",
     "submission_status": "pending"
   },
   {

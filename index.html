@@ -203,15 +203,6 @@
         </table>
       </div>
     </div>
-    <div class="chart-card wide">
-      <h3>Validation Run History</h3>
-      <div class="table-wrap">
-        <table id="poc-runs-table">
-          <thead><tr><th>Date</th><th>Processed</th><th>Confirmed</th><th>Not Confirmed</th><th>Error</th><th>Cost</th></tr></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -596,7 +587,7 @@ function openReportModal(cve) {
   modal.innerHTML = `
     <button class="modal-close" onclick="closeReportModal()">&times;</button>
     <h2>${r.cve}</h2>
-    <div class="modal-product">${r.product}${r.followup_cve ? ' &rarr; ' + r.followup_cve : ''}${r.submission_status ? ' &bull; ' + badge(r.submission_status === 'accepted' ? 'confirmed' : r.submission_status === 'pending' ? 'skip' : 'not_confirmed') : ''}</div>
+    <div class="modal-product">${r.product}${r.followup_cve ? ' &rarr; ' + r.followup_cve : ''}${r.submission_status ? ' &bull; <span class="badge ' + r.submission_status + '">' + r.submission_status.toUpperCase() + '</span>' : ''}</div>
     <div class="section-label">Description</div>
     <div class="report-body">${descHtml}</div>
     <div class="section-label">Impact</div>
@@ -633,7 +624,7 @@ function populatePocStats() {
     makeStatCard('Confirmed Incomplete', _pocReports.length, COLORS.incomplete),
     makeStatCard('With Follow-up CVE', totalWithFollowup, COLORS.confirmed),
     makeStatCard('Issues Submitted', totalSubmitted, COLORS.ghsa),
-    makeStatCard('Vendor Accepted', totalAccepted, COLORS.complete),
+    makeStatCard('Vendor Confirmed', totalAccepted, COLORS.complete),
   ].join('');
 
   // Confirmed cases table from poc_reports.json
@@ -666,18 +657,6 @@ function populatePocStats() {
     tbody.innerHTML = '<tr><td colspan="6" class="empty-state">No confirmed incomplete fixes yet.</td></tr>';
   }
 
-  // Run history table
-  const runsTbody = document.querySelector('#poc-runs-table tbody');
-  runsTbody.innerHTML = '';
-  if (data.length > 0) {
-    for (let i = data.length - 1; i >= 0; i--) {
-      const d = data[i];
-      const cost = d.total_cost_usd ? `$${d.total_cost_usd.toFixed(2)}` : '-';
-      runsTbody.innerHTML += `<tr><td>${d.date}</td><td>${d.cases_processed || 0}</td><td>${d.confirmed || 0}</td><td>${d.not_confirmed || 0}</td><td>${d.error || 0}</td><td>${cost}</td></tr>`;
-    }
-  } else {
-    runsTbody.innerHTML = '<tr><td colspan="6" class="empty-state">No PoC validation runs yet.</td></tr>';
-  }
 }
 
 // === Init ===
