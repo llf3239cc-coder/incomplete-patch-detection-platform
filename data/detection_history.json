@@ -4204,5 +4204,150 @@
         "url": "https://github.com/MarkUsProject/Markus/commit/7daed9fd2d44932223798d997b55094a3bff104b"
       }
     ]
+  },
+  {
+    "date": "2026-02-11",
+    "timestamp": "20260211_140010",
+    "new_patches_found": 18,
+    "cases_processed": 18,
+    "complete": 15,
+    "incomplete": 2,
+    "error": 1,
+    "duration_min": 23.5,
+    "categories": {
+      "input_validation": 3,
+      "other": 6,
+      "authz": 5,
+      "memory_safety": 2,
+      "dos": 1
+    },
+    "cases": [
+      {
+        "cve": "CVE-2026-26013",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/langchain-ai/langchain/commit/2b4b1dc29a833d4053deba4c2b77a3848c834565"
+      },
+      {
+        "cve": "CVE-2026-26009",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/karutoil/catalyst/commit/11980aaf3f46315b02777f325ba02c56b110165d"
+      },
+      {
+        "cve": "CVE-2026-25956",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/frappe/frappe/commit/22cac9dd240dc1fa00d4bab7e3887b70faf22bd1"
+      },
+      {
+        "cve": "CVE-2026-26003",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/labring/FastGPT/commit/0beb52a2f3dc4067aab011cc98122d1352823b0c"
+      },
+      {
+        "cve": "CVE-2026-25646",
+        "detected": "complete",
+        "confidence": 0.0714,
+        "category": "memory_safety",
+        "url": "https://github.com/pnggroup/libpng/commit/01d03b8453eb30ade759cd45c707e5a1c7277d88"
+      },
+      {
+        "cve": "CVE-2026-25992",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/siyuan-note/siyuan/commit/1f02650b3892d2ea3896242dd2422c30bda55e11"
+      },
+      {
+        "cve": "CVE-2026-25506",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/dun/munge/commit/bf40cc27c4ce8451d4b062c9de0b67ec40894812"
+      },
+      {
+        "cve": "CVE-2026-25993",
+        "detected": "complete",
+        "confidence": 0.0514,
+        "category": "other",
+        "url": "http://github.com/evershopcommerce/evershop/commit/5c5bdf2c1ad5d16ae68e9e48b494563953b6d1cd"
+      },
+      {
+        "cve": "CVE-2026-26007",
+        "detected": "complete",
+        "confidence": 0.04,
+        "category": "other",
+        "url": "https://github.com/pyca/cryptography/commit/0eebb9dbb6343d9bc1d91e5a2482ed4e054a6d8c"
+      },
+      {
+        "cve": "CVE-2026-2259",
+        "detected": "complete",
+        "confidence": 0.04,
+        "category": "other",
+        "url": "https://github.com/aardappel/lobster/commit/2f45fe860d00990e79e13250251c1dde633f1f89"
+      },
+      {
+        "cve": "CVE-2026-24885",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/kanboard/kanboard/commit/2c56d92783d4a3094812c2f7cba50f80a372f95e"
+      },
+      {
+        "cve": "CVE-2026-24045",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/docmost/docmost/commit/f3f74c591f32f85b8aa9a98ed884a7dd455780f9"
+      },
+      {
+        "cve": "CVE-2026-1486",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/keycloak/keycloak/commit/176dc8902ce552056d3648c4601d519afc6fb043"
+      },
+      {
+        "cve": "CVE-2026-25530",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/kanboard/kanboard/commit/c3d8d20e05322b09e036fed7afb57194d624a414"
+      },
+      {
+        "cve": "CVE-2026-25728",
+        "detected": "complete",
+        "confidence": 0.0813,
+        "category": "other",
+        "url": "https://github.com/MacWarrior/clipbucket-v5/commit/09536e6e2ca6d69a2ee83190b588c0b8116dd16d"
+      },
+      {
+        "cve": "CVE-2026-1529",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/keycloak/keycloak/commit/8fc9a98026106a326f4faa98d4c9a48341ace2d7"
+      },
+      {
+        "cve": "CVE-2026-26006",
+        "detected": "complete",
+        "confidence": 0.0333,
+        "category": "dos",
+        "url": "https://github.com/Significant-Gravitas/AutoGPT/commit/57a06f70883ce6be18738c6ae8bb41085c71e266"
+      },
+      {
+        "cve": "CVE-2026-25947",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/Worklenz/worklenz/commit/76e5cb0f5dd566fb65586cd3db30ee951c92a32b"
+      }
+    ]
   }
 ]
