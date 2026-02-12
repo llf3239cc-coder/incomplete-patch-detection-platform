@@ -4349,5 +4349,114 @@
         "url": "https://github.com/Worklenz/worklenz/commit/76e5cb0f5dd566fb65586cd3db30ee951c92a32b"
       }
     ]
+  },
+  {
+    "date": "2026-02-12",
+    "timestamp": "20260212_140008",
+    "new_patches_found": 13,
+    "cases_processed": 13,
+    "complete": 13,
+    "incomplete": 0,
+    "error": 0,
+    "duration_min": 8.3,
+    "categories": {
+      "input_validation": 3,
+      "authz": 6,
+      "other": 3,
+      "memory_safety": 1
+    },
+    "cases": [
+      {
+        "cve": "CVE-2026-25935",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/go-vikunja/vikunja/commit/dd0b82f00a8c9ded1c19a1e643a197c514be6d37"
+      },
+      {
+        "cve": "CVE-2026-26014",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/pion/dtls/commit/61762dee8217991882c5eb79856b9e7a73ee349f"
+      },
+      {
+        "cve": "CVE-2026-26023",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/langgenius/dify/commit/378a1d7d08bd0ac5c75eaadc075a0f35211fcb8e"
+      },
+      {
+        "cve": "CVE-2026-25994",
+        "detected": "complete",
+        "confidence": 0.1434,
+        "category": "memory_safety",
+        "url": "https://github.com/pjsip/pjproject/commit/063b3a155f163cc5a9a1df2c56b6720fd3a0dbb0"
+      },
+      {
+        "cve": "CVE-2026-26029",
+        "detected": "complete",
+        "confidence": 0.028,
+        "category": "input_validation",
+        "url": "https://github.com/akutishevsky/sf-mcp-server/commit/99fba0171b8c22b5ee3c0405053ccfd2910a066d"
+      },
+      {
+        "cve": "CVE-2026-25759",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/statamic/cms/commit/6ed4f65f3387686d6dbd816e9b4f18a8d9736ff6"
+      },
+      {
+        "cve": "CVE-2026-25924",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/kanboard/kanboard/commit/b9ada89b1a64034612fc4262b88c42458c0d6ee4"
+      },
+      {
+        "cve": "CVE-2026-25633",
+        "detected": "complete",
+        "confidence": 0.0533,
+        "category": "authz",
+        "url": "https://github.com/statamic/cms/commit/5a6f47246edf3a0c453727ffecbfa14333a6bc8a"
+      },
+      {
+        "cve": "CVE-2026-1774",
+        "detected": "complete",
+        "confidence": 0.06,
+        "category": "other",
+        "url": "https://github.com/stalniy/casl/commit/39da920ec1dfadf3655e28bd0389e960ac6871f4"
+      },
+      {
+        "cve": "CVE-2026-26019",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/langchain-ai/langchainjs/commit/d5e3db0d01ab321ec70a875805b2f74aefdadf9d"
+      },
+      {
+        "cve": "CVE-2026-25999",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/Aiven-Open/klaw/commit/617ed96b1db111ed498d89132321bf39f486e3a1"
+      },
+      {
+        "cve": "CVE-2025-11537",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/keycloak/keycloak/commit/137a35c1109ff43a305f26264978a3ea21452373"
+      },
+      {
+        "cve": "CVE-2026-23903",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/apache/shiro/commit/3b9638b957495004599aeaf24ba8949e309f26e8"
+      }
+    ]
   }
 ]
