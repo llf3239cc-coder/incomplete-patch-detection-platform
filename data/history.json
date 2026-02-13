@@ -90,5 +90,28 @@
     "nvd_new": 13,
     "osv_new": 0,
     "snyk_new": 24
+  },
+  {
+    "date": "2026-02-13",
+    "timestamp": "2026-02-13 07:21 UTC",
+    "ghsa_total": 12989,
+    "nvd_total": 19321,
+    "osv_total": 23791,
+    "snyk_total": 22556,
+    "merged_total": 30139,
+    "patches_downloaded": 36636,
+    "steps": {
+      "ghsa": "ok",
+      "nvd": "ok",
+      "osv": "ok",
+      "snyk": "ok",
+      "merge": "ok",
+      "download": "ok"
+    },
+    "duration_min": 321.2,
+    "ghsa_new": 9,
+    "nvd_new": 20,
+    "osv_new": 0,
+    "snyk_new": 33
   }
 ]
