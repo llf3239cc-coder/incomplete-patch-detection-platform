@@ -4755,5 +4755,34 @@
         "url": "https://github.com/TandoorRecipes/recipes/commit/fdf22c5e745740db1fec29d6b4bd3df5d340e6ab"
       }
     ]
+  },
+  {
+    "date": "2026-02-27",
+    "timestamp": "20260227_031629",
+    "new_patches_found": 2,
+    "cases_processed": 2,
+    "complete": 1,
+    "incomplete": 0,
+    "error": 1,
+    "duration_min": 7.6,
+    "categories": {
+      "input_validation": 1
+    },
+    "cases": [
+      {
+        "cve": "CVE-2026-2469",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/DirectoryTree/ImapEngine/commit/87fca56affd9527e6907a705e6d600c5174d9a5a"
+      },
+      {
+        "cve": "CVE-2025-14608",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/iamsayan/wp-last-modified-info/commit/cb3586897c11c3cd55dd63b7ae963243a027c0be"
+      }
+    ]
   }
 ]
