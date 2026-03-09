@@ -4784,5 +4784,4114 @@
         "url": "https://github.com/iamsayan/wp-last-modified-info/commit/cb3586897c11c3cd55dd63b7ae963243a027c0be"
       }
     ]
+  },
+  {
+    "date": "2026-03-09",
+    "timestamp": "20260309_140005",
+    "new_patches_found": 589,
+    "cases_processed": 584,
+    "complete": 491,
+    "incomplete": 81,
+    "error": 12,
+    "duration_min": 393.2,
+    "categories": {
+      "input_validation": 213,
+      "authz": 102,
+      "other": 158,
+      "path_traversal": 16,
+      "memory_safety": 62,
+      "integer_handling": 4,
+      "dos": 17
+    },
+    "cases": [
+      {
+        "cve": "CVE-2026-30847",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/wekan/wekan/commit/1c8667eae8b28739e43569b612ffdb2693c6b1ce"
+      },
+      {
+        "cve": "CVE-2026-30845",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/wekan/wekan/commit/8c00adc6b865653bd717a946dd646eb54ac78c9c"
+      },
+      {
+        "cve": "CVE-2026-30846",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/wekan/wekan/commit/1ee9b2e917104f54c035f6426169a28fedecbdb6"
+      },
+      {
+        "cve": "CVE-2026-30832",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/charmbracelet/soft-serve/commit/3ef660098ab37a7950457da8ecc25b516e37ce4e"
+      },
+      {
+        "cve": "CVE-2026-30843",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/wekan/wekan/commit/73eb98c57afd3d72377a1f7160a52450ab0eeb8b"
+      },
+      {
+        "cve": "CVE-2026-30830",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/kepano/defuddle/commit/f154cb740ee603431b69638273af737a27156df9"
+      },
+      {
+        "cve": "CVE-2026-30841",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/ellite/Wallos/commit/e8a513591dbbf885966e2ef55c38622785b9060d"
+      },
+      {
+        "cve": "CVE-2026-30827",
+        "detected": "complete",
+        "confidence": 0.0427,
+        "category": "other",
+        "url": "https://github.com/express-rate-limit/express-rate-limit/commit/14e53888cdfd1b9798faf5b634c4206409e27fc4"
+      },
+      {
+        "cve": "CVE-2026-30844",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/wekan/wekan/commit/62216e36c15f55d4ef6cb97313db3aa54fc77fe0"
+      },
+      {
+        "cve": "CVE-2026-30842",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "authz",
+        "url": "https://github.com/ellite/Wallos/commit/e8a513591dbbf885966e2ef55c38622785b9060d"
+      },
+      {
+        "cve": "CVE-2026-30225",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/OliveTin/OliveTin/commit/cb46a597b2465235839ed58cf034b5e7b70ef911"
+      },
+      {
+        "cve": "CVE-2026-30241",
+        "detected": "complete",
+        "confidence": 0.0902,
+        "category": "other",
+        "url": "https://github.com/mercurius-js/mercurius/commit/5b56f60f4b0d60780b0ff499a479bd830bdd6986"
+      },
+      {
+        "cve": "CVE-2026-30861",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/Tencent/WeKnora/commit/57d6fea8bc265ad28b385e0158957c870cff4b50"
+      },
+      {
+        "cve": "CVE-2026-30223",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/OliveTin/OliveTin/commit/e97d8ecbd8d6ba468c418ca496fcd18f78131233"
+      },
+      {
+        "cve": "CVE-2026-30224",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/OliveTin/OliveTin/commit/d6a0abc3755d43107be1939567c52953bcbec3d5"
+      },
+      {
+        "cve": "CVE-2026-29795",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/stellar/rs-stellar-xdr/commit/1f840013c3e2fca0321fb844b048afa01d10dda6"
+      },
+      {
+        "cve": "CVE-2026-29789",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/vitodeploy/vito/commit/0fdcfe5f0b93da644a0456e0e4544763828e3326"
+      },
+      {
+        "cve": "CVE-2026-29790",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/dbt-labs/dbt-common/commit/e547954a48bac9394ef6eb98432e429dce9a7709"
+      },
+      {
+        "cve": "CVE-2026-30233",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/OliveTin/OliveTin/commit/d7962710e7c46f6bdda4188b5b0cdbde4be665a0"
+      },
+      {
+        "cve": "CVE-2026-30840",
+        "detected": "complete",
+        "confidence": 0.0433,
+        "category": "other",
+        "url": "https://github.com/ellite/Wallos/commit/e8a513591dbbf885966e2ef55c38622785b9060d"
+      },
+      {
+        "cve": "CVE-2026-29791",
+        "detected": "incomplete",
+        "confidence": 0.45,
+        "category": "input_validation",
+        "url": "https://github.com/agentgateway/agentgateway/commit/9a5287569d892e77a8be8c3bb7bf3d7744244274"
+      },
+      {
+        "cve": "CVE-2026-29780",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/GOVCERT-LU/eml_parser/commit/99af03a09a90aaaaadd0ed2ffb5eea46d1ea2cc9"
+      },
+      {
+        "cve": "CVE-2026-29786",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/isaacs/node-tar/commit/7bc755dd85e623c0279e08eb3784909e6d7e4b9f"
+      },
+      {
+        "cve": "CVE-2026-30839",
+        "detected": "complete",
+        "confidence": 0.1069,
+        "category": "memory_safety",
+        "url": "https://github.com/ellite/Wallos/commit/e8a513591dbbf885966e2ef55c38622785b9060d"
+      },
+      {
+        "cve": "CVE-2026-30828",
+        "detected": "complete",
+        "confidence": 0.0433,
+        "category": "other",
+        "url": "https://github.com/ellite/Wallos/commit/e8a513591dbbf885966e2ef55c38622785b9060d"
+      },
+      {
+        "cve": "CVE-2026-29611",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/71f357d9498cebb0efe016b0496d5fbe807539fc"
+      },
+      {
+        "cve": "CVE-2026-29779",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/lyc8503/UptimeFlare/commit/377a5963c66ba9a798abebfe8d80378b053435e9"
+      },
+      {
+        "cve": "CVE-2026-29188",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/filebrowser/filebrowser/commit/7ed1425115be602c2b23236c410098ea2d74b42f"
+      },
+      {
+        "cve": "CVE-2026-29178",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/LemmyNet/lemmy/commit/f47a03f56d1797bceab5f34b6f624c91cecd5871"
+      },
+      {
+        "cve": "CVE-2026-29606",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/ff11d8793b90c52f8d84dae3fbb99307da51b5c9"
+      },
+      {
+        "cve": "CVE-2026-29787",
+        "detected": "complete",
+        "confidence": 0.05,
+        "category": "other",
+        "url": "https://github.com/doobidoo/mcp-memory-service/commit/18f4323ca92763196aa2922f691dfbeb6bd84e48"
+      },
+      {
+        "cve": "CVE-2026-29610",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/013e8f6b3be3333a229a066eef26a45fec47ffcc"
+      },
+      {
+        "cve": "CVE-2026-29183",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/siyuan-note/siyuan/commit/d68bd5a79391742b3cb2e14d892bdd9997064927"
+      },
+      {
+        "cve": "CVE-2026-29086",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/honojs/hono/commit/44ae0c8cc4d5ab2bed529127a4ac72e1483ad073"
+      },
+      {
+        "cve": "CVE-2026-29085",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/honojs/hono/commit/f4123ed9ea3c7c52380cc99a079a4d773838846e"
+      },
+      {
+        "cve": "CVE-2026-29609",
+        "detected": "complete",
+        "confidence": 0.1414,
+        "category": "memory_safety",
+        "url": "https://github.com/openclaw/openclaw/commit/00a08908892d1743d1fc52e5cbd9499dd5da2fe0"
+      },
+      {
+        "cve": "CVE-2026-29089",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/timescale/timescaledb/commit/9a8f7f8bdeb99e6abae0786ffe526791a8628ce3"
+      },
+      {
+        "cve": "CVE-2026-29087",
+        "detected": "complete",
+        "confidence": 0.0533,
+        "category": "authz",
+        "url": "https://github.com/honojs/node-server/commit/455015be1697dd89974a68b70350ea7b2d126d2e"
+      },
+      {
+        "cve": "CVE-2026-29076",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/yhirose/cpp-httplib/commit/de296af3eb5b0d5c116470e033db900e4812c5e6"
+      },
+      {
+        "cve": "CVE-2026-29612",
+        "detected": "complete",
+        "confidence": 0.1354,
+        "category": "memory_safety",
+        "url": "https://github.com/openclaw/openclaw/commit/31791233d60495725fa012745dde8d6ee69e9595"
+      },
+      {
+        "cve": "CVE-2026-29075",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/mesa/mesa/commit/c35b8cd67fc89dd680ae218e49b77f6e1ee07a27"
+      },
+      {
+        "cve": "CVE-2026-29062",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/FasterXML/jackson-core/commit/8b25fd67f20583e75fb09564ce1eaab06cd5a902"
+      },
+      {
+        "cve": "CVE-2026-29068",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/pjsip/pjproject/commit/6c9024511bf5307ff72efde1f90c9a2a226d8967"
+      },
+      {
+        "cve": "CVE-2026-29042",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/nuclio/nuclio/commit/5352d7e16cf92f4350a2f8d806c4b80b626b5c5a"
+      },
+      {
+        "cve": "CVE-2026-29069",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "authz",
+        "url": "https://github.com/craftcms/cms/commit/c3d02d4a7246f516933f42106c0a67ce062f68d8"
+      },
+      {
+        "cve": "CVE-2026-29045",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/honojs/hono/commit/6a0607a929d888893f0c91d92dce2fcfdb3662a3"
+      },
+      {
+        "cve": "CVE-2026-29065",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/dgtlmoon/changedetection.io/commit/1d7d812eb0faab37042246e2fbce04f29bb1b3aa"
+      },
+      {
+        "cve": "CVE-2026-29038",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/dgtlmoon/changedetection.io/commit/ec7d56f85d1e9690fca7cb4711c1fb20dffec780"
+      },
+      {
+        "cve": "CVE-2026-29046",
+        "detected": "complete",
+        "confidence": 0.0029,
+        "category": "other",
+        "url": "https://github.com/maximmasiutin/TinyWeb/commit/53aa8b6e5146491d7be57920e3fc50d7a34e4d5a"
+      },
+      {
+        "cve": "CVE-2026-28804",
+        "detected": "complete",
+        "confidence": 0.0244,
+        "category": "input_validation",
+        "url": "https://github.com/py-pdf/pypdf/commit/648c627d2657447dfb1773412af05a0a5103b98f"
+      },
+      {
+        "cve": "CVE-2026-29022",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/mackron/dr_libs/commit/8a7258cc66b49387ad58cc5b81568982a3560d49"
+      },
+      {
+        "cve": "CVE-2026-28795",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/zhongyu09/openchatbi/commit/372a7e861da5159c3106d64d6f6edf8284db8c75"
+      },
+      {
+        "cve": "CVE-2026-28790",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/OliveTin/OliveTin/commit/d9804182eae43cf49f735e6533ddbe1541c2b9a9"
+      },
+      {
+        "cve": "CVE-2026-28799",
+        "detected": "complete",
+        "confidence": 0.0533,
+        "category": "memory_safety",
+        "url": "https://github.com/pjsip/pjproject/commit/e06ff6c64741cc1675fd3296615910f532f6b1a1"
+      },
+      {
+        "cve": "CVE-2026-28794",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/middleapi/orpc/commit/1dba06fc6f938c2486de303c2fa096bc1c8418b5"
+      },
+      {
+        "cve": "CVE-2026-29039",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/dgtlmoon/changedetection.io/commit/417d57e5749441e4be9acc4010369bded805d66f"
+      },
+      {
+        "cve": "CVE-2026-28782",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "authz",
+        "url": "https://github.com/craftcms/cms/commit/fb61a91357f5761c852400185ba931f51d82783d"
+      },
+      {
+        "cve": "CVE-2026-28695",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/craftcms/cms/commit/e31e50849ad71638e11ea55fbd1ed90ae8f8f6e0"
+      },
+      {
+        "cve": "CVE-2026-28789",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/OliveTin/OliveTin/commit/f044d90d5525c4c8e3f421b32ed7eff771c22d36"
+      },
+      {
+        "cve": "CVE-2026-28696",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/craftcms/cms/commit/4d98a07e47580f1712095825d3e3c4d67bc9f8b9"
+      },
+      {
+        "cve": "CVE-2026-28685",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/kimai/kimai/commit/a0601c8cb28fed1cca19051a8272425069ab758f"
+      },
+      {
+        "cve": "CVE-2026-28518",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/volcengine/OpenViking/commit/46b3e76e28b9b3eee73693720c9ec48820228b72"
+      },
+      {
+        "cve": "CVE-2026-28514",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/RocketChat/Rocket.Chat/commit/7d89aae0b1bd08e82b02ceab4c180b430e2c6f07"
+      },
+      {
+        "cve": "CVE-2026-29091",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/locutusjs/locutus/commit/977a1fb169441e35996a1d2465b512322de500ad"
+      },
+      {
+        "cve": "CVE-2026-28678",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/toxicbishop/DSA-with-tsx/commit/d527fba3b3c15f185b9d1e730322dff9248391e4"
+      },
+      {
+        "cve": "CVE-2026-28502",
+        "detected": "complete",
+        "confidence": 0.0622,
+        "category": "authz",
+        "url": "https://github.com/WWBN/AVideo/commit/b739aeeb9ce34aed9961d2c155d597810f8229db"
+      },
+      {
+        "cve": "CVE-2026-28492",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/filebrowser/filebrowser/commit/31194fb57a5b92e7155219d7ec7273028fcb2e83"
+      },
+      {
+        "cve": "CVE-2026-28509",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/langbot-app/LangBot/commit/614621ab7b84fe50da3c6137705cde5a99429866"
+      },
+      {
+        "cve": "CVE-2026-28501",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/WWBN/AVideo/commit/0c10be681c64044618ab94473251bd7c9b114fa1"
+      },
+      {
+        "cve": "CVE-2026-29048",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/humhub/humhub/commit/bd06ab4c75f6c65295ee3e1ce3643437e8f9d10a"
+      },
+      {
+        "cve": "CVE-2026-28479",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/559c8d9930eebb5356506ff1a8cd3dbaec92be77"
+      },
+      {
+        "cve": "CVE-2026-28497",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/maximmasiutin/TinyWeb/commit/d2edd0322c3d74beee0a6c0191299b8946695d4e"
+      },
+      {
+        "cve": "CVE-2026-29784",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/TryGhost/Ghost/commit/ec065a774fa125953d2aa644a59cd8990329e0a0"
+      },
+      {
+        "cve": "CVE-2026-28477",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/a99ad11a4107ba8eac58f54a3c1a8a0cf5686f47"
+      },
+      {
+        "cve": "CVE-2026-28475",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/113ebfd6a23c4beb8a575d48f7482593254506ec"
+      },
+      {
+        "cve": "CVE-2026-28485",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/9230a2ae14307740a13ada7afd6dcfab34e0287f"
+      },
+      {
+        "cve": "CVE-2026-28472",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/fe81b1d7125a014b8280da461f34efbf5f761575"
+      },
+      {
+        "cve": "CVE-2026-28469",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/61d59a802869177d9cef52204767cd83357ab79e"
+      },
+      {
+        "cve": "CVE-2026-28470",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/d1ecb46076145deb188abcba8f0699709ea17198"
+      },
+      {
+        "cve": "CVE-2026-28464",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/113ebfd6a23c4beb8a575d48f7482593254506ec"
+      },
+      {
+        "cve": "CVE-2026-28481",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/41cc5bcd4f1d434ad1bbdfa55b56f25025ecbf6b"
+      },
+      {
+        "cve": "CVE-2026-28697",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/craftcms/cms/commit/9dc2a4a3ec8e9cd5e8c0d1129f36371437519197"
+      },
+      {
+        "cve": "CVE-2026-28486",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/openclaw/openclaw/commit/3aa94afcfd12104c683c9cad81faf434d0dadf87"
+      },
+      {
+        "cve": "CVE-2026-28463",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/77b89719d5b7e271f48b6f49e334a8b991468c3b"
+      },
+      {
+        "cve": "CVE-2026-28462",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/7f0489e4731c8d965d78d6eac4a60312e46a9426"
+      },
+      {
+        "cve": "CVE-2026-28476",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/bfa7d21e997baa8e3437657d59b1e296815cc1b1"
+      },
+      {
+        "cve": "CVE-2026-28457",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/3eb6a31b6fcf8268456988bfa8e3637d373438c2"
+      },
+      {
+        "cve": "CVE-2026-28448",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/8c7901c984866a776eb59662dc9d8b028de4f0d0"
+      },
+      {
+        "cve": "CVE-2026-28450",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/647d929c9d0fd114249230d939a5cb3b36dc70e7"
+      },
+      {
+        "cve": "CVE-2026-28471",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/8f3bfbd1c4fb967a2ddb5b4b9a05784920814bcf"
+      },
+      {
+        "cve": "CVE-2026-28465",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/a749db9820eb6d6224032a5a34223d286d2dcc2f"
+      },
+      {
+        "cve": "CVE-2026-28434",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/yhirose/cpp-httplib/commit/defd907c7469c5c8281247b73bbd07be24c31164"
+      },
+      {
+        "cve": "CVE-2026-28446",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/f8dfd034f5d9235c5485f492a9e4ccc114e97fdb"
+      },
+      {
+        "cve": "CVE-2026-28429",
+        "detected": "complete",
+        "confidence": 0.06,
+        "category": "input_validation",
+        "url": "https://github.com/Talishar/Talishar/commit/6be3871a14c192d1fb8146cdbc76f29f27c1cf48"
+      },
+      {
+        "cve": "CVE-2026-28438",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/cocoindex-io/cocoindex/commit/ba2fc4a89e22d35572c64bd2990737c7913b0729"
+      },
+      {
+        "cve": "CVE-2026-28453",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "memory_safety",
+        "url": "https://github.com/openclaw/openclaw/commit/3aa94afcfd12104c683c9cad81faf434d0dadf87"
+      },
+      {
+        "cve": "CVE-2026-28422",
+        "detected": "complete",
+        "confidence": 0.0853,
+        "category": "memory_safety",
+        "url": "https://github.com/vim/vim/commit/4e5b9e31cb7484ad156f"
+      },
+      {
+        "cve": "CVE-2026-28427",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/nekename/OpenDeck/commit/488a52050017e95a72ba448226ac5e19a20dd9ed"
+      },
+      {
+        "cve": "CVE-2026-28458",
+        "detected": "complete",
+        "confidence": 0.0338,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/a1e89afcc19efd641c02b24d66d689f181ae2b5c"
+      },
+      {
+        "cve": "CVE-2026-28435",
+        "detected": "complete",
+        "confidence": 0.1614,
+        "category": "memory_safety",
+        "url": "https://github.com/yhirose/cpp-httplib/commit/c99d7472b5cf4869d3897b9afc9792063a3d15a8"
+      },
+      {
+        "cve": "CVE-2026-28419",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "other",
+        "url": "https://github.com/vim/vim/commit/9b7dfa2948c9e1e5e32a5812"
+      },
+      {
+        "cve": "CVE-2026-28420",
+        "detected": "complete",
+        "confidence": 0.2034,
+        "category": "memory_safety",
+        "url": "https://github.com/vim/vim/commit/bb6de2105b160e729c34063"
+      },
+      {
+        "cve": "CVE-2026-28418",
+        "detected": "complete",
+        "confidence": 0.128,
+        "category": "memory_safety",
+        "url": "https://github.com/vim/vim/commit/f6a7f469a9c0d09e84cd6cb"
+      },
+      {
+        "cve": "CVE-2026-28428",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "input_validation",
+        "url": "https://github.com/Talishar/Talishar/commit/a9c218efa37756c9e7eed056fbff6ee03f79aefc"
+      },
+      {
+        "cve": "CVE-2026-28451",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/5b4121d6011a48c71e747e3c18197f180b872c5d"
+      },
+      {
+        "cve": "CVE-2026-28421",
+        "detected": "complete",
+        "confidence": 0.0733,
+        "category": "memory_safety",
+        "url": "https://github.com/vim/vim/commit/65c1a143c331c886dc28"
+      },
+      {
+        "cve": "CVE-2026-28415",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "input_validation",
+        "url": "https://github.com/gradio-app/gradio/commit/dfee0da06d0aa94b3c2684131e7898d5d5c1911e"
+      },
+      {
+        "cve": "CVE-2026-28414",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "path_traversal",
+        "url": "https://github.com/gradio-app/gradio/commit/6011b00d0154b85532fa901dd73cf8fa7d86fd04"
+      },
+      {
+        "cve": "CVE-2026-28407",
+        "detected": "complete",
+        "confidence": 0.0467,
+        "category": "other",
+        "url": "https://github.com/chainguard-dev/malcontent/commit/356c56659ccfcad0b249a97de8cf71f151ed3ee9"
+      },
+      {
+        "cve": "CVE-2026-28417",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/vim/vim/commit/79348dbbc09332130f4c860"
+      },
+      {
+        "cve": "CVE-2026-28402",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/nimiq/core-rs-albatross/commit/6454c26d966858c5520f55739a30b94c17656c85"
+      },
+      {
+        "cve": "CVE-2026-28412",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/f/textream/commit/3524fa96f98ba17025b48ce9e19d49d859fc2ec1"
+      },
+      {
+        "cve": "CVE-2026-28406",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/chainguard-forks/kaniko/commit/a370e4b1f66e6e842b685c8f70ed507964c4b221"
+      },
+      {
+        "cve": "CVE-2026-28416",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/gradio-app/gradio/commit/fc7c01ea1e581ef70be98fddf003b0c91315c7cc"
+      },
+      {
+        "cve": "CVE-2026-28478",
+        "detected": "complete",
+        "confidence": 0.1414,
+        "category": "memory_safety",
+        "url": "https://github.com/openclaw/openclaw/commit/3cbcba10cf30c2ffb898f0d8c7dfb929f15f8930"
+      },
+      {
+        "cve": "CVE-2026-28410",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/graphprotocol/contracts/commit/91224ed83eeff3fc3afea01f5ed269373d9bf773"
+      },
+      {
+        "cve": "CVE-2026-28392",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/f19eabee54c49e9a2e264b4965edf28a2f92e657"
+      },
+      {
+        "cve": "CVE-2026-28350",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/fedora-python/lxml_html_clean/commit/9c5612ca33b941eec4178abf8a5294b103403f34"
+      },
+      {
+        "cve": "CVE-2026-28370",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/openstack/vitrage/commit/89df4bd2ffda1a5ddea66cd828438a6a171a3b11"
+      },
+      {
+        "cve": "CVE-2026-28394",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "memory_safety",
+        "url": "https://github.com/openclaw/openclaw/commit/166cf6a3e04c7df42bea70a7ad5ce2b9df46d147"
+      },
+      {
+        "cve": "CVE-2026-28351",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/py-pdf/pypdf/commit/f309c6003746414dc7b5048c19e6d879ff2dc858"
+      },
+      {
+        "cve": "CVE-2026-28363",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "memory_safety",
+        "url": "https://github.com/openclaw/openclaw/commit/3b8e33037ae2e12af7beb56fcf0346f1f8cbde6f"
+      },
+      {
+        "cve": "CVE-2026-28391",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/a7f4a53ce80c98ba1452eb90802d447fca9bf3d6"
+      },
+      {
+        "cve": "CVE-2026-28403",
+        "detected": "complete",
+        "confidence": 0.1314,
+        "category": "other",
+        "url": "https://github.com/f/textream/commit/f5ebad82750b9313386c34af8f0ede50c213a8a0"
+      },
+      {
+        "cve": "CVE-2026-28268",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/go-vikunja/vikunja/commit/5c2195f9fca9ad208477e865e6009c37889f87b2"
+      },
+      {
+        "cve": "CVE-2026-28348",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/fedora-python/lxml_html_clean/commit/2ef732667ddbc74ea59847bcf24b75809aaeed3b"
+      },
+      {
+        "cve": "CVE-2026-28226",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/phishingclub/phishingclub/commit/c7e666da9a71cd519f317cbf67ade10068a33070"
+      },
+      {
+        "cve": "CVE-2026-28289",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/freescout-help-desk/freescout/commit/f7bc16c56a6b13c06da52ad51fd666546b40818f"
+      },
+      {
+        "cve": "CVE-2026-28231",
+        "detected": "complete",
+        "confidence": 0.0591,
+        "category": "memory_safety",
+        "url": "https://github.com/bigcat88/pillow_heif/commit/8305a15d3780c533b762578cbe987d27a2c59c7a"
+      },
+      {
+        "cve": "CVE-2026-27974",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/advplyr/audiobookshelf-app/commit/bab95530c8c3d7a4b4cec5b059da8b79ad50223e"
+      },
+      {
+        "cve": "CVE-2026-28208",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/junrar/junrar/commit/947ff1d33f00f940aa68ae2593500291d799d954"
+      },
+      {
+        "cve": "CVE-2026-28405",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/MarkUsProject/Markus/commit/55d74f2ddb72d2ec2f29aa2b4cb6b2da10755036"
+      },
+      {
+        "cve": "CVE-2026-27969",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/vitessio/vitess/commit/c565cab615bc962bda061dcd645aa7506c59ca4a"
+      },
+      {
+        "cve": "CVE-2026-28230",
+        "detected": "complete",
+        "confidence": 0.0067,
+        "category": "other",
+        "url": "https://github.com/steve-community/steve/commit/7f169c6c5b36a9c458ec41ce8af581972e5c724e"
+      },
+      {
+        "cve": "CVE-2026-28211",
+        "detected": "complete",
+        "confidence": 0.0067,
+        "category": "other",
+        "url": "https://github.com/CyrilleB79/NVDA-Dev-Test-Toolbox/commit/21a0544432b08971b5d18320e8256be12c610bea"
+      },
+      {
+        "cve": "CVE-2026-27973",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/advplyr/audiobookshelf-app/commit/b2c2b625e3cf586562397f4c02e38059f2b8ef5c"
+      },
+      {
+        "cve": "CVE-2026-27948",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/9001/copyparty/commit/31b2801fd041f803f4a3d5c12c7d7cb5419048bc"
+      },
+      {
+        "cve": "CVE-2026-27968",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/packistry/packistry/commit/7740b48f0f4ecbe63099fb056c8a146180f8b283"
+      },
+      {
+        "cve": "CVE-2026-27965",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/vitessio/vitess/commit/4c0173293907af9cb942a6683c465c3f1e9fdb5c"
+      },
+      {
+        "cve": "CVE-2026-27963",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/advplyr/audiobookshelf/commit/503f4611b221a5bde19024e657021670df204478"
+      },
+      {
+        "cve": "CVE-2026-27946",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/zitadel/zitadel/commit/0261536243e500dccfd8c7f547d592c822478327"
+      },
+      {
+        "cve": "CVE-2026-28342",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "memory_safety",
+        "url": "https://github.com/OliveTin/OliveTin/commit/2eb5f0ba79d4bbef3c802bf8b4666a7e18dcfd90"
+      },
+      {
+        "cve": "CVE-2026-27966",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/langflow-ai/langflow/commit/d8c6480daa17b2f2af0b5470cdf5c3d28dc9e508"
+      },
+      {
+        "cve": "CVE-2026-27942",
+        "detected": "complete",
+        "confidence": 0.1534,
+        "category": "memory_safety",
+        "url": "https://github.com/NaturalIntelligence/fast-xml-parser/commit/c13a961910f14986295dd28484eee830fa1a0e8a"
+      },
+      {
+        "cve": "CVE-2026-27939",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/statamic/cms/commit/8639ef96217eaa682bc42e8a62769cb7c6a85d3a"
+      },
+      {
+        "cve": "CVE-2026-27943",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/c87489bf63f2701b634d948279e104f2ed3df1c0"
+      },
+      {
+        "cve": "CVE-2026-27905",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "memory_safety",
+        "url": "https://github.com/bentoml/BentoML/commit/4e0eb007765ac04c7924220d643f264715cc9670"
+      },
+      {
+        "cve": "CVE-2026-28338",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/pmd/pmd/commit/c140c0e1de5853a08efb84c9f91dfeb015882442"
+      },
+      {
+        "cve": "CVE-2026-27941",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/openlit/openlit/commit/4a62039a1659d6cbb8913172693f587b5fc2546c"
+      },
+      {
+        "cve": "CVE-2026-27951",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/118afc0b954ba9d5632b7836ad24e454555ed113"
+      },
+      {
+        "cve": "CVE-2026-27901",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/sveltejs/svelte/commit/0df5abcae223058ceb95491470372065fb87951d"
+      },
+      {
+        "cve": "CVE-2026-27903",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/isaacs/minimatch/commit/0bf499aa45f5059b56809cc3b75ff3eafeb8d748"
+      },
+      {
+        "cve": "CVE-2026-27888",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/py-pdf/pypdf/commit/7a4c8246ed48d9d328fb596942271da47b6d109c"
+      },
+      {
+        "cve": "CVE-2026-27899",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/h44z/wg-portal/commit/fe4485037a25426446ced95050e9498f477bf71d"
+      },
+      {
+        "cve": "CVE-2026-27884",
+        "detected": "complete",
+        "confidence": 0.08,
+        "category": "other",
+        "url": "https://github.com/Pennyw0rth/NetExec/commit/7d027f2774d0520b322d60f9c99b9ab3edb4035e"
+      },
+      {
+        "cve": "CVE-2026-27900",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/linode/terraform-provider-linode/commit/43a925d826b999f0355de3dc7330c55f496824c0"
+      },
+      {
+        "cve": "CVE-2026-27840",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "integer_handling",
+        "url": "https://github.com/zitadel/zitadel/commit/feab8e1fa371f3ad654640fc869b2c14f2fdb602"
+      },
+      {
+        "cve": "CVE-2026-27902",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/sveltejs/svelte/commit/0298e979371bb583855c9810db79a70a551d22b9"
+      },
+      {
+        "cve": "CVE-2026-27839",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/wger-project/wger/commit/29876a1954fe959e4b58ef070170e81703dab60e"
+      },
+      {
+        "cve": "CVE-2026-27835",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/wger-project/wger/commit/1fda5690b35706bb137850c8a084ec6a13317b64"
+      },
+      {
+        "cve": "CVE-2026-27904",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/isaacs/minimatch/commit/11d0df6165d15a955462316b26d52e5efae06fce"
+      },
+      {
+        "cve": "CVE-2026-27938",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/wp-graphql/wp-graphql/commit/de0c2d590593f1099546ad517106e454a498bc58"
+      },
+      {
+        "cve": "CVE-2026-27821",
+        "detected": "complete",
+        "confidence": 0.1434,
+        "category": "memory_safety",
+        "url": "https://github.com/gpac/gpac/commit/9bd7137fded2db40de61a2cf3045812c8741ec52"
+      },
+      {
+        "cve": "CVE-2026-27838",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/wger-project/wger/commit/e964328784e2ee2830a1991d69fadbce86ac9fbf"
+      },
+      {
+        "cve": "CVE-2026-27818",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/TerriaJS/terriajs-server/commit/3aaa5d9717162b245ae4569232bbe7d8673c913f"
+      },
+      {
+        "cve": "CVE-2026-27836",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/thorsten/phpMyFAQ/commit/f2ab673f0668753cd0f7c7c8bc7fd2304dcf5cb1"
+      },
+      {
+        "cve": "CVE-2026-27830",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/swaldman/c3p0/commit/e14cbd8166e423e2e9a9d6f08b2add3433492d6e"
+      },
+      {
+        "cve": "CVE-2026-27799",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/e87695b3227978ad70b967b8d054baaf8ac2cced"
+      },
+      {
+        "cve": "CVE-2026-27798",
+        "detected": "complete",
+        "confidence": 0.088,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/0377e60b3c0d766bd7271221c95d9ee54f6a3738"
+      },
+      {
+        "cve": "CVE-2026-27819",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/go-vikunja/vikunja/commit/1b3d8dc59cb5f2b759ab0ad2bc9915b993e3cb73"
+      },
+      {
+        "cve": "CVE-2026-27797",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/homarr-labs/homarr/commit/fce970c70653f200ff1c73081139a77f0379bd91"
+      },
+      {
+        "cve": "CVE-2026-27796",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/homarr-labs/homarr/commit/91fc5a5c747121475a50f2713d571ceb89e95257"
+      },
+      {
+        "cve": "CVE-2026-27793",
+        "detected": "complete",
+        "confidence": 0.024,
+        "category": "other",
+        "url": "https://github.com/seerr-team/seerr/commit/4f089b29d0bb41d382168b17aa152eb5b8a25303"
+      },
+      {
+        "cve": "CVE-2026-27736",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/bigbluebutton/bigbluebutton/commit/691f92f3af0d6b796b91cb968977068663119812"
+      },
+      {
+        "cve": "CVE-2026-27829",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/withastro/astro/commit/e01e98b063e90d274c42130ec2a60cc0966622c9"
+      },
+      {
+        "cve": "CVE-2026-27735",
+        "detected": "complete",
+        "confidence": 0.06,
+        "category": "memory_safety",
+        "url": "https://github.com/modelcontextprotocol/servers/commit/862e717ff714987bd5577318df09858e14883863"
+      },
+      {
+        "cve": "CVE-2026-27808",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/axllent/mailpit/commit/10ad4df8cc0cd9e51dea1b4410009545eef7fbf5"
+      },
+      {
+        "cve": "CVE-2026-27734",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/henrygd/beszel/commit/311095cfddda113863ca9656cf9e99411be1cef5"
+      },
+      {
+        "cve": "CVE-2026-27896",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/modelcontextprotocol/go-sdk/commit/7b8d81c264074404abdf5aa16e2cf0c2d9c64cc0"
+      },
+      {
+        "cve": "CVE-2026-27945",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/zitadel/zitadel/commit/b2532e9666215bef04855d138ca716045bb74a06"
+      },
+      {
+        "cve": "CVE-2026-27792",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/seerr-team/seerr/commit/946bdecec524b4e7f8aaf8f2b3856f319a3580c1"
+      },
+      {
+        "cve": "CVE-2026-27809",
+        "detected": "complete",
+        "confidence": 0.0529,
+        "category": "other",
+        "url": "https://github.com/psd-tools/psd-tools/commit/6c0a78f195b5942757886a1863793fd5946c1fb1"
+      },
+      {
+        "cve": "CVE-2026-27707",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/seerr-team/seerr/commit/4ae20684092b5b28527b23dfbc1a3417858fee8e"
+      },
+      {
+        "cve": "CVE-2026-27729",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "memory_safety",
+        "url": "https://github.com/withastro/astro/commit/522f880b07a4ea7d69a19b5507fb53a5ed6c87f8"
+      },
+      {
+        "cve": "CVE-2026-27704",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/dart-lang/pub/commit/26c6985c742593d081f8b58450f463a584a4203a"
+      },
+      {
+        "cve": "CVE-2026-27705",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/makeplane/plane/commit/9070acbbe81bc02db5c169789da6862d5fc35d96"
+      },
+      {
+        "cve": "CVE-2026-27701",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/live-codes/livecodes/commit/e151c64c2bd80d2d53ac1333f1df9429fe6a1a11"
+      },
+      {
+        "cve": "CVE-2026-27732",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/WWBN/AVideo/commit/384ef2548093f4cbb1bfac00f1f429fe57fab853"
+      },
+      {
+        "cve": "CVE-2026-27700",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/honojs/hono/commit/41adbf56e252c04611f8972364ac0887ae07a4c7"
+      },
+      {
+        "cve": "CVE-2026-27728",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/OneUptime/oneuptime/commit/f2cce35a04fac756cecc7a4c55e23758b99288c1"
+      },
+      {
+        "cve": "CVE-2026-27692",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/InternationalColorConsortium/iccDEV/commit/29d088840b962a7cdd35993dfabc2cb35a049847"
+      },
+      {
+        "cve": "CVE-2026-27699",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/patrickjuchli/basic-ftp/commit/2a2a0e6514357b9eda07c2f8afbd3f04727a7cd9"
+      },
+      {
+        "cve": "CVE-2026-27794",
+        "detected": "complete",
+        "confidence": 0.0227,
+        "category": "other",
+        "url": "https://github.com/langchain-ai/langgraph/commit/f91d79d0c86932ded6e3b9f195d5a0bbd5aef99c"
+      },
+      {
+        "cve": "CVE-2026-27691",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "integer_handling",
+        "url": "https://github.com/InternationalColorConsortium/iccDEV/commit/43ae18dd69fc70190d3632a18a3af2f3da1e052a"
+      },
+      {
+        "cve": "CVE-2026-27641",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/jugmac00/flask-reuploaded/commit/d64c6b2f71cb73734fc38baa0e3e156926361288"
+      },
+      {
+        "cve": "CVE-2026-27696",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/dgtlmoon/changedetection.io/commit/fe7aa38c651d73fe5f41ce09855fa8f97193747b"
+      },
+      {
+        "cve": "CVE-2026-27730",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/esm-dev/esm.sh/commit/0593516c4cfab49ad3b4900416a8432ff2e23eb0"
+      },
+      {
+        "cve": "CVE-2026-27636",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/freescout-help-desk/freescout/commit/9984071e6f1b4e633fdcffcea82bbebc9c1e009c"
+      },
+      {
+        "cve": "CVE-2026-27702",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/Budibase/budibase/commit/348659810cf930dda5f669e782706594c547115d"
+      },
+      {
+        "cve": "CVE-2026-27633",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/maximmasiutin/TinyWeb/commit/1cb5a1d"
+      },
+      {
+        "cve": "CVE-2026-27631",
+        "detected": "complete",
+        "confidence": 0.06,
+        "category": "other",
+        "url": "https://github.com/Exiv2/exiv2/commit/659db316eef745899a778a1e0b760a971d1b69df"
+      },
+      {
+        "cve": "CVE-2026-27637",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/freescout-help-desk/freescout/commit/004a8231f6e413af1d4680930b0e2342fd4283f9"
+      },
+      {
+        "cve": "CVE-2026-27643",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/free5gc/udr/commit/754d23b03755ad59077ed529ce3b971e477080c4"
+      },
+      {
+        "cve": "CVE-2026-27627",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/karakeep-app/karakeep/commit/ba3db953c0d8675e2e3ecc29113a332b570b2cb9"
+      },
+      {
+        "cve": "CVE-2026-27624",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "authz",
+        "url": "https://github.com/coturn/coturn/commit/b80eb898ba26552600770162c26a8ae7f3661b0b"
+      },
+      {
+        "cve": "CVE-2026-27621",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/TypiCMS/Core/commit/d480a0be1e8e7c0600bb9a325bb11920ee66497d"
+      },
+      {
+        "cve": "CVE-2026-27630",
+        "detected": "complete",
+        "confidence": 0.0022,
+        "category": "dos",
+        "url": "https://github.com/maximmasiutin/TinyWeb/commit/23268c8"
+      },
+      {
+        "cve": "CVE-2026-27614",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/bugsink/bugsink/commit/e784d6aeb0d5f29b40c2779d2544c2b9ef097ee9"
+      },
+      {
+        "cve": "CVE-2026-27626",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/OliveTin/OliveTin/commit/4bbd2eab153287dc744ad061c58af7693f0c3ddc"
+      },
+      {
+        "cve": "CVE-2026-27612",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/denpiligrim/repostat/commit/715df5f73359d222fd7876e948d14290180e3c88"
+      },
+      {
+        "cve": "CVE-2026-27613",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/maximmasiutin/TinyWeb/commit/d9dbda8db49da69d2160e1c527e782b73b5ffb6b"
+      },
+      {
+        "cve": "CVE-2026-27598",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/dagu-org/dagu/commit/e2ed589105d79273e4e6ac8eb31525f765bb3ce4"
+      },
+      {
+        "cve": "CVE-2026-27597",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/agentfront/enclave/commit/09afbebe4cb6d0586c1145aa71ffabd2103932db"
+      },
+      {
+        "cve": "CVE-2026-27610",
+        "detected": "complete",
+        "confidence": 0.0593,
+        "category": "other",
+        "url": "https://github.com/parse-community/parse-dashboard/commit/f92a9ef5246d57e51696bd881a15f3b133b2bb50"
+      },
+      {
+        "cve": "CVE-2026-27587",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "input_validation",
+        "url": "https://github.com/caddyserver/caddy/commit/a1081194bfae4e0d8c227ec44aecb95eded55d1e"
+      },
+      {
+        "cve": "CVE-2026-27586",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/caddyserver/caddy/commit/d42d39b4bc237c628f9a95363b28044cb7a7fe72"
+      },
+      {
+        "cve": "CVE-2026-27589",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "dos",
+        "url": "https://github.com/caddyserver/caddy/commit/65e0ddc22137bbbaa68c842ae0b98d0548504545"
+      },
+      {
+        "cve": "CVE-2026-27588",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/caddyserver/caddy/commit/eec32a0bb5a11651c6a7b04ce82dc50610f2b27e"
+      },
+      {
+        "cve": "CVE-2026-27595",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/parse-community/parse-dashboard/commit/f92a9ef5246d57e51696bd881a15f3b133b2bb50"
+      },
+      {
+        "cve": "CVE-2026-27584",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/actualbudget/actual/commit/ea937d100956ca56689ff852d99c28589e2a7d88"
+      },
+      {
+        "cve": "CVE-2026-27642",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/free5gc/udm/commit/a7af2321ddea6368c43835f90f6d1b9d67dd2ea1"
+      },
+      {
+        "cve": "CVE-2026-27575",
+        "detected": "complete",
+        "confidence": 0.0229,
+        "category": "input_validation",
+        "url": "https://github.com/go-vikunja/vikunja/commit/89c17d3b23e2a23320ad135b4e8f0a14fdd91bda"
+      },
+      {
+        "cve": "CVE-2026-27568",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/WWBN/AVideo/commit/ade348ed6d28b3797162c3d9e98054fb09ec51d7"
+      },
+      {
+        "cve": "CVE-2026-27567",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/payloadcms/payload/commit/1041bb6"
+      },
+      {
+        "cve": "CVE-2026-27571",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "input_validation",
+        "url": "https://github.com/nats-io/nats-server/commit/f77fb7c4535e6727cc1a2899cd8e6bbdd8ba2017"
+      },
+      {
+        "cve": "CVE-2026-27492",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/lettermint/lettermint-node/commit/24a17acbc2429c5eb30391f9df3dc0ea7aaf4de1"
+      },
+      {
+        "cve": "CVE-2026-27645",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/dgtlmoon/changedetection.io/commit/a385c89abf44b52fcfa20c7c6a6dd3047c4c1eb5"
+      },
+      {
+        "cve": "CVE-2026-27488",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/99db4d13e5c139883ef0def9ff963e9273179655"
+      },
+      {
+        "cve": "CVE-2026-27638",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/actualbudget/actual/commit/9966c024cb75f57943193cac8e42f401efed9d08"
+      },
+      {
+        "cve": "CVE-2026-27574",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/OneUptime/oneuptime/commit/7f9ed4d43945574702a26b7c206e38cc344fe427"
+      },
+      {
+        "cve": "CVE-2026-27480",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/static-web-server/static-web-server/commit/7bf0fd425eb10dac9bf9ef5febce12c4dd039ce1"
+      },
+      {
+        "cve": "CVE-2026-27482",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/ray-project/ray/commit/0fda8b824cdc9dc6edd763bb28dfd7d1cc9b02a4"
+      },
+      {
+        "cve": "CVE-2026-27477",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/mastodon/mastodon/commit/7b85d2182361e68d51d9a02f94fb1070b5f503b1"
+      },
+      {
+        "cve": "CVE-2026-27471",
+        "detected": "complete",
+        "confidence": 0.0533,
+        "category": "memory_safety",
+        "url": "https://github.com/frappe/erpnext/commit/78fc9424d9085c2eafe1211931e22d7044f85fc7"
+      },
+      {
+        "cve": "CVE-2026-27479",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/ellite/Wallos/commit/76a53df9cb4658123b8f0b7cf1826f1ba7d1c960"
+      },
+      {
+        "cve": "CVE-2026-27469",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/isso-comments/isso/commit/0afbfe0691ee237963e8fb0b2ee01c9e55ca2144"
+      },
+      {
+        "cve": "CVE-2026-27695",
+        "detected": "complete",
+        "confidence": 0.0307,
+        "category": "other",
+        "url": "https://github.com/zeroae/zae-limiter/commit/481ce44d818d66e31d8837bc48519660ce4c267f"
+      },
+      {
+        "cve": "CVE-2026-27483",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/mindsdb/mindsdb/commit/87a44bdb2b97f963e18f10a068e1a1e2690505ef"
+      },
+      {
+        "cve": "CVE-2026-27466",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/bigbluebutton/bigbluebutton/commit/f3d33d94a9682e87c7d41f55700b19d61e1ab8b4"
+      },
+      {
+        "cve": "CVE-2026-27467",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/bigbluebutton/bigbluebutton/commit/3aa47832bc2b17178799bd932453c226e8f95703"
+      },
+      {
+        "cve": "CVE-2026-27212",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/nolimits4web/swiper/commit/d3e663322a13043ca63aaba235d8cf3900e0c8cf"
+      },
+      {
+        "cve": "CVE-2026-27210",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/mpetroff/pannellum/commit/9391ef8da6a6a98c6a9f8c97f101adb900523681"
+      },
+      {
+        "cve": "CVE-2026-27461",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/pimcore/pimcore/commit/1c3925fbec4895abeb21e5c244a83679c4e4a6f4"
+      },
+      {
+        "cve": "CVE-2026-27484",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/775816035ecc6bb243843f8000c9a58ff609e32d"
+      },
+      {
+        "cve": "CVE-2026-27203",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/YosefHayim/ebay-mcp/commit/aab0bda75ea9dd27aa37d0d8524d7cf41b3c4a9a"
+      },
+      {
+        "cve": "CVE-2026-27468",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/mastodon/mastodon/commit/6ba6285a73c3a8b281123814d45f534e3bcebb96"
+      },
+      {
+        "cve": "CVE-2026-27206",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/zumba/json-serializer/commit/bf26227879adefce75eb9651040d8982be97b881"
+      },
+      {
+        "cve": "CVE-2026-27198",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/getformwork/formwork/commit/19390a0b408e084bdef86f3581e050f3ee51e7cd"
+      },
+      {
+        "cve": "CVE-2026-27193",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/feathersjs/feathers/commit/ee19a0ae9bc2ebf23b1fe598a1f7361981b65401"
+      },
+      {
+        "cve": "CVE-2026-27199",
+        "detected": "complete",
+        "confidence": 0.0333,
+        "category": "other",
+        "url": "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d"
+      },
+      {
+        "cve": "CVE-2026-27192",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/feathersjs/feathers/commit/ee19a0ae9bc2ebf23b1fe598a1f7361981b65401"
+      },
+      {
+        "cve": "CVE-2026-27190",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/denoland/deno/commit/9132ad958c83a0d0b199de12b69b877f63edab4c"
+      },
+      {
+        "cve": "CVE-2026-27191",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/feathersjs/feathers/commit/ee19a0ae9bc2ebf23b1fe598a1f7361981b65401"
+      },
+      {
+        "cve": "CVE-2026-27167",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/gradio-app/gradio/commit/dfee0da06d0aa94b3c2684131e7898d5d5c1911e"
+      },
+      {
+        "cve": "CVE-2026-27129",
+        "detected": "complete",
+        "confidence": 0.07,
+        "category": "input_validation",
+        "url": "https://github.com/craftcms/cms/commit/2825388b4f32fb1c9bd709027a1a1fd192d709a3"
+      },
+      {
+        "cve": "CVE-2026-27205",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/pallets/flask/commit/089cb86dd22bff589a4eafb7ab8e42dc357623b4"
+      },
+      {
+        "cve": "CVE-2026-27128",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/craftcms/cms/commit/3e4afe18279951c024c64896aa2b93cda6d95fdf"
+      },
+      {
+        "cve": "CVE-2026-27156",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/zauberzeug/nicegui/commit/1861f59cc374ca0dc9d970b157ef3774720f8dbf"
+      },
+      {
+        "cve": "CVE-2026-27125",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/sveltejs/svelte/commit/73098bb26c6f06e7fd1b0746d817d2c5ee90755f"
+      },
+      {
+        "cve": "CVE-2026-27120",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/vapor/leaf-kit/commit/8919e39476c3a4ba05c28b71546bb9195f87ef34"
+      },
+      {
+        "cve": "CVE-2026-27126",
+        "detected": "complete",
+        "confidence": 0.0433,
+        "category": "input_validation",
+        "url": "https://github.com/craftcms/cms/commit/f5d488d9bb6eff7670ed2c2fe30e15692e92c52b"
+      },
+      {
+        "cve": "CVE-2026-27116",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/go-vikunja/vikunja/commit/a42b4f37bde58596a3b69482cd5a67641a94f62d"
+      },
+      {
+        "cve": "CVE-2026-27572",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/bytecodealliance/wasmtime/commit/301dc7162cca51def19131019af1187f45901c0a"
+      },
+      {
+        "cve": "CVE-2026-27127",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/craftcms/cms/commit/a4cf3fb63bba3249cf1e2882b18a2d29e77a8575"
+      },
+      {
+        "cve": "CVE-2026-27112",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/akuity/kargo/commit/155c6852ffbffa2902f18e6c7add91a846e8d344"
+      },
+      {
+        "cve": "CVE-2026-27100",
+        "detected": "complete",
+        "confidence": 0.0267,
+        "category": "authz",
+        "url": "https://github.com/jenkinsci/jenkins/commit/f92eadb5813f04ca27439455e2573c3171e93a45"
+      },
+      {
+        "cve": "CVE-2026-27115",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/Alex4SSB/ADB-Explorer/commit/f7554690b1f68c6066c12aa45aec60303bca545b"
+      },
+      {
+        "cve": "CVE-2026-27194",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/man-group/dtale/commit/431c6148d3c799de20e1dec86c4432f48e3d0746"
+      },
+      {
+        "cve": "CVE-2026-27113",
+        "detected": "complete",
+        "confidence": 0.0338,
+        "category": "input_validation",
+        "url": "https://github.com/liquidprompt/liquidprompt/commit/a4f6b8d8c90b3eaa33d13dfd1093062ab9c4b30c"
+      },
+      {
+        "cve": "CVE-2026-27099",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/jenkinsci/jenkins/commit/578c028e2cdfdc9e124d0ca389a80bb2bd231ab2"
+      },
+      {
+        "cve": "CVE-2026-27024",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "dos",
+        "url": "https://github.com/py-pdf/pypdf/commit/bd2f6d052fe5941e85e37082c2a43453d48d1295"
+      },
+      {
+        "cve": "CVE-2026-27026",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/py-pdf/pypdf/commit/7905842d833f899f1d3228af7e7467ad80277016"
+      },
+      {
+        "cve": "CVE-2026-27017",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/refraction-networking/utls/commit/24bd1e05a788c1add7f3037f4532ea552b2cee07"
+      },
+      {
+        "cve": "CVE-2026-27016",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/3bea263e02441690c01dea7fa3fe6ffec94af335"
+      },
+      {
+        "cve": "CVE-2026-27465",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/fleetdm/fleet/commit/23fc6804efe785f806f769d6be1f5f05b2e13ec2"
+      },
+      {
+        "cve": "CVE-2026-27015",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/65d59d3b3c2f630f2ea862687ecf5f95f8115244"
+      },
+      {
+        "cve": "CVE-2026-27007",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "dos",
+        "url": "https://github.com/openclaw/openclaw/commit/41ded303b4f6dae5afa854531ff837c3276ad60b"
+      },
+      {
+        "cve": "CVE-2026-27025",
+        "detected": "complete",
+        "confidence": 0.0095,
+        "category": "other",
+        "url": "https://github.com/py-pdf/pypdf/commit/77d7b8d7cfbe8dd179858dfa42666f73fc6e57a2"
+      },
+      {
+        "cve": "CVE-2026-27022",
+        "detected": "complete",
+        "confidence": 0.046,
+        "category": "input_validation",
+        "url": "https://github.com/langchain-ai/langgraphjs/commit/814c76dc3938d0f6f7e17ca3bc11d6a12270b2a1"
+      },
+      {
+        "cve": "CVE-2026-27111",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/akuity/kargo/commit/833314cad5513d48d89431493325ae44c1324a49"
+      },
+      {
+        "cve": "CVE-2026-27493",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/n8n-io/n8n/commit/562d867483e871b0f1e31776252e23bd721df75b"
+      },
+      {
+        "cve": "CVE-2026-27003",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/cf69907015b659e5025efb735ee31bd05c4ee3d5"
+      },
+      {
+        "cve": "CVE-2026-26995",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "other",
+        "url": "https://github.com/refraction-networking/utls/commit/8fe0b08e9a0e7e2d08b268f451f2c79962e6acd0"
+      },
+      {
+        "cve": "CVE-2026-26994",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/refraction-networking/utls/commit/f8892761e2a4d29054264651d3a86fda83bc83f9"
+      },
+      {
+        "cve": "CVE-2026-27002",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/887b209db47f1f9322fead241a1c0b043fd38339"
+      },
+      {
+        "cve": "CVE-2026-26992",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/882fe6f90ea504a3732f83caf89bba7850a5699f"
+      },
+      {
+        "cve": "CVE-2026-26993",
+        "detected": "complete",
+        "confidence": 0.04,
+        "category": "input_validation",
+        "url": "https://github.com/FlintSH/Flare/commit/7763d7b954799552f287ab9260bb1353f8880163"
+      },
+      {
+        "cve": "CVE-2026-26989",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/087608cf9f851189847cb8e8e5ad002e59170c58"
+      },
+      {
+        "cve": "CVE-2026-26991",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/64b31da444369213eb4559ec1c304ebfaa0ba12c"
+      },
+      {
+        "cve": "CVE-2026-26997",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/MacWarrior/clipbucket-v5/commit/2da4c8e41f9e4baf47ff89f8a674fbe9b63ac76d"
+      },
+      {
+        "cve": "CVE-2026-26986",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/b4f0f0a18fe53aa8d47d062f91471f4e9c5e0d51"
+      },
+      {
+        "cve": "CVE-2026-26983",
+        "detected": "complete",
+        "confidence": 0.0233,
+        "category": "dos",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/7cfae4da24a995fb05386d77364ff404a7cca7bc"
+      },
+      {
+        "cve": "CVE-2026-26990",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/15429580baba03ed1dd377bada1bde4b7a1175a1"
+      },
+      {
+        "cve": "CVE-2026-27001",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/6254e96acf16e70ceccc8f9b2abecee44d606f79"
+      },
+      {
+        "cve": "CVE-2026-26974",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/Tygo-van-den-Hurk/Slyde/commit/e4c215b061e44fd2ead805de34d72642a710af60"
+      },
+      {
+        "cve": "CVE-2026-26967",
+        "detected": "complete",
+        "confidence": 0.1347,
+        "category": "memory_safety",
+        "url": "https://github.com/pjsip/pjproject/commit/f821c214e52b11bae11e4cd3c7f0864538fb5491"
+      },
+      {
+        "cve": "CVE-2026-26964",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/windmill-labs/windmill/commit/43218c62852490d0efafa8f94385bfe0e8f2ad82"
+      },
+      {
+        "cve": "CVE-2026-26965",
+        "detected": "complete",
+        "confidence": 0.0267,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/a0be5cb87d760bb1c803ad1bb835aa1e73e62abc"
+      },
+      {
+        "cve": "CVE-2026-26980",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/TryGhost/Ghost/commit/30868d632b2252b638bc8a4c8ebf73964592ed91"
+      },
+      {
+        "cve": "CVE-2026-26958",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/FiloSottile/edwards25519/commit/d1c650afb95fad0742b98d95f2eb2cf031393abb"
+      },
+      {
+        "cve": "CVE-2026-26963",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/cilium/cilium/commit/88e28e1e62c0b1a02c3f0fc22d888ac9eefbe885"
+      },
+      {
+        "cve": "CVE-2026-26988",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/15429580baba03ed1dd377bada1bde4b7a1175a1"
+      },
+      {
+        "cve": "CVE-2026-26955",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "memory_safety",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/7d8fdce2d0ef337cb86cb37fc0c436c905e04d77"
+      },
+      {
+        "cve": "CVE-2026-26953",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/pi-hole/web/commit/1a0c6f4fe6d0116fd2846b2adaae95996b7f194d"
+      },
+      {
+        "cve": "CVE-2026-26952",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/pi-hole/web/commit/d328f143718022d82dc94c8751121ca41be3b996"
+      },
+      {
+        "cve": "CVE-2026-26972",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/7f0489e4731c8d965d78d6eac4a60312e46a9426"
+      },
+      {
+        "cve": "CVE-2026-26717",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openfun/richie/commit/a1b5bbda3403d7debb466c303a32852925fcba5f"
+      },
+      {
+        "cve": "CVE-2026-26514",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/xddxdd/bird-lg-go/commit/6187a4e3afce6d8c29568f8c72ca497d1f5a2b56"
+      },
+      {
+        "cve": "CVE-2026-26957",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/abhinavxd/libredesk/commit/727213631ce6a36bcb06f50ce542155e78f51316"
+      },
+      {
+        "cve": "CVE-2026-26987",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "input_validation",
+        "url": "https://github.com/librenms/librenms/commit/8e626b38ef92e240532cdac2ac7e38706a71208b"
+      },
+      {
+        "cve": "CVE-2026-26959",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/Alex4SSB/ADB-Explorer/commit/1b9fed20e875f5e74fd04e9889402f969c2d34e4"
+      },
+      {
+        "cve": "CVE-2026-27004",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/c6c53437f7da033b94a01d492e904974e7bda74c"
+      },
+      {
+        "cve": "CVE-2026-26861",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/CleverTap/clevertap-web-sdk/commit/84695b726a751614ddc3a4f71382c239c5833e03"
+      },
+      {
+        "cve": "CVE-2026-26331",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/yt-dlp/yt-dlp/commit/1fbbe29b99dc61375bf6d786f824d9fcf6ea9c1a"
+      },
+      {
+        "cve": "CVE-2026-26328",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/872079d42fe105ece2900a1dd6ab321b92da2d59"
+      },
+      {
+        "cve": "CVE-2026-26322",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/c5406e1d2434be2ef6eb4d26d8f1798d718713f4"
+      },
+      {
+        "cve": "CVE-2026-26323",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/a429380e337152746031d290432a4b93aa553d55"
+      },
+      {
+        "cve": "CVE-2026-26324",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/c0c0e0f9aecb913e738742f73e091f2f72d39a19"
+      },
+      {
+        "cve": "CVE-2026-26318",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/sebhildebrandt/systeminformation/commit/b67d3715eec881038ccbaace2f2711419ac3e107"
+      },
+      {
+        "cve": "CVE-2026-26320",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/28d9dd7a772501ccc3f71457b4adfee79084fe6f"
+      },
+      {
+        "cve": "CVE-2026-26315",
+        "detected": "complete",
+        "confidence": 0.0433,
+        "category": "other",
+        "url": "https://github.com/ethereum/go-ethereum/commit/46bee92f9e64c0a06a12586a5d21cffc49d1ba8e"
+      },
+      {
+        "cve": "CVE-2026-26283",
+        "detected": "complete",
+        "confidence": 0.0067,
+        "category": "input_validation",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/c448c6920a985872072fc7be6034f678c087de9b"
+      },
+      {
+        "cve": "CVE-2026-26281",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-26325",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/cb3290fca32593956638f161d9776266b90ab891"
+      },
+      {
+        "cve": "CVE-2026-27013",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/fabricjs/fabric.js/commit/7e1a122defd8feefe4eb7eaf0c180d7b0aeb6fee"
+      },
+      {
+        "cve": "CVE-2026-26317",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/b566b09f81e2b704bf9398d8d97d5f7a90aa94c3"
+      },
+      {
+        "cve": "CVE-2026-26314",
+        "detected": "complete",
+        "confidence": 0.0233,
+        "category": "dos",
+        "url": "https://github.com/ethereum/go-ethereum/commit/895a8597cb16c02203e38707ed2d1da5c500fe60"
+      },
+      {
+        "cve": "CVE-2026-26280",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/sebhildebrandt/systeminformation/commit/22242aa56188f2bffcbd7d265a11e1ebb808b460"
+      },
+      {
+        "cve": "CVE-2026-26272",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/sysadminsmedia/homebox/commit/51bd04e5f4656b306a296745ddd854d45aa3b892"
+      },
+      {
+        "cve": "CVE-2026-26276",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/gogs/gogs/commit/9001a68cdda7bd9c078ffd6d1c4622905ac11e5c"
+      },
+      {
+        "cve": "CVE-2026-26270",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-26279",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/froxlor/froxlor/commit/22249677107f8f39f8d4a238605641e87dab4343"
+      },
+      {
+        "cve": "CVE-2026-26271",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/f5e20403d6e325e11b68129803f967fb5aeec1cb"
+      },
+      {
+        "cve": "CVE-2026-26321",
+        "detected": "complete",
+        "confidence": 0.06,
+        "category": "other",
+        "url": "https://github.com/openclaw/openclaw/commit/5b4121d6011a48c71e747e3c18197f180b872c5d"
+      },
+      {
+        "cve": "CVE-2026-26329",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/openclaw/openclaw/commit/3aa94afcfd12104c683c9cad81faf434d0dadf87"
+      },
+      {
+        "cve": "CVE-2026-26205",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/open-policy-agent/opa-envoy-plugin/commit/58c44d4ec408d5852d1d0287599e7d5c5e2bc5c3"
+      },
+      {
+        "cve": "CVE-2026-26203",
+        "detected": "complete",
+        "confidence": 0.0367,
+        "category": "memory_safety",
+        "url": "https://github.com/pjsip/pjproject/commit/5aee54f09d4f91538d55279d7316591b28fded6c"
+      },
+      {
+        "cve": "CVE-2026-26198",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/collerek/ormar/commit/a03bae14fe01358d3eaf7e319fcd5db2e4956b16"
+      },
+      {
+        "cve": "CVE-2026-26202",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/penpot/penpot/commit/06e5825c8a0209889966a4eb5152efd6ff108626"
+      },
+      {
+        "cve": "CVE-2026-26196",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/gogs/gogs/commit/295bfba72993c372e7b338438947d8e1a6bed8fd"
+      },
+      {
+        "cve": "CVE-2026-26195",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/gogs/gogs/commit/ac21150a53bef3a3061f4da787ab193a8d68ecfc"
+      },
+      {
+        "cve": "CVE-2026-26066",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "dos",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/880057ce34f6da9dff2fe3b290bbbc45b743e613"
+      },
+      {
+        "cve": "CVE-2026-26194",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "input_validation",
+        "url": "https://github.com/gogs/gogs/commit/a000f0c7a632ada40e6829abdeea525db4c0fc2d"
+      },
+      {
+        "cve": "CVE-2026-26064",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/kovidgoyal/calibre/commit/e1b5f9b45a5e8fa96c136963ad9a1d35e6adac62"
+      },
+      {
+        "cve": "CVE-2026-26047",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/moodle/moodle/commit/8683b4a04939332e353cad1be51222930dc40b2c"
+      },
+      {
+        "cve": "CVE-2026-26065",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/kovidgoyal/calibre/commit/b6da1c3878c06eb1356cb0ec1106cb66e0e9bfb8"
+      },
+      {
+        "cve": "CVE-2026-26045",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/moodle/moodle/commit/566054ba11f609a6d48d09b32e85d435d49927da"
+      },
+      {
+        "cve": "CVE-2026-25997",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/58409406afe7c2a8a71ed2dc8e22075be4f41c0c"
+      },
+      {
+        "cve": "CVE-2026-26022",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/gogs/gogs/commit/441c64d7bd8893b2f4e48660a8be3a7472e14291"
+      },
+      {
+        "cve": "CVE-2026-26057",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/cisco-ai-defense/skill-scanner/commit/1e35e57f3051ecc89ba845ae7206321c8eac20a1"
+      },
+      {
+        "cve": "CVE-2026-25987",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/bbae0215e1b76830509fd20e6d37c0dd7e3e4c3a"
+      },
+      {
+        "cve": "CVE-2026-25988",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/4354fc1d554ec2e6314aed13536efa7bde9593d2"
+      },
+      {
+        "cve": "CVE-2026-26266",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/aliasvault/aliasvault/commit/382e2e96fa502891638a48404f6d82dc972ab481"
+      },
+      {
+        "cve": "CVE-2026-26278",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/NaturalIntelligence/fast-xml-parser/commit/910dae5be2de2955e968558fadf6e8f74f117a77"
+      },
+      {
+        "cve": "CVE-2026-25984",
+        "detected": "complete",
+        "confidence": 0.1387,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/5b91ab69af614024255fd93dcc9a62b41fbc435c"
+      },
+      {
+        "cve": "CVE-2026-26327",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/openclaw/openclaw/commit/d583782ee322a6faa1fe87ae52455e0d349de586"
+      },
+      {
+        "cve": "CVE-2026-25985",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/1a51eb9af00c36724660e294520878fd1f13e312"
+      },
+      {
+        "cve": "CVE-2026-25967",
+        "detected": "complete",
+        "confidence": 0.1894,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/9afe96cc325da1e4349fbd7418675af2f8708c10"
+      },
+      {
+        "cve": "CVE-2026-25989",
+        "detected": "complete",
+        "confidence": 0.078,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/5a545ab9d6c3d12a6a76cfed32b87df096729d95"
+      },
+      {
+        "cve": "CVE-2026-25983",
+        "detected": "complete",
+        "confidence": 0.064,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/257200cb21de23404dce5f8261871845d425dee5"
+      },
+      {
+        "cve": "CVE-2026-25966",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/8d4c67a90ae458fb36393a05c0069e9123ac174c"
+      },
+      {
+        "cve": "CVE-2026-25959",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "dos",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/d3e8b3b9365be96a4f11dda149d71b3287227d0a"
+      },
+      {
+        "cve": "CVE-2026-25969",
+        "detected": "complete",
+        "confidence": 0.0733,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/a253d1b124ebdcc2832daac6f9a35c362635b40e"
+      },
+      {
+        "cve": "CVE-2026-25942",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/9362a0bf8dda04eedbca07d5dfaec1044e67cc6b"
+      },
+      {
+        "cve": "CVE-2026-25955",
+        "detected": "complete",
+        "confidence": 0.12,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/169d358734509e82663a0d6a0085ae726d439d8e"
+      },
+      {
+        "cve": "CVE-2026-25963",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/fleetdm/fleet/commit/d27d0362db390fe835e3b5328525f25018df0fb7"
+      },
+      {
+        "cve": "CVE-2026-25941",
+        "detected": "complete",
+        "confidence": 0.1147,
+        "category": "memory_safety",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/2e3b77e28ac6a398897d28ba464dcc5dfab9c9e2"
+      },
+      {
+        "cve": "CVE-2026-25929",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/fc4d00ecb63561dacd23cb1fed49c64bd1a83258"
+      },
+      {
+        "cve": "CVE-2026-25940",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/parallax/jsPDF/commit/71ad2dbfa6c7c189ab42b855b782620fa8a38375"
+      },
+      {
+        "cve": "CVE-2026-25930",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/8c76acdd226007cc4ff3eccd3ca6193e0be6e699"
+      },
+      {
+        "cve": "CVE-2026-25898",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/c9c87dbaba56bf82aebd3392e11f0ffd93709b12"
+      },
+      {
+        "cve": "CVE-2026-25897",
+        "detected": "complete",
+        "confidence": 0.1834,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/23fde73188ea32c15b607571775d4f92bdb75e60"
+      },
+      {
+        "cve": "CVE-2026-25921",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/gogs/gogs/commit/81ee8836445ac888d99da8b652be7d5cbc5c4d5c"
+      },
+      {
+        "cve": "CVE-2026-25891",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/gofiber/fiber/commit/59133702301c2ab7b776dd123b474cbd995f2c86"
+      },
+      {
+        "cve": "CVE-2026-25884",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "memory_safety",
+        "url": "https://github.com/Exiv2/exiv2/commit/cbba4d206512fe63e12d164fdd1881562f072a9d"
+      },
+      {
+        "cve": "CVE-2026-26267",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/stellar/rs-soroban-sdk/commit/e92a3933e5f92dc09da3c740cf6a360d55709a2b"
+      },
+      {
+        "cve": "CVE-2026-25799",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/49000e7298fbfdd759ac2c46f740f40c2e9b7452"
+      },
+      {
+        "cve": "CVE-2026-25797",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/26088a83d71e9daa203d54a56fe3c31f3f85463d"
+      },
+      {
+        "cve": "CVE-2026-25796",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "dos",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/93ad259ce4f6d641eea0bee73f374af90f35efc3"
+      },
+      {
+        "cve": "CVE-2026-25802",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/QuantumNous/new-api/commit/ab5456eb1049aa8a0f3e51f359907ec7fff38b4b"
+      },
+      {
+        "cve": "CVE-2026-25798",
+        "detected": "complete",
+        "confidence": 0.0367,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/e046417675d5c26e5f48816851a406c121c77469"
+      },
+      {
+        "cve": "CVE-2026-25794",
+        "detected": "complete",
+        "confidence": 0.1971,
+        "category": "memory_safety",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/ffe589df5ff8ce1433daa4ccb0d2a9fadfbe30ed"
+      },
+      {
+        "cve": "CVE-2026-25755",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/parallax/jsPDF/commit/56b46d45b052346f5995b005a34af5dcdddd5437"
+      },
+      {
+        "cve": "CVE-2026-25743",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/da18f83f39648edc2463e8810757380a9f1d91de"
+      },
+      {
+        "cve": "CVE-2026-25746",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/e230d3ef46425ffc96a37dc6369428aa37c88554"
+      },
+      {
+        "cve": "CVE-2026-25741",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/zulip/zulip/commit/bf28c82dc9b1f630fa8e9106358771b20a0040f7"
+      },
+      {
+        "cve": "CVE-2026-25638",
+        "detected": "complete",
+        "confidence": 0.0813,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/1e88fca11c7b8517100d518bc99bd8c474f02f88"
+      },
+      {
+        "cve": "CVE-2026-25954",
+        "detected": "complete",
+        "confidence": 0.124,
+        "category": "memory_safety",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/1994e9844212a6dfe0ff12309fef520e888986b5"
+      },
+      {
+        "cve": "CVE-2026-25596",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-25595",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-25594",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-25953",
+        "detected": "complete",
+        "confidence": 0.12,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/1994e9844212a6dfe0ff12309fef520e888986b5"
+      },
+      {
+        "cve": "CVE-2026-26201",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/jm33-m0/emp3r0r/commit/ea4d074f081dac6293f3aec38f01def5f08d5af5"
+      },
+      {
+        "cve": "CVE-2026-25637",
+        "detected": "complete",
+        "confidence": 0.1102,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/30ce0e8efbd72fd6b50ed3a10ae22f57c8901137"
+      },
+      {
+        "cve": "CVE-2026-25738",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/indico/indico/commit/70d341826116fac5868719a6133f2c26d9345137"
+      },
+      {
+        "cve": "CVE-2026-25952",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/FreeRDP/FreeRDP/commit/1994e9844212a6dfe0ff12309fef520e888986b5"
+      },
+      {
+        "cve": "CVE-2026-25554",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/OpenSIPS/opensips/commit/3822d33c1c6b25832fdd88da1d23eed74be55b05"
+      },
+      {
+        "cve": "CVE-2026-25548",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-25535",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "input_validation",
+        "url": "https://github.com/parallax/jsPDF/commit/2e5e156e284d92c7d134bce97e6418756941d5e6"
+      },
+      {
+        "cve": "CVE-2026-25476",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/02a6a7793402b10356a94626d78e0e1069e92a77"
+      },
+      {
+        "cve": "CVE-2026-25527",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "dos",
+        "url": "https://github.com/dgtlmoon/changedetection.io/commit/9d38b4517364831889b5b0d7b3465fd060403fd4"
+      },
+      {
+        "cve": "CVE-2026-25242",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/gogs/gogs/commit/628216d5889fcb838c471f4754f09b935d9cd9f3"
+      },
+      {
+        "cve": "CVE-2026-25500",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/rack/rack/commit/f2f225f297b99fbee3d9f51255d41f601fc40aff"
+      },
+      {
+        "cve": "CVE-2026-25220",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/9f2c44fc88fc051fcf0b6922c373977543e6b2af"
+      },
+      {
+        "cve": "CVE-2026-25232",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/gogs/gogs/commit/7b7e38c88007a7c482dbf31efff896185fd9b79c"
+      },
+      {
+        "cve": "CVE-2026-25903",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/apache/nifi/commit/119f8881fbc3cbd0d522b0c549b841da3de01f64"
+      },
+      {
+        "cve": "CVE-2026-25147",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/d6ab3cd0b621b19b942cf49d2db2026e288aa214"
+      },
+      {
+        "cve": "CVE-2026-25229",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/gogs/gogs/commit/643a6d6353cb6a182a4e1f0720228727f30a3ad2"
+      },
+      {
+        "cve": "CVE-2026-25766",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/labstack/echo/commit/b1d443086ea27cf51345ec72a71e9b7e9d9ce5f1"
+      },
+      {
+        "cve": "CVE-2026-25164",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/c5e1c44774156cd0d04f4e08ed6a81fe76d38e92"
+      },
+      {
+        "cve": "CVE-2026-25591",
+        "detected": "complete",
+        "confidence": 0.046,
+        "category": "input_validation",
+        "url": "https://github.com/QuantumNous/new-api/commit/3e1be18310f35d20742683ca9e4bf3bcafc173c5"
+      },
+      {
+        "cve": "CVE-2026-25127",
+        "detected": "complete",
+        "confidence": 0.0769,
+        "category": "memory_safety",
+        "url": "https://github.com/openemr/openemr/commit/ad902d6892482fff2e3c56bfb15597df8b6c3beb"
+      },
+      {
+        "cve": "CVE-2026-25124",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/ad902d6892482fff2e3c56bfb15597df8b6c3beb"
+      },
+      {
+        "cve": "CVE-2026-25545",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "dos",
+        "url": "https://github.com/withastro/astro/commit/e01e98b063e90d274c42130ec2a60cc0966622c9"
+      },
+      {
+        "cve": "CVE-2026-25131",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/1e63cbab34558bca029533f87cdb6efb1ff32c75"
+      },
+      {
+        "cve": "CVE-2026-25146",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/fe6341496dc82d5b4f5a3f35891bb2e2481f3b25"
+      },
+      {
+        "cve": "CVE-2026-24896",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/1a57dfc244b30e96e7ebdb5ba6f331a6eb868df1"
+      },
+      {
+        "cve": "CVE-2026-24898",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/8e4de59ab58222f13abc4e4040128737d857db9c"
+      },
+      {
+        "cve": "CVE-2026-24890",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/a29c0f7ac0975429a85cd09a3ff12ee0dcdb4478"
+      },
+      {
+        "cve": "CVE-2026-24847",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/b924459bb5b2844f8f5d3d6cedd2e854eda20aad"
+      },
+      {
+        "cve": "CVE-2026-24908",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/943e23cad6e979f87cdf168807fce2a7b32dd194"
+      },
+      {
+        "cve": "CVE-2026-25135",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/7ab23dfe73ebd16dd66a526272f3761f1bd5be7d"
+      },
+      {
+        "cve": "CVE-2026-24745",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-24746",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-24892",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "dos",
+        "url": "https://github.com/openITCOCKPIT/openITCOCKPIT/commit/975e0d0dfb79898568afbbfdba8f647d92612a69"
+      },
+      {
+        "cve": "CVE-2026-25120",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/gogs/gogs/commit/1b226ca48dc8b3e95cc1c41229d72819c960a1b7"
+      },
+      {
+        "cve": "CVE-2026-24743",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-24744",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6"
+      },
+      {
+        "cve": "CVE-2026-24849",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/22f8e53e5769a88b7a16cb223bd197d044c84e5a"
+      },
+      {
+        "cve": "CVE-2026-24484",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/0349df6d43d633bd61bb582d1e1e87d6332de32a"
+      },
+      {
+        "cve": "CVE-2026-24708",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openstack/nova/commit/3eba22ff09c81a61750fbb4882e5f1f01a20fdf5"
+      },
+      {
+        "cve": "CVE-2026-24481",
+        "detected": "complete",
+        "confidence": 0.0443,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/51c9d33f4770cdcfa1a029199375d570af801c97"
+      },
+      {
+        "cve": "CVE-2026-24485",
+        "detected": "complete",
+        "confidence": 0.088,
+        "category": "other",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/332c1566acc2de77857032d3c2504ead6210ff50"
+      },
+      {
+        "cve": "CVE-2026-24764",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openclaw/openclaw/commit/35eb40a7000b59085e9c638a80fd03917c7a095e"
+      },
+      {
+        "cve": "CVE-2026-24487",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/openemr/openemr/commit/5ce10a3961b73862aaf31eb30044ffe1018465cc"
+      },
+      {
+        "cve": "CVE-2026-24004",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/fleetdm/fleet/commit/24dd2257ae7127680a2f6cd1a4eee58a9c95dd34"
+      },
+      {
+        "cve": "CVE-2026-23750",
+        "detected": "incomplete",
+        "confidence": 0.7,
+        "category": "memory_safety",
+        "url": "https://github.com/golioth/pouch/commit/1b2219a1"
+      },
+      {
+        "cve": "CVE-2026-24005",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openkruise/kruise/commit/94364b76adf3e8a1749a31afe809a163bed29613"
+      },
+      {
+        "cve": "CVE-2026-24126",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/WeblateOrg/weblate/commit/78773cc141ce0a97900c11341e6cf856451395fd"
+      },
+      {
+        "cve": "CVE-2026-23749",
+        "detected": "complete",
+        "confidence": 0.1481,
+        "category": "memory_safety",
+        "url": "https://github.com/golioth/golioth-firmware-sdk/commit/0e788217ab4b61a7c1d9fadd1b4a40f5f538a26d"
+      },
+      {
+        "cve": "CVE-2026-23748",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "memory_safety",
+        "url": "https://github.com/golioth/golioth-firmware-sdk/commit/d7f55b380d8be8b29bd101ce06e421af2e88c12b"
+      },
+      {
+        "cve": "CVE-2026-24122",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/sigstore/cosign/commit/3c9a7363f563db76d78e2de2cabd945450f3781e"
+      },
+      {
+        "cve": "CVE-2026-23939",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/hexpm/hexpm/commit/5d2ccd2f14f45a63225a73fb5b1c937baf36fdc0"
+      },
+      {
+        "cve": "CVE-2026-23999",
+        "detected": "complete",
+        "confidence": 0.0114,
+        "category": "other",
+        "url": "https://github.com/fleetdm/fleet/commit/05ca0693621e6671fb95dfc5437b9f9ee6dd7047"
+      },
+      {
+        "cve": "CVE-2026-22860",
+        "detected": "complete",
+        "confidence": 0.0533,
+        "category": "input_validation",
+        "url": "https://github.com/rack/rack/commit/75c5745c286637a8f049a33790c71237762069e7"
+      },
+      {
+        "cve": "CVE-2026-22728",
+        "detected": "complete",
+        "confidence": 0.01,
+        "category": "other",
+        "url": "https://github.com/bitnami-labs/sealed-secrets/commit/d57ee4a8357d250e602b995399b525496ab688c1"
+      },
+      {
+        "cve": "CVE-2026-23552",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/apache/camel/commit/c1ed776e3a4fa23d15acf4b9a48fdf758d4316ff"
+      },
+      {
+        "cve": "CVE-2026-23627",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/cbf4ea4345b14a6c8362201e30c74ffb0949cdb1"
+      },
+      {
+        "cve": "CVE-2026-22208",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/S-100ExpertTeam/OpenS100/commit/753cf294434e8d3961f20a567c4d99151e3b530d"
+      },
+      {
+        "cve": "CVE-2026-21864",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/valkey-io/valkey-bloom/commit/a68614b6e3845777d383b3a513cedcc08b3b7ccd"
+      },
+      {
+        "cve": "CVE-2026-23747",
+        "detected": "complete",
+        "confidence": 0.1351,
+        "category": "memory_safety",
+        "url": "https://github.com/golioth/golioth-firmware-sdk/commit/48f521bcc0187ada2b9cbdad31dc380e6c7b7332"
+      },
+      {
+        "cve": "CVE-2026-21866",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/langgenius/dify/commit/ae17537470bba417a8971fff705dd82ecb043564"
+      },
+      {
+        "cve": "CVE-2026-24834",
+        "detected": "complete",
+        "confidence": 0.0427,
+        "category": "other",
+        "url": "https://github.com/kata-containers/kata-containers/commit/6a672503973bf7c687053e459bfff8a9652e16bf"
+      },
+      {
+        "cve": "CVE-2026-21622",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/hexpm/hexpm/commit/bb0e42091995945deef10556f58d046a52eb7884"
+      },
+      {
+        "cve": "CVE-2026-22866",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/ensdomains/ens-contracts/commit/c76c5ad0dc9de1c966443bd946fafc6351f87587"
+      },
+      {
+        "cve": "CVE-2026-21882",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/AsfhtgkDavid/theshit/commit/5293957b119e55212dce2c6dcbaf1d7eb794602a"
+      },
+      {
+        "cve": "CVE-2026-21621",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/hexpm/hexpm/commit/71c127afebb7ed7cc637eb231b98feb802d62999"
+      },
+      {
+        "cve": "CVE-2026-3749",
+        "detected": "complete",
+        "confidence": 0.0267,
+        "category": "other",
+        "url": "https://github.com/Bytedesk/bytedesk/commit/975e39e4dd527596987559f56c5f9f973f64eff7"
+      },
+      {
+        "cve": "CVE-2026-3789",
+        "detected": "complete",
+        "confidence": 0.0267,
+        "category": "other",
+        "url": "https://github.com/Bytedesk/bytedesk/commit/975e39e4dd527596987559f56c5f9f973f64eff7"
+      },
+      {
+        "cve": "CVE-2026-3788",
+        "detected": "complete",
+        "confidence": 0.0267,
+        "category": "other",
+        "url": "https://github.com/Bytedesk/bytedesk/commit/975e39e4dd527596987559f56c5f9f973f64eff7"
+      },
+      {
+        "cve": "CVE-2026-21853",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/toeverything/AFFiNE/commit/c9a4129a3e9376b688c18e1dcd6c87a775caac80"
+      },
+      {
+        "cve": "CVE-2026-3748",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "other",
+        "url": "https://github.com/Bytedesk/bytedesk/commit/975e39e4dd527596987559f56c5f9f973f64eff7"
+      },
+      {
+        "cve": "CVE-2026-3616",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/DefaultFuction/Jeson-Customer-Relationship-Management-System/commit/f0e991870e9d33701cca3a1d0fd4eec135af01a6"
+      },
+      {
+        "cve": "CVE-2026-3739",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/suitenumerique/messages/commit/d7729f4b885449f6dee3faf8b5f2a05769fb3d6e"
+      },
+      {
+        "cve": "CVE-2026-3706",
+        "detected": "complete",
+        "confidence": 0.048,
+        "category": "other",
+        "url": "https://github.com/mkj/dropbear/commit/fdec3c90a15447bd538641d85e5a3e3ac981011d"
+      },
+      {
+        "cve": "CVE-2026-3520",
+        "detected": "complete",
+        "confidence": 0.0834,
+        "category": "memory_safety",
+        "url": "https://github.com/expressjs/multer/commit/7e66481f8b2e6c54b982b34c152479e096ce2752"
+      },
+      {
+        "cve": "CVE-2026-3816",
+        "detected": "complete",
+        "confidence": 0.0333,
+        "category": "dos",
+        "url": "https://github.com/DefectDojo/django-DefectDojo/commit/e8f1e5131535b8fd80a7b1b3085d676295fdcd41"
+      },
+      {
+        "cve": "CVE-2026-3455",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/nodemailer/mailparser/commit/921a67df4cfb38f0b411037d7b26fbd4d5411b08"
+      },
+      {
+        "cve": "CVE-2026-3419",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "other",
+        "url": "https://github.com/fastify/fastify/commit/67f6c9b32cb3623d3c9470cc17ed830dd2f083d7"
+      },
+      {
+        "cve": "CVE-2026-3449",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/TooTallNate/once/commit/b9f43cc5259bee2952d91ad3cdbd201a82df448a"
+      },
+      {
+        "cve": "CVE-2026-3408",
+        "detected": "complete",
+        "confidence": 0.0769,
+        "category": "memory_safety",
+        "url": "https://github.com/VedantMadane/openbabel/commit/e23a224b8fd9d7c2a7cde9ef4ec6afb4c05aa08a"
+      },
+      {
+        "cve": "CVE-2026-3395",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/maxsite/cms/commit/08937a3c5d672a242d68f53e9fccf8a748820ef3"
+      },
+      {
+        "cve": "CVE-2026-3484",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/PhialsBasement/nmap-mcp-server/commit/30a6b9e1c7fa6146f51e28d6ab83a2568d9a3488"
+      },
+      {
+        "cve": "CVE-2026-25576",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/ImageMagick/ImageMagick/commit/077b42643212d7da8c1a4f6b2cd0067ebca8ec0f"
+      },
+      {
+        "cve": "CVE-2026-3304",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "dos",
+        "url": "https://github.com/expressjs/multer/commit/739919097dde3921ec31b930e4b9025036fa74ee"
+      },
+      {
+        "cve": "CVE-2026-3707",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "integer_handling",
+        "url": "https://github.com/MrNanko/webp4j/commit/89771b201c66d15d29e4cc016d8aae82b6a5fbe1"
+      },
+      {
+        "cve": "CVE-2026-3285",
+        "detected": "complete",
+        "confidence": 0.1494,
+        "category": "memory_safety",
+        "url": "https://github.com/berry-lang/berry/commit/7149c59a39ba44feca261b12f06089f265fec176"
+      },
+      {
+        "cve": "CVE-2026-3351",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "authz",
+        "url": "https://github.com/canonical/lxd/commit/d936c90d47cf0be1e9757df897f769e9887ebde1"
+      },
+      {
+        "cve": "CVE-2026-3284",
+        "detected": "complete",
+        "confidence": 0.05,
+        "category": "integer_handling",
+        "url": "https://github.com/libvips/libvips/commit/24795bb3d19d84f7b6f5ed86451ad556c8f2fe70"
+      },
+      {
+        "cve": "CVE-2026-23491",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "path_traversal",
+        "url": "https://github.com/InvoicePlane/InvoicePlane/commit/add8bb798dde621f886823065ef1841986543c69"
+      },
+      {
+        "cve": "CVE-2026-3282",
+        "detected": "complete",
+        "confidence": 0.058,
+        "category": "memory_safety",
+        "url": "https://github.com/libvips/libvips/commit/7215ead1e0cd7d3703cc4f5fca06d7d0f4c22b91"
+      },
+      {
+        "cve": "CVE-2026-3281",
+        "detected": "complete",
+        "confidence": 0.0747,
+        "category": "memory_safety",
+        "url": "https://github.com/libvips/libvips/commit/fd28c5463697712cb0ab116a2c55e4f4d92c4088"
+      },
+      {
+        "cve": "CVE-2026-3283",
+        "detected": "complete",
+        "confidence": 0.058,
+        "category": "memory_safety",
+        "url": "https://github.com/libvips/libvips/commit/24795bb3d19d84f7b6f5ed86451ad556c8f2fe70"
+      },
+      {
+        "cve": "CVE-2026-3327",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/datocms/plugins/commit/7965eebf0973cc5ebb18bc5ff9ce7ff19e89bb2e"
+      },
+      {
+        "cve": "CVE-2026-21443",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/b1e3fe8a9ed8bcaf17e0b73d7fad5434f9fe36da"
+      },
+      {
+        "cve": "CVE-2026-3209",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/fosrl/pangolin/commit/5e37c4e85fae68e756be5019a28ca903b161fdd5"
+      },
+      {
+        "cve": "CVE-2026-3293",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/snowflakedb/snowflake-jdbc/commit/5fb0a8a318a2ed87f4022a1f56e742424ba94052"
+      },
+      {
+        "cve": "CVE-2026-3255",
+        "detected": "complete",
+        "confidence": 0.084,
+        "category": "other",
+        "url": "https://github.com/tokuhirom/HTTP-Session2/commit/9cfde4d7e0965172aef5dcfa3b03bb48df93e636"
+      },
+      {
+        "cve": "CVE-2026-3147",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "memory_safety",
+        "url": "https://github.com/libvips/libvips/commit/b3ab458a25e0e261cbd1788474bbc763f7435780"
+      },
+      {
+        "cve": "CVE-2026-3145",
+        "detected": "complete",
+        "confidence": 0.08,
+        "category": "other",
+        "url": "https://github.com/libvips/libvips/commit/d4ce337c76bff1b278d7085c3c4f4725e3aa6ece"
+      },
+      {
+        "cve": "CVE-2026-3185",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/feiyuchuixue/sz-boot-parent/commit/aefaabfd7527188bfba3c8c9eee17c316d094802"
+      },
+      {
+        "cve": "CVE-2026-3186",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/feiyuchuixue/sz-boot-parent/commit/aefaabfd7527188bfba3c8c9eee17c316d094802"
+      },
+      {
+        "cve": "CVE-2026-3146",
+        "detected": "complete",
+        "confidence": 0.04,
+        "category": "memory_safety",
+        "url": "https://github.com/libvips/libvips/commit/d4ce337c76bff1b278d7085c3c4f4725e3aa6ece"
+      },
+      {
+        "cve": "CVE-2026-3049",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/horilla-opensource/horilla-crm/commit/730b5a44ff060916780c44a4bdbc8ced70a2cd27"
+      },
+      {
+        "cve": "CVE-2026-3189",
+        "detected": "complete",
+        "confidence": 0.1614,
+        "category": "other",
+        "url": "https://github.com/feiyuchuixue/sz-boot-parent/commit/aefaabfd7527188bfba3c8c9eee17c316d094802"
+      },
+      {
+        "cve": "CVE-2026-3188",
+        "detected": "complete",
+        "confidence": 0.1614,
+        "category": "other",
+        "url": "https://github.com/feiyuchuixue/sz-boot-parent/commit/aefaabfd7527188bfba3c8c9eee17c316d094802"
+      },
+      {
+        "cve": "CVE-2026-3125",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/opennextjs/opennextjs-cloudflare/commit/f5bd138fd3c77e02f2aa4b9c76d55681e59e98b4"
+      },
+      {
+        "cve": "CVE-2026-2913",
+        "detected": "complete",
+        "confidence": 0.1454,
+        "category": "memory_safety",
+        "url": "https://github.com/libvips/libvips/commit/a56feecbe9ed66521d9647ec9fbcd2546eccd7ee"
+      },
+      {
+        "cve": "CVE-2026-3050",
+        "detected": "complete",
+        "confidence": 0.0333,
+        "category": "other",
+        "url": "https://github.com/Horilla-opensource/Horilla-crm/commit/fc5c8e55988e89273012491b5f097b762b474546"
+      },
+      {
+        "cve": "CVE-2026-2903",
+        "detected": "complete",
+        "confidence": 0.0947,
+        "category": "memory_safety",
+        "url": "https://github.com/skvadrik/re2c/commit/febeb977936f9519a25d9fbd10ff8256358cdb97"
+      },
+      {
+        "cve": "CVE-2026-2974",
+        "detected": "complete",
+        "confidence": 0.04,
+        "category": "other",
+        "url": "https://github.com/aliasvault/aliasvault/commit/873ecc03f92238e162f98a068ad56069a922b4f6"
+      },
+      {
+        "cve": "CVE-2026-2889",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "other",
+        "url": "https://github.com/CCExtractor/ccextractor/commit/fd7271bae238ccb3ae8a71304ea64f0886324925"
+      },
+      {
+        "cve": "CVE-2026-2869",
+        "detected": "complete",
+        "confidence": 0.0814,
+        "category": "memory_safety",
+        "url": "https://github.com/janet-lang/janet/commit/2fabc80151a2b8834ee59cda8a70453f848b40e5"
+      },
+      {
+        "cve": "CVE-2026-2739",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "dos",
+        "url": "https://github.com/indutny/bn.js/commit/33df26b5771e824f303a79ec6407409376baa64b"
+      },
+      {
+        "cve": "CVE-2026-2861",
+        "detected": "complete",
+        "confidence": 0.02,
+        "category": "dos",
+        "url": "https://github.com/foswiki/distro/commit/31aeecb58b64"
+      },
+      {
+        "cve": "CVE-2026-3187",
+        "detected": "complete",
+        "confidence": 0.12,
+        "category": "other",
+        "url": "https://github.com/feiyuchuixue/sz-boot-parent/commit/aefaabfd7527188bfba3c8c9eee17c316d094802"
+      },
+      {
+        "cve": "CVE-2026-3009",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/keycloak/keycloak/commit/4fd5367e6cc28cfa68fb2240fc459c12b1fdbf2a"
+      },
+      {
+        "cve": "CVE-2026-2721",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/Pierre-Lannoy/wp-mailarchiver/commit/946c1a700bbecc6080a427fd428de800334af824"
+      },
+      {
+        "cve": "CVE-2026-2732",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/short-pixel-optimizer/enable-media-replace/commit/8ca282e68e5fcf8a8e4cecc1f0ab192c42b1dc66"
+      },
+      {
+        "cve": "CVE-2026-2705",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "memory_safety",
+        "url": "https://github.com/VedantMadane/openbabel/commit/e23a224b8fd9d7c2a7cde9ef4ec6afb4c05aa08a"
+      },
+      {
+        "cve": "CVE-2026-2532",
+        "detected": "complete",
+        "confidence": 0.03,
+        "category": "other",
+        "url": "https://github.com/lintsinghua/DeepAudit/commit/da853fdd8cbe9d42053b45d83f25708ba29b8b27"
+      },
+      {
+        "cve": "CVE-2026-2704",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "other",
+        "url": "https://github.com/VedantMadane/openbabel/commit/e23a224b8fd9d7c2a7cde9ef4ec6afb4c05aa08a"
+      },
+      {
+        "cve": "CVE-2026-2733",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/keycloak/keycloak/commit/743ac24081b2c6da36aac3775147ec5b80c2861e"
+      },
+      {
+        "cve": "CVE-2026-2887",
+        "detected": "complete",
+        "confidence": 0.0967,
+        "category": "other",
+        "url": "https://github.com/aardappel/lobster/commit/8ba49f98ccfc9734ef352146806433a41d9f9aa6"
+      },
+      {
+        "cve": "CVE-2026-2703",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "other",
+        "url": "https://github.com/xlnt-community/xlnt/commit/f2d7bf494e5c52706843cf7eb9892821bffb0734"
+      },
+      {
+        "cve": "CVE-2026-2492",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/tensorflow/tensorflow/commit/46e7f7fb144fd11cf6d17c23dd47620328d77082"
+      },
+      {
+        "cve": "CVE-2026-2419",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/lesterchan/wp-downloadmanager/commit/416b9f5459496166c0395f9e055d4c4cf872404a"
+      },
+      {
+        "cve": "CVE-2026-2426",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/lesterchan/wp-downloadmanager/commit/d3470a8971d9043438c8aad281cf37d14fefa208"
+      },
+      {
+        "cve": "CVE-2026-2359",
+        "detected": "complete",
+        "confidence": 0.06,
+        "category": "dos",
+        "url": "https://github.com/expressjs/multer/commit/cccf0fe0e64150c4f42ccf6654165c0d66b9adab"
+      },
+      {
+        "cve": "CVE-2026-2035",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/opnsense/core/commit/cb15c935137d05c86a1e6cf12af877e9c32a23af"
+      },
+      {
+        "cve": "CVE-2026-2439",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/bwva/Concierge-Sessions/commit/20bb28e92e8fba307c4ff8264701c215be65e73b"
+      },
+      {
+        "cve": "CVE-2026-2472",
+        "detected": "complete",
+        "confidence": 0.0433,
+        "category": "input_validation",
+        "url": "https://github.com/googleapis/python-aiplatform/commit/8a00d43dbd24e95dbab6ea32c63ce0a5a1849480"
+      },
+      {
+        "cve": "CVE-2026-2880",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/fastify/middie/commit/140e0dd0359d890fec7e6ea1dcc5134d6bd554d4"
+      },
+      {
+        "cve": "CVE-2026-1931",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/BrindleDigital/rentfetch/commit/3c7162b24a8be5e5399c1a5bbaf0b949127aca75"
+      },
+      {
+        "cve": "CVE-2026-0999",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/mattermost/mattermost/commit/61651b0df7ea5db55d1e54f8d6fb5fce4149309c"
+      },
+      {
+        "cve": "CVE-2026-0998",
+        "detected": "complete",
+        "confidence": 0.078,
+        "category": "input_validation",
+        "url": "https://github.com/mattermost/mattermost-plugin-zoom/commit/a8b58c43625ab25746e451acc4f71515d52c8122"
+      },
+      {
+        "cve": "CVE-2026-0997",
+        "detected": "complete",
+        "confidence": 0.078,
+        "category": "input_validation",
+        "url": "https://github.com/mattermost/mattermost-plugin-zoom/commit/a8b58c43625ab25746e451acc4f71515d52c8122"
+      },
+      {
+        "cve": "CVE-2026-0871",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/keycloak/keycloak/commit/9d0f679ecea405958f167fcd0f4a6db6ae32c3fa"
+      },
+      {
+        "cve": "CVE-2025-70342",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/grahampugh/erase-install/commit/2c31239fb8519d87577514b3db9ddb0771232a21"
+      },
+      {
+        "cve": "CVE-2026-3102",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/exiftool/exiftool/commit/e9609a9bcc0d32bd252a709a562fb822d6dd86f7"
+      },
+      {
+        "cve": "CVE-2026-0540",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/cure53/DOMPurify/commit/fca0a938b4261ddc9c0293a289935a9029c049f5"
+      },
+      {
+        "cve": "CVE-2026-0980",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/logicminds/rubyipmi/commit/252503a7b4dca68388165883b0322024e344a215"
+      },
+      {
+        "cve": "CVE-2026-1669",
+        "detected": "complete",
+        "confidence": 0.04,
+        "category": "other",
+        "url": "https://github.com/keras-team/keras/commit/8a37f9dadd8e23fa4ee3f537eeb6413e75d12553"
+      },
+      {
+        "cve": "CVE-2025-69873",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/ajv-validator/ajv/commit/720a23fa453ffae8340e92c9b0fe886c54cfe0d5"
+      },
+      {
+        "cve": "CVE-2025-69287",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/bsv-blockchain/ts-sdk/commit/d8cf6930028372079d977138ae9eaa03ae2f50bb"
+      },
+      {
+        "cve": "CVE-2026-2293",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/nestjs/nest/commit/fd8d073e0e048b185147209338ca7042e52c10ba"
+      },
+      {
+        "cve": "CVE-2026-1615",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/dchester/jsonpath/commit/9631412641b7095f86840a7a45b5b3afc68b0fcb"
+      },
+      {
+        "cve": "CVE-2025-69253",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/free5gc/udr/commit/754d23b03755ad59077ed529ce3b971e477080c4"
+      },
+      {
+        "cve": "CVE-2025-69231",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/5f20b756441fc9868f43410a9ef97536c38b2ba6"
+      },
+      {
+        "cve": "CVE-2025-69248",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/free5gc/nas/commit/0329a7ac3f314f210366c1b3c33dc29eded4ac5f"
+      },
+      {
+        "cve": "CVE-2025-68277",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/11ec62d1683571a629734fba66f7fb68d0bdc312"
+      },
+      {
+        "cve": "CVE-2025-69208",
+        "detected": "complete",
+        "confidence": 0.01,
+        "category": "other",
+        "url": "https://github.com/free5gc/udr/commit/91bb34bd96e1c89b3fddca80db8b90049da61ebb"
+      },
+      {
+        "cve": "CVE-2025-67491",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/openemr/openemr/commit/66a11c2d72ade16c4a908cd839d27cd7b261f97a"
+      },
+      {
+        "cve": "CVE-2025-69247",
+        "detected": "incomplete",
+        "confidence": 0.4,
+        "category": "memory_safety",
+        "url": "https://github.com/free5gc/go-upf/commit/b798fe5ee6a984be492fa53958dd5f1305469f85"
+      },
+      {
+        "cve": "CVE-2025-66024",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/xwiki-contrib/application-blog/commit/cca87f0a0edc2e7e049d46d51f4a4d8f78b714ba"
+      },
+      {
+        "cve": "CVE-2026-0969",
+        "detected": "incomplete",
+        "confidence": 0.6,
+        "category": "input_validation",
+        "url": "https://github.com/hashicorp/next-mdx-remote/commit/4d527fdcaed911b87f427d0b4d3c711e817fa4b3"
+      },
+      {
+        "cve": "CVE-2025-61146",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "other",
+        "url": "https://github.com/saitoha/libsixel/commit/e0ba6685262a3679cc5b9009c0c5b7dc8a3f262e"
+      },
+      {
+        "cve": "CVE-2025-52998",
+        "detected": "complete",
+        "confidence": 0.0293,
+        "category": "other",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/ba7e15d8cfefcd451de939e98d461b17e72eb627"
+      },
+      {
+        "cve": "CVE-2025-61147",
+        "detected": "complete",
+        "confidence": 0.0769,
+        "category": "other",
+        "url": "https://github.com/strukturag/libde265/commit/8b17e0930f77db07f55e0b89399a8f054ddbecf7"
+      },
+      {
+        "cve": "CVE-2025-52476",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/349062d31533d464feea78d41996bc0857f90f61"
+      },
+      {
+        "cve": "CVE-2025-64166",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "other",
+        "url": "https://github.com/mercurius-js/mercurius/commit/962d402ec7a92342f4a1b7f5f04af01776838c3c"
+      },
+      {
+        "cve": "CVE-2025-52475",
+        "detected": "complete",
+        "confidence": 0.0133,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/349062d31533d464feea78d41996bc0857f90f61"
+      },
+      {
+        "cve": "CVE-2025-67438",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "input_validation",
+        "url": "https://github.com/Sync-in/server/commit/a6276d067725637310e4e83a3eee337aae81f439"
+      },
+      {
+        "cve": "CVE-2025-52470",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/ead79db4eb034b8c11a3d6036759d083de37530c"
+      },
+      {
+        "cve": "CVE-2025-52469",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/39e0fa88a2ba5dd197e0d8ce7335730b666992a6"
+      },
+      {
+        "cve": "CVE-2025-52468",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/790ef513aceacae6fe5b6641145901f04c7992dd"
+      },
+      {
+        "cve": "CVE-2025-50194",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/4d07349340543b9c913e76f8cb436a4570500ce2"
+      },
+      {
+        "cve": "CVE-2025-50197",
+        "detected": "complete",
+        "confidence": 0.068,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/e1c7879d63172cd7e5e47c9a03ade0e32023e134"
+      },
+      {
+        "cve": "CVE-2025-50195",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/afdbd4bb9a9ea17b7740559dd4e05aa13b16480d"
+      },
+      {
+        "cve": "CVE-2025-50192",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/fd0f2a95b21fa28da47d785c88b879a77951b0f7"
+      },
+      {
+        "cve": "CVE-2025-50190",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/613eb19a0fac6dd49c233f32ad5428cd29d5a468"
+      },
+      {
+        "cve": "CVE-2025-50193",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/afdbd4bb9a9ea17b7740559dd4e05aa13b16480d"
+      },
+      {
+        "cve": "CVE-2025-50186",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/9fef8f30b41d586cb4f4fc823906c16a12ae0ff4"
+      },
+      {
+        "cve": "CVE-2025-50191",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/06155f128395acc6745af826150a0bb2b4a68496"
+      },
+      {
+        "cve": "CVE-2025-50188",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/chamilo/chamilo-lms/commit/ef54cc0906a3caaa3e7ac9b640b044f03b1fe733"
+      },
+      {
+        "cve": "CVE-2025-15599",
+        "detected": "incomplete",
+        "confidence": 0.5,
+        "category": "input_validation",
+        "url": "https://github.com/cure53/DOMPurify/commit/c861f5a83fb8d90800f1680f855fee551161ac2b"
+      },
+      {
+        "cve": "CVE-2025-45691",
+        "detected": "incomplete",
+        "confidence": 0.3,
+        "category": "memory_safety",
+        "url": "https://github.com/vibrantlabsai/ragas/commit/b28433709cbedbb531db79dadcfbdbd3aa6adcb0"
+      },
+      {
+        "cve": "CVE-2025-40926",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/kazeburo/Plack-Middleware-Session-Simple/commit/760bb358b8f53e52cf415888a4ac858fd99bb24e"
+      },
+      {
+        "cve": "CVE-2025-15558",
+        "detected": "complete",
+        "confidence": 0.0693,
+        "category": "authz",
+        "url": "https://github.com/docker/cli/commit/13759330b1f7e7cb0d67047ea42c5482548ba7fa"
+      },
+      {
+        "cve": "CVE-2025-15586",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/OpenGamePanel/OGP-Website/commit/52f865a4fba763594453068acf8fa9e3fc38d663"
+      },
+      {
+        "cve": "CVE-2025-14350",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/mattermost/mattermost/commit/761e56bb11ccb751ddbe4bab5898ccc2b384fd82"
+      },
+      {
+        "cve": "CVE-2025-14573",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/mattermost/mattermost/commit/6404ab29acc04901c5cb1cf5ad97fc3c0693e2cd"
+      },
+      {
+        "cve": "CVE-2025-50180",
+        "detected": "complete",
+        "confidence": 0.036,
+        "category": "other",
+        "url": "https://github.com/esm-dev/esm.sh/commit/0593516c4cfab49ad3b4900416a8432ff2e23eb0"
+      },
+      {
+        "cve": "CVE-2025-13821",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/mattermost/mattermost/commit/cd17b61de41bf0a49b524bb91ce0bbe859e5a100"
+      },
+      {
+        "cve": "CVE-2025-13590",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/wso2/carbon-apimgt/commit/49a6427b39a5d9552ce97430858bb4b1912a3044"
+      },
+      {
+        "cve": "CVE-2025-67752",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "other",
+        "url": "https://github.com/openemr/openemr/commit/22f8e53e5769a88b7a16cb223bd197d044c84e5a"
+      },
+      {
+        "cve": "CVE-2025-12150",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "authz",
+        "url": "https://github.com/keycloak/keycloak/commit/4136a677e7e24f6685ed25567e191e1003200339"
+      },
+      {
+        "cve": "CVE-2025-14009",
+        "detected": "incomplete",
+        "confidence": 0.5333,
+        "category": "input_validation",
+        "url": "https://github.com/nltk/nltk/commit/1056b323af6462455571302e766b67cf300aea18"
+      },
+      {
+        "cve": "CVE-2025-69251",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/free5gc/udm/commit/504b14458d156558b3c0ade7107b86b3d5e72998"
+      },
+      {
+        "cve": "CVE-2025-15597",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "authz",
+        "url": "https://github.com/dataease/SQLBot/commit/d640ac31d1ce64ce90e06cf7081163915c9fc28c"
+      },
+      {
+        "cve": "CVE-2025-13327",
+        "detected": "complete",
+        "confidence": 0.016,
+        "category": "other",
+        "url": "https://github.com/astral-sh/uv/commit/da659fee4898a73dbc75070f3e82d49f745e4628"
+      },
+      {
+        "cve": "CVE-2024-3884",
+        "detected": "complete",
+        "confidence": 0.0,
+        "category": "input_validation",
+        "url": "https://github.com/undertow-io/undertow/commit/cb854c779b9e2368c3c274ebd7217c8e75d505be"
+      },
+      {
+        "cve": "CVE-2025-69250",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/free5gc/udm/commit/504b14458d156558b3c0ade7107b86b3d5e72998"
+      },
+      {
+        "cve": "CVE-2025-69252",
+        "detected": "error",
+        "confidence": 0.0,
+        "category": "",
+        "url": "https://github.com/free5gc/udm/commit/504b14458d156558b3c0ade7107b86b3d5e72998"
+      }
+    ]
   }
 ]
